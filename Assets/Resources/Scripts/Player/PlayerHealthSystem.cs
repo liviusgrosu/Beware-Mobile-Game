@@ -1,16 +1,16 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class EnemyHealthSystem : MonoBehaviour
+public class PlayerHealthSystem : MonoBehaviour
 {
     public bool godMode;
 
     public int maxHP = 1;
     private int currHP;
-
-    private EnemyManager enemyManager;
 
     [SerializeField]
     private GameObject healthCellUI;
@@ -26,8 +26,6 @@ public class EnemyHealthSystem : MonoBehaviour
 
     private void Start()
     {
-        enemyManager = GameObject.Find("Enemy Manager").GetComponent<EnemyManager>();
-
         canvas = transform.GetChild(0);
         healthBar = new List<GameObject>();
         cellWidth = healthCellUI.GetComponent<RectTransform>().rect.width;
@@ -64,14 +62,12 @@ public class EnemyHealthSystem : MonoBehaviour
     {
         if (godMode) return;
 
-        currHP += amount;
+        if (currHP > 0) currHP += amount;
 
-        if (currHP <= 0)
-            enemyManager.RemoveEnemy(gameObject.name);
-        else if (currHP > maxHP)
-            currHP = maxHP;
+        if (currHP <= 0) print("player is dead...");
+        else if (currHP > maxHP) currHP = maxHP;
 
-        for(int i = 0; i < maxHP; i++)
+        for (int i = 0; i < maxHP; i++)
         {
             if (i < currHP) healthBar.ElementAt(i).GetComponent<Image>().sprite = fullHPImg;
             else healthBar.ElementAt(i).GetComponent<Image>().sprite = emptyHPImg;

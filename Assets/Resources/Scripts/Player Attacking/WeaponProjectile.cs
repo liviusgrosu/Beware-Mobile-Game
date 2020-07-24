@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
   
@@ -12,6 +13,9 @@ public class WeaponProjectile : MonoBehaviour
         {
             case "Enemy":
                 col.gameObject.GetComponent<EnemyHealthSystem>().ChangeHealth(-damage);
+                break;
+            case "Player":
+                col.gameObject.GetComponent<PlayerHealthSystem>().ChangeHealth(-damage);
                 break;
         }
         Destroy(this.gameObject);
