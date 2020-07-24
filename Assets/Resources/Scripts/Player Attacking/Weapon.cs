@@ -7,22 +7,26 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
+    [Header("Projectile Properties")]
     public float fireRate;
     public float projectileSpeed;
     public GameObject projectilePrefab;
 
+    [Header("Projectile Count")]
+    public bool isAmmoInfinite;
     public int maxProjectileCount;
     private int _curProjectileCount;
 
     public int curProjectileCount {
         get { return _curProjectileCount; }
-        set { 
+        set {
             _curProjectileCount = value;
-            if (_curProjectileCount <= 0) Destroy(this.gameObject);
+            if (!isAmmoInfinite && _curProjectileCount <= 0) Destroy(this.gameObject);
         }
     }
 
-    [SerializeField] 
+    [Header("Spawns")]
+    [SerializeField]
     private Transform[] bulletSpawns;
     private int bulletSpawnIndex = 0;
 
@@ -31,28 +35,32 @@ public class Weapon : MonoBehaviour
 
     private const float BULLET_LIFE = 1.2f;
 
+    [Header("Misc")]
+    public Sprite weaponIcon;
+
     private enum FireType
     {
-        Sequential, 
-        Random, 
+        Sequential,
+        Random,
         All
     }
 
     [SerializeField]
     private FireType fireType;
 
-    private void Start()
+    private void Awake()
     {
         curProjectileCount = maxProjectileCount;
         isFiring = false;
     }
 
+
     public void ToggleFiring(bool state)
     {
         isFiring = state;
-        if (isFiring) 
+        if (isFiring)
             StartCoroutine(BeginFiring());
-        else 
+        else
             StopAllCoroutines();
     }
 
@@ -67,6 +75,7 @@ public class Weapon : MonoBehaviour
 
     private void FireProjectile()
     {
+        if(!isAmmoInfinite) curProjectileCount--;
         switch (fireType)
         {
             case FireType.Sequential:

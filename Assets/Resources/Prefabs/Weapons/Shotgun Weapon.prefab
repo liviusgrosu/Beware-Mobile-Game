@@ -169,13 +169,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireRate: 1.25
   projectileSpeed: 50
-  projectileCount: 10
   projectilePrefab: {fileID: 9196634944871186572, guid: ab451364fde37b840982bf12ebca2534,
     type: 3}
+  isAmmoInfinite: 0
+  maxProjectileCount: 15
   bulletSpawns:
   - {fileID: 7519995790399198930}
   - {fileID: 4767982377195695225}
   - {fileID: 5584515407196600862}
   - {fileID: 2983289767721951076}
   isFiring: 0
+  weaponIcon: {fileID: 21300000, guid: 5ee5b1378f8ddf44ea614e60d63569aa, type: 3}
   fireType: 2

@@ -10,17 +10,9 @@ public class EnemyDropHandler : MonoBehaviour
     private GameObject coinPrefab;
     private bool isQuitting;
 
-    private enum Drops
-    {
-        Pistol,
-        Shotgun,
-        Chaingun,
-        Sniper,
-        Health
-    }
-
     [SerializeField]
-    private Drops[] drops;
+    private EnumDefinitions.WeaponType[] weapons;
+
 
     void OnApplicationQuit()
     {
@@ -31,9 +23,9 @@ public class EnemyDropHandler : MonoBehaviour
     {
         if (!isQuitting)
         {
-            foreach(Drops drop in drops)
+            foreach(EnumDefinitions.WeaponType weapon in weapons)
             {
-                GameObject obj = Resources.Load(string.Format("Prefabs/Drops/{0} Drop", drop.ToString())) as GameObject;
+                GameObject obj = Resources.Load(string.Format("Prefabs/Drops/{0} Drop", weapon.ToString())) as GameObject;
                 Instantiate(obj, transform.position, Quaternion.identity);
             }
 

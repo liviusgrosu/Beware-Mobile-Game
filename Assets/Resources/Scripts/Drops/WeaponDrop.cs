@@ -8,15 +8,12 @@ public class WeaponDrop : MonoBehaviour
     private float lifeTime;
     [SerializeField]
     private float shimmerStartTime;
+    [SerializeField]
+    private EnumDefinitions.WeaponType weaponType;
 
     private void Awake()
     {
         StartCoroutine(WaitAndDestroy());
-    }
-
-    private void Start()
-    {
-        GameObject.Find("Score Manager").GetComponent<ScoreManager>().AddMaxScore();
     }
 
     IEnumerator WaitAndDestroy()
@@ -30,7 +27,7 @@ public class WeaponDrop : MonoBehaviour
         switch (col.gameObject.tag)
         {
             case "Player":
-                GameObject.Find("Score Manager").GetComponent<ScoreManager>().AddCurrentScore();
+                col.gameObject.GetComponent<WeaponController>().SwitchWeapons(weaponType);
                 Destroy(this.gameObject);
                 break;
         }
