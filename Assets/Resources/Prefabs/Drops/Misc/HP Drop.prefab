@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 3768505201601406375}
   - component: {fileID: 3443010819815758500}
   - component: {fileID: 2249178897458330326}
-  - component: {fileID: 8682816642677506109}
-  - component: {fileID: -1004138739603554364}
+  - component: {fileID: 2227721466089345135}
+  - component: {fileID: -994821394336989845}
   m_Layer: 13
-  m_Name: Sniper Drop
+  m_Name: HP Drop
   m_TagString: Drop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -58,10 +58,11 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b08a2683a48606d498d4960ce1aabcd7, type: 2}
+  - {fileID: 2100000, guid: 3be52c6dd1f05e340bdc386becb80cc9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -82,6 +83,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!135 &2249178897458330326
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -90,12 +92,12 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4438630218146824919}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &8682816642677506109
+--- !u!54 &2227721466089345135
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -111,7 +113,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &-1004138739603554364
+--- !u!114 &-994821394336989845
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -120,9 +122,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 4438630218146824919}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3045fa3d02321ac4a89fdd0de37365a4, type: 3}
+  m_Script: {fileID: 11500000, guid: bab819faa8b4c064d8706ebb82d0b13e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeTime: 99
-  shimmerStartTime: 0
-  weaponType: 3
+  lifeTime: 3
+  shimmerStartTime: 3

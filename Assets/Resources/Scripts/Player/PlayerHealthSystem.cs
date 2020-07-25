@@ -12,17 +12,24 @@ public class PlayerHealthSystem : MonoBehaviour
     public int maxHP = 1;
     private int currHP;
 
-    [SerializeField]
-    private GameObject healthCellUI;
+    [SerializeField] private GameObject healthCellUI;
     private List<GameObject> healthBar;
     private Transform canvas;
 
-    [SerializeField]
-    private Sprite fullHPImg, emptyHPImg;
+    [SerializeField] private Sprite fullHPImg, emptyHPImg;
 
     //Changing x pos
     private float cellSpacing = 0.05f;
     private float cellWidth;
+
+    [Space(5)]
+    [Header("Invincible Frames")]
+    [SerializeField] private Material regularMat;
+    [SerializeField] private Material invincibleMat;
+    [SerializeField] private MeshRenderer rend;
+
+    [SerializeField] private float invincibleTime;
+    private bool isInvincible;
 
     private void Start()
     {
@@ -60,7 +67,7 @@ public class PlayerHealthSystem : MonoBehaviour
 
     public void ChangeHealth(int amount)
     {
-        if (godMode) return;
+        if (godMode || isInvincible) return;
 
         if (currHP > 0) currHP += amount;
 
@@ -72,5 +79,25 @@ public class PlayerHealthSystem : MonoBehaviour
             if (i < currHP) healthBar.ElementAt(i).GetComponent<Image>().sprite = fullHPImg;
             else healthBar.ElementAt(i).GetComponent<Image>().sprite = emptyHPImg;
         }
+
+        if(amount < 0) StartCoroutine(StayInvinsible());
+    }
+
+    public bool IsHealthFull()
+    {
+        return currHP == maxHP;
+    }
+
+    private IEnumerator StayInvinsible()
+    {
+        rend.material = invincibleMat;
+        isInvincible = true;
+        gameObject.layer = LayerMask.NameToLayer("Invincible Player");
+
+        yield return new WaitForSeconds(invincibleTime);
+
+        rend.material = regularMat;
+        isInvincible = false;
+        gameObject.layer = LayerMask.NameToLayer("Player");
     }
 }

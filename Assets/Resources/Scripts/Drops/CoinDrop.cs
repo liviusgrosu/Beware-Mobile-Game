@@ -27,7 +27,7 @@ public class CoinDrop : MonoBehaviour
         Destroy(this.gameObject);
     }
 
-    private void OnCollisionEnter(Collision col)
+    private void OnTriggerEnter(Collider col)
     {
         switch (col.gameObject.tag)
         {

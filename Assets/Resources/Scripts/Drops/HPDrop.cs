@@ -2,14 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeaponDrop : MonoBehaviour
+public class HPDrop : MonoBehaviour
 {
     [SerializeField]
     private float lifeTime;
     [SerializeField]
     private float shimmerStartTime;
-    [SerializeField]
-    private EnumDefinitions.WeaponType weaponType;
 
     private void Awake()
     {
@@ -27,8 +25,12 @@ public class WeaponDrop : MonoBehaviour
         switch (col.gameObject.tag)
         {
             case "Player":
-                col.gameObject.GetComponent<WeaponController>().SwitchWeapons(weaponType);
-                Destroy(this.gameObject);
+                PlayerHealthSystem playerHealth = col.gameObject.GetComponent<PlayerHealthSystem>();
+                if (!playerHealth.IsHealthFull())
+                {
+                    playerHealth.ChangeHealth(1);
+                    Destroy(this.gameObject);
+                }
                 break;
         }
     }

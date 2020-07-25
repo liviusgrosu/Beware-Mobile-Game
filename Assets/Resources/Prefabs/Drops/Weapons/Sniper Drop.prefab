@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 3768505201601406375}
   - component: {fileID: 3443010819815758500}
   - component: {fileID: 2249178897458330326}
-  - component: {fileID: 4053281750708700558}
-  - component: {fileID: 2227721466089345135}
+  - component: {fileID: 8682816642677506109}
+  - component: {fileID: -1004138739603554364}
   m_Layer: 13
-  m_Name: Coin Drop
+  m_Name: Sniper Drop
   m_TagString: Drop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c68411398ac00fa4dbcdd7026327c0eb, type: 2}
+  - {fileID: 2100000, guid: b08a2683a48606d498d4960ce1aabcd7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -97,21 +97,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4053281750708700558
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4438630218146824919}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e821637d47768f94aa491ca72d752e13, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lifeTime: 10
-  shimmerStartTime: 2
---- !u!54 &2227721466089345135
+--- !u!54 &8682816642677506109
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -127,3 +113,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-1004138739603554364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4438630218146824919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3045fa3d02321ac4a89fdd0de37365a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeTime: 99
+  shimmerStartTime: 0
+  weaponType: 3

@@ -11,4 +11,9 @@ public class EnumDefinitions
         Chaingun = 2,
         Sniper = 3
     }
+
+    public enum MiscDropTypes
+    {
+        HP = 4
+    }
 }
