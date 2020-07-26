@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class EnemyCollisionAdvancedMovement : MonoBehaviour
+public class EnemyCollisionAdvancedMovement : MonoBehaviour, IEnemyMovement
 {
     private Transform player;
     private NavMeshAgent agent;
@@ -77,5 +77,10 @@ public class EnemyCollisionAdvancedMovement : MonoBehaviour
                 break;
         }
         currMovementState = state;
+    }
+
+    public void SetMovementSpeed()
+    {
+        print("Accessing this fine....");
     }
 }

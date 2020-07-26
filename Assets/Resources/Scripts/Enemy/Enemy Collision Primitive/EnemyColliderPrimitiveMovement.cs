@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Monetization;
 
-public class EnemyColliderPrimitiveMovement : MonoBehaviour
+public class EnemyColliderPrimitiveMovement : MonoBehaviour, IEnemyMovement
 {
     private Vector3 _currDirection { get; set; }
     private float _currMovementSpeed;
@@ -78,5 +78,10 @@ public class EnemyColliderPrimitiveMovement : MonoBehaviour
         }
         prevMovementState = currMovementState;
         currMovementState = state;
+    }
+
+    public void SetMovementSpeed()
+    {
+        
     }
 }

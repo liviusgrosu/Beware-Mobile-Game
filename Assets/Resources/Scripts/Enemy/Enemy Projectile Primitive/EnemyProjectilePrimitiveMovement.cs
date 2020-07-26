@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyProjectilePrimitiveMovement : MonoBehaviour
+public class EnemyProjectilePrimitiveMovement : MonoBehaviour, IEnemyMovement
 {
     private Vector3 _currDirection { get; set; }
     private float _currMovementSpeed;
@@ -129,5 +129,10 @@ public class EnemyProjectilePrimitiveMovement : MonoBehaviour
     {
         int[] directions = new int[] { 1, -1 };
         currDirection = new Vector3(directions[Random.Range(0, 2)], 0, directions[Random.Range(0, 2)]);
+    }
+
+    public void SetMovementSpeed()
+    {
+        print("Accessing this fine....");
     }
 }

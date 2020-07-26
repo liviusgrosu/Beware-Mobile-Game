@@ -57,6 +57,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -81,6 +82,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &483243058
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -142,13 +144,14 @@ GameObject:
   - component: {fileID: 241461533}
   - component: {fileID: 1502795496}
   - component: {fileID: 1502795497}
+  - component: {fileID: -6265430914669400877}
   m_Layer: 11
   m_Name: Enemy Projectile Dumb
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2615298062097794077
 Transform:
   m_ObjectHideFlags: 0
@@ -188,6 +191,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -212,6 +216,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!136 &2615298062097794075
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -254,7 +259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc6a7b413e5e2e54fb4522c858e0275c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  godMode: 1
+  godMode: 0
   maxHP: 4
   healthCellUI: {fileID: 1023857267034312492, guid: 2434dd89ddb0a104b90138e220615b31,
     type: 3}
@@ -275,7 +280,6 @@ MonoBehaviour:
   slowMovementSpeed: 0.05
   regMovementSpeed: 0.1
   fastMovementSpeed: 0.15
-  _behaviorState: 0
   movementTime: 3
   attackingTime: 3
 --- !u!114 &241461533
@@ -318,6 +322,22 @@ MonoBehaviour:
   weaponSpawn: {fileID: 1293479143}
   testWeapons:
   - {fileID: 5000509310322805231, guid: 6833f807f041f7f4bbce3507f26006e0, type: 3}
+--- !u!114 &-6265430914669400877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2615298062097794076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9ff908d2ac6f3643a93e02ceacd0325, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  containsVariant: 1
+  varientPrefab: {fileID: 2615298062097794076, guid: 5fa10206328169b49b7f695cbabffad1,
+    type: 3}
+  variantAmount: 2
 --- !u!1 &2615298062456324644
 GameObject:
   m_ObjectHideFlags: 0

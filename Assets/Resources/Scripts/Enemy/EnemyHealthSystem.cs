@@ -67,7 +67,7 @@ public class EnemyHealthSystem : MonoBehaviour
         currHP += amount;
 
         if (currHP <= 0)
-            enemyManager.RemoveEnemy(gameObject.name);
+            enemyManager.RemoveEnemy(gameObject.GetInstanceID());
         else if (currHP > maxHP)
             currHP = maxHP;
 

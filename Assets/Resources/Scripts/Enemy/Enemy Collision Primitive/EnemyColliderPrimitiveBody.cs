@@ -20,6 +20,13 @@ public class EnemyColliderPrimitiveBody : MonoBehaviour
                 Vector3 inNormal = col.contacts[0].normal;
                 movement.currDirection = Vector3.Reflect(inDirection, inNormal);
                 break;
+        }
+    }
+
+    private void OnCollisionStay(Collision col)
+    {
+        switch (col.gameObject.tag)
+        {
             case "Player":
                 //TODO: Change this so that this variable is accessed from a script that would make sense to store it
                 col.gameObject.GetComponent<PlayerHealthSystem>().ChangeHealth(-1);

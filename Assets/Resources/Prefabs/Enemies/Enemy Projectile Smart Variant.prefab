@@ -16,13 +16,11 @@ GameObject:
   - component: {fileID: 1358772872505442921}
   - component: {fileID: 7408171154461996996}
   - component: {fileID: 259839320579021727}
-  - component: {fileID: 4725044050736295175}
   - component: {fileID: 1690855373}
-  - component: {fileID: 8843846210773752772}
   - component: {fileID: 2868869684663617897}
   - component: {fileID: 4774285504579854403}
   m_Layer: 11
-  m_Name: Enemy Projectile Smart
+  m_Name: Enemy Projectile Smart Variant
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71,7 +69,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 652bdc183fb5a8345bdc63cd13b85623, type: 2}
+  - {fileID: 2100000, guid: 91f5feb81000a9a46a47b3b3fd689fd4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -166,23 +164,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   godMode: 0
-  maxHP: 2
+  maxHP: 1
   healthCellUI: {fileID: 1023857267034312492, guid: 2434dd89ddb0a104b90138e220615b31,
     type: 3}
   fullHPImg: {fileID: 21300000, guid: bc95fa4484c2be84390558616d7214c9, type: 3}
   emptyHPImg: {fileID: 21300000, guid: d6220756d6f795b4695c07acd6f871a2, type: 3}
---- !u!114 &4725044050736295175
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 259839320579021724}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fe9095ce6dc26c4381631795006d21b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1690855373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -198,22 +184,6 @@ MonoBehaviour:
   coinAmount: 2
   weaponDrops: 
   miscDrops: 
---- !u!114 &8843846210773752772
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 259839320579021724}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9ff908d2ac6f3643a93e02ceacd0325, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  containsVariant: 1
-  varientPrefab: {fileID: 259839320579021724, guid: 2c5a6bafab1351444b8f221d17218f68,
-    type: 3}
-  variantAmount: 2
 --- !u!114 &2868869684663617897
 MonoBehaviour:
   m_ObjectHideFlags: 0

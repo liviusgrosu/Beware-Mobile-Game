@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class EnemyProjectileAdvancedMovement : MonoBehaviour
+public class EnemyProjectileAdvancedMovement : MonoBehaviour, IEnemyMovement
 {
     private Transform player;
     private NavMeshAgent agent;
@@ -130,5 +130,10 @@ public class EnemyProjectileAdvancedMovement : MonoBehaviour
             }
 
         }
+    }
+
+    public void SetMovementSpeed()
+    {
+        print("Accessing this fine....");
     }
 }

@@ -2,49 +2,56 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
+using UnityEditor;
 using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
 {
-    public List<Transform> enemyList;
+    public Dictionary<int, Transform> enemyInstanceMap;
 
     private void Start()
     {
-        enemyList = new List<Transform>();
+        enemyInstanceMap = new Dictionary<int, Transform>();
         GenerateEnemyList();
     }
 
     private void GenerateEnemyList()
     {
         foreach (GameObject enemy in GameObject.FindGameObjectsWithTag("Enemy"))
-            enemyList.Add(enemy.transform);
+            AddEnemy(enemy.GetInstanceID(), enemy.transform);
     }
 
     //Get the enemy thats closest to the given position
     public Transform GetClosestEnemy(Vector3 pos)
     {
-        if (!enemyList.Any()) return null;
+        if (!enemyInstanceMap.Any()) return null;
 
-        Transform closestEnemy = enemyList.First();
-        foreach(Transform enemy in enemyList.Skip(1))
+        Transform closestEnemy = enemyInstanceMap.First().Value;
+        foreach(KeyValuePair<int, Transform> enemy in enemyInstanceMap.Skip(1))
         {
-            if (Vector3.Distance(pos, enemy.position) < Vector3.Distance(pos, closestEnemy.position))
-                closestEnemy = enemy;
+            if (Vector3.Distance(pos, enemy.Value.position) < Vector3.Distance(pos, closestEnemy.position))
+                closestEnemy = enemy.Value;
         }
         return closestEnemy;
     }
 
-    //Add an enemy to the enemy manager list and spawn it 
-    void AddEnemy()
+    //Add an enemies to the enemy manager list
+    public void AddEnemy(int enemyID, Transform enemyObj)
     {
+        enemyInstanceMap.Add(enemyID, enemyObj);
     }
 
     //Remove an enemy from the enemy manager list
-    public void RemoveEnemy(string enemyName)
+    public void RemoveEnemy(int enemyID)
     {
-        Transform destoryEnemy = enemyList.SingleOrDefault(r => r.name.Equals(enemyName));
-        if (destoryEnemy == null) return;
-        enemyList.Remove(destoryEnemy);
-        Destroy(destoryEnemy.gameObject);
+        Transform removedObj = enemyInstanceMap.SingleOrDefault(r => r.Key.Equals(enemyID)).Value;
+        if (removedObj == null) return;
+        enemyInstanceMap.Remove(enemyID);
+        Destroy(removedObj.gameObject);
+
+        /*        Transform enemyObj = enemyIdList.SingleOrDefault(r => r.Equals(enemyName));
+                if (enemyObj == null) return;
+                enemyIdList.Remove(enemyObj);
+                Destroy(enemyObj.gameObject);*/
     }
 }

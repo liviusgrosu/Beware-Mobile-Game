@@ -11,6 +11,19 @@ public class EnemyCollisionAdvancedBody : MonoBehaviour
     {
         movement = GetComponent<EnemyCollisionAdvancedMovement>();
     }
+
+    private void OnCollisionStay(Collision col)
+    {
+        switch (col.gameObject.tag)
+        {
+            case "Player":
+                //TODO: Change this so that this variable is accessed from a script that would make sense to store it
+                col.gameObject.GetComponent<PlayerHealthSystem>().ChangeHealth(-1);
+                break;
+        }
+    }
+
+
     private void OnTriggerEnter(Collider col)
     {
         switch (col.gameObject.tag)
