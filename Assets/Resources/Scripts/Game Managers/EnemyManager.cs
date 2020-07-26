@@ -8,6 +8,7 @@ using UnityEngine;
 public class EnemyManager : MonoBehaviour
 {
     public Dictionary<int, Transform> enemyInstanceMap;
+    Transform closestEnemy;
 
     private void Start()
     {
@@ -26,12 +27,16 @@ public class EnemyManager : MonoBehaviour
     {
         if (!enemyInstanceMap.Any()) return null;
 
-        Transform closestEnemy = enemyInstanceMap.First().Value;
+        if (closestEnemy != null) closestEnemy.gameObject.GetComponent<EnemyHitMarker>().ToggleHitmarker(false);
+
+        closestEnemy = enemyInstanceMap.First().Value;
         foreach(KeyValuePair<int, Transform> enemy in enemyInstanceMap.Skip(1))
         {
             if (Vector3.Distance(pos, enemy.Value.position) < Vector3.Distance(pos, closestEnemy.position))
                 closestEnemy = enemy.Value;
         }
+
+        closestEnemy.gameObject.GetComponent<EnemyHitMarker>().ToggleHitmarker(true);
         return closestEnemy;
     }
 
@@ -48,10 +53,5 @@ public class EnemyManager : MonoBehaviour
         if (removedObj == null) return;
         enemyInstanceMap.Remove(enemyID);
         Destroy(removedObj.gameObject);
-
-        /*        Transform enemyObj = enemyIdList.SingleOrDefault(r => r.Equals(enemyName));
-                if (enemyObj == null) return;
-                enemyIdList.Remove(enemyObj);
-                Destroy(enemyObj.gameObject);*/
     }
 }
