@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class MovementJoystickListener : MonoBehaviour, IDragHandler, IPointerDownHandler, IPointerUpHandler
 {
+    public Image directionIndicator;
+    public Image directionBackground;
     private Image background;
     private Image joystick;
     private Vector3 inputVector;
@@ -33,6 +35,7 @@ public class MovementJoystickListener : MonoBehaviour, IDragHandler, IPointerDow
             inputVector = (inputVector.magnitude > 1f) ? inputVector.normalized : inputVector;
 
             joystick.rectTransform.anchoredPosition = new Vector3(inputVector.x * (background.rectTransform.sizeDelta.x / 3), inputVector.z * (background.rectTransform.sizeDelta.y / 3));
+            directionIndicator.rectTransform.anchoredPosition = new Vector3(inputVector.x * 7f * (directionBackground.rectTransform.sizeDelta.x / 3), inputVector.z * 7f * (directionBackground.rectTransform.sizeDelta.y / 3));
         }
     }
 
@@ -45,6 +48,7 @@ public class MovementJoystickListener : MonoBehaviour, IDragHandler, IPointerDow
     {
         inputVector = Vector3.zero;
         joystick.rectTransform.anchoredPosition = Vector3.zero;
+        directionIndicator.rectTransform.anchoredPosition = Vector3.zero;
     }
 
     public float Horizontal()
