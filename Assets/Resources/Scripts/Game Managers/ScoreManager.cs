@@ -4,9 +4,11 @@ using System.ComponentModel;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ScoreManager : MonoBehaviour
+public class ScoreManager : MonoBehaviour, IUIElement
 {
-    
+
+    private bool isUIActive;
+
     [SerializeField]
     private int coinValue = 20;
 
@@ -47,5 +49,15 @@ public class ScoreManager : MonoBehaviour
     private void CalculateStarScore()
     {
         startTotal = 3 * (curScore / maxScore);
+    }
+
+    public void ToggleUI(bool state)
+    {
+        isUIActive = state;
+
+        foreach (Transform child in transform)
+        {
+            child.gameObject.SetActive(isUIActive);
+        }
     }
 }

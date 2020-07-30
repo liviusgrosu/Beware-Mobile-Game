@@ -22,7 +22,7 @@ public class WeaponController : MonoBehaviour
     {
         isPlayer = this.gameObject.tag == "Player" ? true : false; 
 
-        uiController = GameObject.Find("Weapon UI").GetComponent<WeaponUIController>();
+        uiController = GameObject.Find("Weapon Player UI").GetComponent<WeaponUIController>();
         SwitchWeapons(EnumDefinitions.WeaponType.Pistol);
     }
 

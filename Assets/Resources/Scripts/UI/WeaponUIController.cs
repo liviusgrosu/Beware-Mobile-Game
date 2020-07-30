@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class WeaponUIController : MonoBehaviour
+public class WeaponUIController : MonoBehaviour, IUIElement
 {
+    private bool isUIActive;
+
     [SerializeField]
     private Text curAmmoCountText, maxAmmoCountText;
     [SerializeField]
@@ -26,5 +28,15 @@ public class WeaponUIController : MonoBehaviour
     {
         weaponIconImg.sprite = weaponIcon;
         maxAmmoCountText.text = maxWeaponCount.ToString();
+    }
+
+    public void ToggleUI(bool state)
+    {
+        isUIActive = state;
+
+        foreach (Transform child in transform)
+        {
+            child.gameObject.SetActive(isUIActive);
+        }
     }
 }

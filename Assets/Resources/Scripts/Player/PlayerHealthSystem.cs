@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class PlayerHealthSystem : MonoBehaviour
 {
+
     public bool godMode;
 
     public int maxHP = 1;
@@ -71,7 +72,7 @@ public class PlayerHealthSystem : MonoBehaviour
 
         if (currHP > 0) currHP += amount;
 
-        if (currHP <= 0) print("player is dead...");
+        if (currHP <= 0) Die();
         else if (currHP > maxHP) currHP = maxHP;
 
         for (int i = 0; i < maxHP; i++)
@@ -83,9 +84,20 @@ public class PlayerHealthSystem : MonoBehaviour
         if(amount < 0) StartCoroutine(StayInvinsible());
     }
 
+    private void Die()
+    {
+        GetComponent<PlayerMovement>().enabled = false;
+        GetComponent<PlayerAttackingBehaviour>().enabled = false;
+    }
+
     public bool IsHealthFull()
     {
         return currHP == maxHP;
+    }
+
+    public bool IsHealthEmpty()
+    {
+        return currHP <= 0;
     }
 
     private IEnumerator StayInvinsible()

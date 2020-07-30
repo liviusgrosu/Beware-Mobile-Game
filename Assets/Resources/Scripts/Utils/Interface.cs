@@ -5,3 +5,8 @@ public interface IEnemyMovement
 {
     void SetMovementSpeed();
 }
+
+public interface IUIElement
+{
+    void ToggleUI(bool state);
+}
