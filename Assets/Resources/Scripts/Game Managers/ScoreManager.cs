@@ -20,7 +20,7 @@ public class ScoreManager : MonoBehaviour, IUIElement
     [SerializeField]
     private Text scoreText;
 
-    private int startTotal = 0;
+    public int starTotal = 0;
 
     private int maxScore 
     { 
@@ -33,6 +33,7 @@ public class ScoreManager : MonoBehaviour, IUIElement
         set { 
             _curScore = value;
             scoreText.text = _curScore.ToString();
+            starTotal = (int)(3 * ((float)curScore / (float)maxScore));
         }
     }
 
@@ -44,11 +45,6 @@ public class ScoreManager : MonoBehaviour, IUIElement
     public void AddCurrentScore()
     {
         curScore += coinValue;
-    }
-
-    private void CalculateStarScore()
-    {
-        startTotal = 3 * (curScore / maxScore);
     }
 
     public void ToggleUI(bool state)
