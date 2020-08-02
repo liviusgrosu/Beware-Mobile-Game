@@ -1625,6 +1625,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin Drop (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4438630218146824919, guid: d2bf755d43f8a434b9fafd8776c0d630,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7138185949964726621, guid: d2bf755d43f8a434b9fafd8776c0d630,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2555,6 +2560,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Coin Drop (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4438630218146824919, guid: d2bf755d43f8a434b9fafd8776c0d630,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7138185949964726621, guid: d2bf755d43f8a434b9fafd8776c0d630,
         type: 3}
@@ -5943,6 +5953,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Coin Drop
+      objectReference: {fileID: 0}
+    - target: {fileID: 4438630218146824919, guid: d2bf755d43f8a434b9fafd8776c0d630,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7138185949964726621, guid: d2bf755d43f8a434b9fafd8776c0d630,
         type: 3}
