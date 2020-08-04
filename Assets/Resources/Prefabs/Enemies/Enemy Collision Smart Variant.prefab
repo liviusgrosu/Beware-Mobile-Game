@@ -159,7 +159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   godMode: 0
-  maxHP: 2
+  maxHP: 1
   healthCellUI: {fileID: 1023857267034312492, guid: 2434dd89ddb0a104b90138e220615b31,
     type: 3}
   fullHPImg: {fileID: 21300000, guid: bc95fa4484c2be84390558616d7214c9, type: 3}
@@ -428,6 +428,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Hitmarker
+      objectReference: {fileID: 0}
+    - target: {fileID: 1113762913689125231, guid: a84a8b5b86ad4944e97d386b6168419f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a84a8b5b86ad4944e97d386b6168419f, type: 3}

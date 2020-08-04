@@ -335,7 +335,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9ff908d2ac6f3643a93e02ceacd0325, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  containsVariant: 1
+  containsVariant: 0
   varientPrefab: {fileID: 2615298062097794076, guid: 5fa10206328169b49b7f695cbabffad1,
     type: 3}
   variantAmount: 2

@@ -192,7 +192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9ff908d2ac6f3643a93e02ceacd0325, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  containsVariant: 1
+  containsVariant: 0
   varientPrefab: {fileID: 7456462585265003737, guid: d0532e59833e96247b670c9c53d02212,
     type: 3}
   variantAmount: 2
@@ -424,6 +424,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Hitmarker
+      objectReference: {fileID: 0}
+    - target: {fileID: 1113762913689125231, guid: a84a8b5b86ad4944e97d386b6168419f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a84a8b5b86ad4944e97d386b6168419f, type: 3}

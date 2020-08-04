@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody rb;
 
-    public MovementJoystickListener movementJoystickListener;
+    private MovementJoystickListener movementJoystickListener;
 
     private Vector3 inputDirection;
     private float zMove, xMove;
@@ -44,6 +44,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        movementJoystickListener = GameObject.Find("Virtual Joystick Background").GetComponent<MovementJoystickListener>();
 
         currMovementSpeed = regMovementSpeed;
     }

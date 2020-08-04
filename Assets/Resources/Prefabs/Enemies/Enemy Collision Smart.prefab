@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 2615298062097794078}
   - component: {fileID: 2066454523}
   - component: {fileID: 7505495554592694313}
+  - component: {fileID: 1780957658418185590}
   m_Layer: 12
   m_Name: Enemy Collision Smart
   m_TagString: Enemy
@@ -199,7 +200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9ff908d2ac6f3643a93e02ceacd0325, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  containsVariant: 1
+  containsVariant: 0
   varientPrefab: {fileID: 2615298062097794076, guid: 31046d7fb545267448f584f1383693ae,
     type: 3}
   variantAmount: 2
@@ -216,6 +217,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitmarkerUI: {fileID: 7263770263228550433}
+--- !u!114 &1780957658418185590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2615298062097794076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 789e3fd8be8bac045af20a1522adae24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinAmount: 0
+  weaponDrops: 
+  miscDrops: 
 --- !u!1 &2615298062456324644
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,7 +9,6 @@ public class EnemyManager : MonoBehaviour
 {
     public Dictionary<int, Transform> enemyInstanceMap;
     Transform closestEnemy;
-
     private void Start()
     {
         enemyInstanceMap = new Dictionary<int, Transform>();
@@ -53,5 +52,11 @@ public class EnemyManager : MonoBehaviour
         if (removedObj == null) return;
         enemyInstanceMap.Remove(enemyID);
         Destroy(removedObj.gameObject);
+    }
+
+    public bool IsMoreEnemies()
+    {
+        // This would change when the wave system is implemented
+        return enemyInstanceMap.Count != 0;
     }
 }
