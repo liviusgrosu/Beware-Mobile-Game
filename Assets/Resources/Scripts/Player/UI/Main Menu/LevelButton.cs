@@ -11,9 +11,14 @@ public class LevelButton : MonoBehaviour
 
     [SerializeField]
     private Sprite fullStar, emptyStar;
+    [SerializeField]
+    private Sprite lockedBackground, unlockedBackground;
+    private Transform lockedSymbol;
 
     void Awake()
     {
+        lockedSymbol = transform.Find("Locked Symbol");
+
         stars = new List<Image>();
         foreach (Image star in GetComponentsInChildren<Image>())
             stars.Add(star);
@@ -27,6 +32,23 @@ public class LevelButton : MonoBehaviour
         {
             stars[i].gameObject.SetActive(true);
             stars[i].sprite = (i <= starScore - 1) ? fullStar : emptyStar;
+        }
+    }
+
+    public void ToggleButton(bool? isUnlocked)
+    {
+        switch(isUnlocked)
+        {
+            case true:
+                GetComponent<Image>().sprite = unlockedBackground;
+                break;
+            case false:
+                lockedSymbol.gameObject.SetActive(true);
+                GetComponent<Button>().enabled = false;
+                GetComponent<Image>().sprite = lockedBackground;
+                break;
+            default:
+                return;
         }
     }
 }

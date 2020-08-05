@@ -39,10 +39,26 @@ public class LevelScreenUI : MonoBehaviour, IUIElement
 
         if(isUIActive)
         {
-            foreach (LevelButton button in levelButtons)
+            for(int i = 0; i < levelButtons.Count; i++)
             {
-                LevelData data = SaveSystem.LoadLevel(button.levelName);
-                button.ToggleStarImages((data != null) ? data.levelStarScore : 0);
+                if(i == 0)
+                {
+                    LevelData currLevelData = SaveSystem.LoadLevel(levelButtons.ElementAt(i).levelName);
+                    levelButtons.ElementAt(i).ToggleStarImages((currLevelData != null) ? currLevelData.levelStarScore : 0);
+                    levelButtons.ElementAt(i).ToggleButton(true);
+                }
+                else
+                {
+                    LevelData currLevelData = SaveSystem.LoadLevel(levelButtons.ElementAt(i).levelName);
+                    LevelData prevLevelData = SaveSystem.LoadLevel(levelButtons.ElementAt(i - 1).levelName);
+
+                    if (prevLevelData != null)
+                        levelButtons.ElementAt(i).ToggleButton(prevLevelData.levelFinished);
+                    else
+                        levelButtons.ElementAt(i).ToggleButton(false);
+
+                    levelButtons.ElementAt(i).ToggleStarImages((currLevelData != null) ? currLevelData.levelStarScore : 0);
+                }
             }
         }
     }

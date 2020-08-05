@@ -63,7 +63,7 @@ public class GameWinUI : MonoBehaviour, IUIElement
             for(int i = 0; i < starUI.Count; i++)
                 starUI.ElementAt(i).GetComponent<Image>().sprite = (i <= scoreManager.starTotal - 1) ? fullStar : emptyStar;
 
-            SaveSystem.SaveLevel(SceneManager.GetActiveScene().name, scoreManager.starTotal);
+            SaveSystem.SaveLevel(SceneManager.GetActiveScene().name, true, scoreManager.starTotal);
         }
     }
 }
