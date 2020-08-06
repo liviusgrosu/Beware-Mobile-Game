@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 2615298062097794079}
   - component: {fileID: 2615298062097794078}
   - component: {fileID: 3709196949680265205}
+  - component: {fileID: -5727812694556940990}
   m_Layer: 11
   m_Name: Enemy Collision Smart Variant
   m_TagString: Enemy
@@ -200,6 +201,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitmarkerUI: {fileID: 1113762913689125231, guid: a84a8b5b86ad4944e97d386b6168419f,
     type: 3}
+--- !u!114 &-5727812694556940990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2615298062097794076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9ff908d2ac6f3643a93e02ceacd0325, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  containsVariant: 0
+  varientPrefab: {fileID: 0}
+  variantAmount: 0
 --- !u!1 &2615298062456324644
 GameObject:
   m_ObjectHideFlags: 0

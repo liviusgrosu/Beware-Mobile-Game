@@ -19,6 +19,8 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private string levelNamePrefix;
 
+    public bool changingScene;
+
     private enum GameState
     { 
         Nil,
@@ -32,6 +34,7 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         gameState = GameState.Nil;
+        changingScene = false;
     }
 
     private void Start()
@@ -75,25 +78,32 @@ public class GameManager : MonoBehaviour
 
     public void RestartLevel()
     {
+        changingScene = true;
         SceneManager.LoadScene(currentSceneName);
     }
 
     public void GoBackToMainMenu()
     {
+        changingScene = true;
         SceneManager.LoadScene("MainMenuScene");
     }
     
     public void AdvanceLevel()
     {
-        try
-        {
-            string currSceneName = SceneManager.GetActiveScene().name;
-            int levelId = int.Parse(currSceneName.Split().Last()) + 1;
-            SceneManager.LoadScene($"{levelNamePrefix} {levelId}");
-        }
-        catch(Exception e)
-        {
-            SceneManager.LoadScene("MainMenuScene");
-        }
+        changingScene = true;
+        int nextLevelId = GetLevelId() + 1;
+        SceneManager.LoadScene($"{levelNamePrefix} {nextLevelId}");
+    }
+
+    public bool IsAnotherLevelAvailable()
+    {
+        int nextLevelId = GetLevelId() + 1;
+        return Application.CanStreamedLevelBeLoaded($"{levelNamePrefix} {nextLevelId}");
+    }
+
+    private int GetLevelId()
+    {
+        string currSceneName = SceneManager.GetActiveScene().name;
+        return int.Parse(currSceneName.Split().Last());
     }
 }

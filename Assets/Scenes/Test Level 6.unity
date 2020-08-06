@@ -286,6 +286,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy Projectile Dumb (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2615298062097794076, guid: 35c29cab7b5b26b48b48ebebc00fd101,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2615298062097794077, guid: 35c29cab7b5b26b48b48ebebc00fd101,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -340,6 +345,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2615298062097794079, guid: 35c29cab7b5b26b48b48ebebc00fd101,
+        type: 3}
+      propertyPath: maxHP
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35c29cab7b5b26b48b48ebebc00fd101, type: 3}
@@ -1297,6 +1307,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy Projectile Dumb
       objectReference: {fileID: 0}
+    - target: {fileID: 2615298062097794076, guid: 35c29cab7b5b26b48b48ebebc00fd101,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2615298062097794077, guid: 35c29cab7b5b26b48b48ebebc00fd101,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1352,6 +1367,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2615298062097794079, guid: 35c29cab7b5b26b48b48ebebc00fd101,
+        type: 3}
+      propertyPath: maxHP
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35c29cab7b5b26b48b48ebebc00fd101, type: 3}
 --- !u!4 &792285966 stripped
@@ -1367,10 +1387,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1122928630}
     m_Modifications:
+    - target: {fileID: 7456462585265003729, guid: d68a878cd99bb8d428b73b35ddb1f211,
+        type: 3}
+      propertyPath: maxHP
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7456462585265003737, guid: d68a878cd99bb8d428b73b35ddb1f211,
         type: 3}
       propertyPath: m_Name
       value: Enemy Collision Dumb (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7456462585265003737, guid: d68a878cd99bb8d428b73b35ddb1f211,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7456462585265003742, guid: d68a878cd99bb8d428b73b35ddb1f211,
         type: 3}
@@ -2288,10 +2318,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1122928630}
     m_Modifications:
+    - target: {fileID: 7456462585265003729, guid: d68a878cd99bb8d428b73b35ddb1f211,
+        type: 3}
+      propertyPath: maxHP
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7456462585265003737, guid: d68a878cd99bb8d428b73b35ddb1f211,
         type: 3}
       propertyPath: m_Name
       value: Enemy Collision Dumb
+      objectReference: {fileID: 0}
+    - target: {fileID: 7456462585265003737, guid: d68a878cd99bb8d428b73b35ddb1f211,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7456462585265003742, guid: d68a878cd99bb8d428b73b35ddb1f211,
         type: 3}

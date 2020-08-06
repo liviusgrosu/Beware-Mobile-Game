@@ -47,7 +47,7 @@ public class MovementJoystickListener : MonoBehaviour, IDragHandler, IPointerDow
             pos.x = (pos.x / background.rectTransform.sizeDelta.x);
             pos.y = (pos.y / background.rectTransform.sizeDelta.y);
 
-            inputVector = new Vector3(pos.x * 2, 0, pos.y * 2 - 1);
+            inputVector = new Vector3(pos.x * 2, 0, pos.y * 2);
             inputVector = (inputVector.magnitude > 1f) ? inputVector.normalized : inputVector;
 
             joystick.rectTransform.anchoredPosition = new Vector3(inputVector.x * (background.rectTransform.sizeDelta.x / 3), inputVector.z * (background.rectTransform.sizeDelta.y / 3));

@@ -36,23 +36,22 @@ public class PlayerAttackingBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        enemiesStillExist = enemyManager.GetClosestEnemy(transform.position) != null;
+        enemiesStillExist = enemyManager.IsMoreEnemies();
 
         if (movement.IsMoving())
         {
             if (weaponController.IsFiringWeapon()) weaponController.ToggleWeaponFire(false);
             //Find the nearest enemy when the player is moving 
             //This way its precalcuated and player doesn't switch
-            if(enemiesStillExist) nearestTarget = enemyManager.GetClosestEnemy(transform.position);
+            if (enemiesStillExist)
+                nearestTarget = enemyManager.GetClosestEnemy(transform.position);
             RotateTowardsTarget(LOOK_MOVEMENT);
         }
         else
         {
             if(enemiesStillExist)
-            {
-                //There needs to be a check if the enemy dies 
-                //If thats the case, it needs to target a new enemy
-                //However if there is no targets then just return from here 
+            { 
+                //If an enemy dies then change to the nearest alive one
                 if (nearestTarget == null)
                     nearestTarget = enemyManager.GetClosestEnemy(transform.position);
                 

@@ -192,6 +192,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 774874787}
     m_Modifications:
+    - target: {fileID: 7456462585265003729, guid: d68a878cd99bb8d428b73b35ddb1f211,
+        type: 3}
+      propertyPath: godMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7456462585265003734, guid: d68a878cd99bb8d428b73b35ddb1f211,
+        type: 3}
+      propertyPath: coinAmount
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7456462585265003737, guid: d68a878cd99bb8d428b73b35ddb1f211,
         type: 3}
       propertyPath: m_Name
@@ -200,7 +210,7 @@ PrefabInstance:
     - target: {fileID: 7456462585265003737, guid: d68a878cd99bb8d428b73b35ddb1f211,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7456462585265003742, guid: d68a878cd99bb8d428b73b35ddb1f211,
         type: 3}
@@ -635,7 +645,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &197547732
 Transform:
   m_ObjectHideFlags: 0
@@ -2465,6 +2475,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Slime Obstacles (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 3867525202678766288, guid: 67b6db24d8fc3b34eae6f5dfafc0d4bf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3867525202678766289, guid: 67b6db24d8fc3b34eae6f5dfafc0d4bf,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2937,6 +2952,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Slime Obstacles (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 3867525202678766288, guid: 67b6db24d8fc3b34eae6f5dfafc0d4bf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3867525202678766289, guid: 67b6db24d8fc3b34eae6f5dfafc0d4bf,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3093,6 +3113,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Slime Obstacles (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3867525202678766288, guid: 67b6db24d8fc3b34eae6f5dfafc0d4bf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3867525202678766289, guid: 67b6db24d8fc3b34eae6f5dfafc0d4bf,
         type: 3}
@@ -3602,6 +3627,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Slime Obstacles (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 3867525202678766288, guid: 67b6db24d8fc3b34eae6f5dfafc0d4bf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3867525202678766289, guid: 67b6db24d8fc3b34eae6f5dfafc0d4bf,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3836,6 +3866,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Slime Obstacles (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3867525202678766288, guid: 67b6db24d8fc3b34eae6f5dfafc0d4bf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3867525202678766289, guid: 67b6db24d8fc3b34eae6f5dfafc0d4bf,
         type: 3}
@@ -4097,6 +4132,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 774874787}
     m_Modifications:
+    - target: {fileID: 1908296113, guid: d68a878cd99bb8d428b73b35ddb1f211, type: 3}
+      propertyPath: containsVariant
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7456462585265003729, guid: d68a878cd99bb8d428b73b35ddb1f211,
+        type: 3}
+      propertyPath: godMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7456462585265003734, guid: d68a878cd99bb8d428b73b35ddb1f211,
+        type: 3}
+      propertyPath: coinAmount
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7456462585265003737, guid: d68a878cd99bb8d428b73b35ddb1f211,
         type: 3}
       propertyPath: m_Name
@@ -4105,7 +4154,7 @@ PrefabInstance:
     - target: {fileID: 7456462585265003737, guid: d68a878cd99bb8d428b73b35ddb1f211,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7456462585265003742, guid: d68a878cd99bb8d428b73b35ddb1f211,
         type: 3}
@@ -5280,7 +5329,7 @@ PrefabInstance:
     - target: {fileID: 2615298062097794076, guid: 356f6c71bd76eb941aabda4b3d3eea75,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2615298062097794077, guid: 356f6c71bd76eb941aabda4b3d3eea75,
         type: 3}
@@ -6232,7 +6281,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2074311496
 Transform:
   m_ObjectHideFlags: 0
@@ -6470,6 +6519,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PI Background
       objectReference: {fileID: 0}
+    - target: {fileID: 1118917573193087553, guid: 587099c01b5bba2499f15e917746dfb9,
+        type: 3}
+      propertyPath: godMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1118917573193087554, guid: 587099c01b5bba2499f15e917746dfb9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6604,6 +6658,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle
       objectReference: {fileID: 0}
+    - target: {fileID: 2372407133229540831, guid: 622933c8def5b8a4d92f53cce86aee45,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 622933c8def5b8a4d92f53cce86aee45, type: 3}
 --- !u!1001 &3867525202877919744
@@ -6627,6 +6686,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Slime Obstacles (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3867525202678766288, guid: 67b6db24d8fc3b34eae6f5dfafc0d4bf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3867525202678766289, guid: 67b6db24d8fc3b34eae6f5dfafc0d4bf,
         type: 3}
@@ -7032,6 +7096,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Slime Obstacles (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3867525202678766288, guid: 67b6db24d8fc3b34eae6f5dfafc0d4bf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3867525202678766289, guid: 67b6db24d8fc3b34eae6f5dfafc0d4bf,
         type: 3}

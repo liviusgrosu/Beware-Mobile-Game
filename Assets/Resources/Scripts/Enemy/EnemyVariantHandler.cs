@@ -10,21 +10,14 @@ public class EnemyVariantHandler : MonoBehaviour
 
     EnemyManager enemyManager;
 
-    private bool isQuitting;
-
     private void Start()
     {
         enemyManager = GameObject.Find("Enemy Manager").GetComponent<EnemyManager>();
     }
 
-    void OnApplicationQuit()
+    public void SpawnVariant()
     {
-        isQuitting = true;
-    }
-
-    void OnDestroy()
-    {
-        if (!isQuitting && containsVariant)
+        if (containsVariant)
         {
             for(int i = 0; i < variantAmount; i++)
             {

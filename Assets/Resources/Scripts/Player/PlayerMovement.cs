@@ -40,6 +40,11 @@ public class PlayerMovement : MonoBehaviour
 
     private MovementState currMovementState, prevMovementState;
 
+    private void Awake()
+    {
+        currMovementState = MovementState.Regular;
+    }
+
     // Start is called before the first frame update
     void Start()
     {

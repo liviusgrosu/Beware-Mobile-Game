@@ -11,6 +11,8 @@ public class EnemyHealthSystem : MonoBehaviour
     private int currHP;
 
     private EnemyManager enemyManager;
+    private EnemyDropHandler dropHandler;
+    private EnemyVariantHandler variantHandler;
 
     [SerializeField]
     private GameObject healthCellUI;
@@ -24,9 +26,10 @@ public class EnemyHealthSystem : MonoBehaviour
     private float cellSpacing = 0.05f;
     private float cellWidth;
 
-    private void Start()
+    private void Awake()
     {
-        enemyManager = GameObject.Find("Enemy Manager").GetComponent<EnemyManager>();
+        dropHandler = GetComponent<EnemyDropHandler>();
+        variantHandler = GetComponent<EnemyVariantHandler>();
 
         canvas = transform.GetChild(0);
         healthBar = new List<GameObject>();
@@ -35,6 +38,11 @@ public class EnemyHealthSystem : MonoBehaviour
         currHP = maxHP;
 
         InitHealthUI();
+    }
+
+    private void Start()
+    {
+        enemyManager = GameObject.Find("Enemy Manager").GetComponent<EnemyManager>();
     }
 
     private void InitHealthUI()
@@ -67,7 +75,10 @@ public class EnemyHealthSystem : MonoBehaviour
         currHP += amount;
 
         if (currHP <= 0)
+        {
+            dropHandler.DropLoot();
             enemyManager.RemoveEnemy(gameObject.GetInstanceID());
+        }
         else if (currHP > maxHP)
             currHP = maxHP;
 

@@ -16,6 +16,9 @@ public class GameWinUI : MonoBehaviour, IUIElement
 
     public Sprite emptyStar, fullStar;
 
+    [SerializeField] private Sprite lockedBackground;
+    [SerializeField] private Transform advanceLevelButton;
+
     private void Awake()
     {
         scoreManager = GameObject.Find("Score Manager").GetComponent<ScoreManager>();
@@ -64,6 +67,12 @@ public class GameWinUI : MonoBehaviour, IUIElement
                 starUI.ElementAt(i).GetComponent<Image>().sprite = (i <= scoreManager.starTotal - 1) ? fullStar : emptyStar;
 
             SaveSystem.SaveLevel(SceneManager.GetActiveScene().name, true, scoreManager.starTotal);
+
+            if (!gameManager.IsAnotherLevelAvailable())
+            {
+                advanceLevelButton.GetComponent<Button>().enabled = false;
+                advanceLevelButton.GetComponent<Image>().sprite = lockedBackground;
+            }
         }
     }
 }

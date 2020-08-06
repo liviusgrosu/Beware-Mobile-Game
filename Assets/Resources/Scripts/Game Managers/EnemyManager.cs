@@ -8,7 +8,7 @@ using UnityEngine;
 public class EnemyManager : MonoBehaviour
 {
     public Dictionary<int, Transform> enemyInstanceMap;
-    Transform closestEnemy;
+    Transform currentClosestEnemy, previousClosestEnemy;
     private void Start()
     {
         enemyInstanceMap = new Dictionary<int, Transform>();
@@ -26,17 +26,17 @@ public class EnemyManager : MonoBehaviour
     {
         if (!enemyInstanceMap.Any()) return null;
 
-        if (closestEnemy != null) closestEnemy.gameObject.GetComponent<EnemyHitMarker>().ToggleHitmarker(false);
+        if (currentClosestEnemy != null) currentClosestEnemy.gameObject.GetComponent<EnemyHitMarker>().ToggleHitmarker(false);
 
-        closestEnemy = enemyInstanceMap.First().Value;
+        currentClosestEnemy = enemyInstanceMap.First().Value;
         foreach(KeyValuePair<int, Transform> enemy in enemyInstanceMap.Skip(1))
         {
-            if (Vector3.Distance(pos, enemy.Value.position) < Vector3.Distance(pos, closestEnemy.position))
-                closestEnemy = enemy.Value;
+            if (Vector3.Distance(pos, enemy.Value.position) < Vector3.Distance(pos, currentClosestEnemy.position))
+                currentClosestEnemy = enemy.Value;
         }
 
-        closestEnemy.gameObject.GetComponent<EnemyHitMarker>().ToggleHitmarker(true);
-        return closestEnemy;
+        currentClosestEnemy.gameObject.GetComponent<EnemyHitMarker>().ToggleHitmarker(true);
+        return currentClosestEnemy;
     }
 
     //Add an enemies to the enemy manager list

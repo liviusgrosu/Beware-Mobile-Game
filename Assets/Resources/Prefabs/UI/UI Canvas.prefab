@@ -1497,6 +1497,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   emptyStar: {fileID: 21300000, guid: 60d8e4faaa835a444b67a01fd9f852f4, type: 3}
   fullStar: {fileID: 21300000, guid: bd0cae0cad528b74794d96a4aa31afc4, type: 3}
+  lockedBackground: {fileID: 21300000, guid: 4d0ab1924d1a6664ca466a3b04146b7d, type: 3}
+  advanceLevelButton: {fileID: 6220588619660756958}
 --- !u!1 &6220588618903862670
 GameObject:
   m_ObjectHideFlags: 0
