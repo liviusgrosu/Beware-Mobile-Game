@@ -773,7 +773,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -883,7 +883,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -1308,7 +1308,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -1386,7 +1386,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -1464,7 +1464,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -1996,7 +1996,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -2074,7 +2074,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -2247,7 +2247,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -2426,7 +2426,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -3055,7 +3055,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -3720,7 +3720,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -3811,7 +3811,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -4697,7 +4697,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -5242,7 +5242,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -5280,7 +5280,7 @@ PrefabInstance:
     - target: {fileID: 2615298062097794076, guid: 356f6c71bd76eb941aabda4b3d3eea75,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2615298062097794077, guid: 356f6c71bd76eb941aabda4b3d3eea75,
         type: 3}
@@ -5991,7 +5991,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -6119,7 +6119,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -6197,7 +6197,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -6547,7 +6547,7 @@ PrefabInstance:
     - target: {fileID: 2372407133229540824, guid: 622933c8def5b8a4d92f53cce86aee45,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 2372407133229540824, guid: 622933c8def5b8a4d92f53cce86aee45,
         type: 3}
@@ -6557,7 +6557,7 @@ PrefabInstance:
     - target: {fileID: 2372407133229540824, guid: 622933c8def5b8a4d92f53cce86aee45,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -1.75
       objectReference: {fileID: 0}
     - target: {fileID: 2372407133229540824, guid: 622933c8def5b8a4d92f53cce86aee45,
         type: 3}
@@ -7157,6 +7157,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7688799014472507846, guid: 71e6efe29319b34479e405d07bcbeb27,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7688799014472507847, guid: 71e6efe29319b34479e405d07bcbeb27,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71e6efe29319b34479e405d07bcbeb27, type: 3}
 --- !u!1001 &7938070682163412957
@@ -7243,12 +7253,12 @@ PrefabInstance:
     - target: {fileID: 8731201144190871006, guid: 4b8d34b2f7268d84bbd114f93ba4de6d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.4210855e-14
       objectReference: {fileID: 0}
     - target: {fileID: 8731201144190871006, guid: 4b8d34b2f7268d84bbd114f93ba4de6d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.75
+      value: -1.7500001
       objectReference: {fileID: 0}
     - target: {fileID: 8731201144190871006, guid: 4b8d34b2f7268d84bbd114f93ba4de6d,
         type: 3}
@@ -7289,6 +7299,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8731201144190871006, guid: 4b8d34b2f7268d84bbd114f93ba4de6d,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.9000034
+      objectReference: {fileID: 0}
+    - target: {fileID: 8731201144190871006, guid: 4b8d34b2f7268d84bbd114f93ba4de6d,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.35000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8731201144190871006, guid: 4b8d34b2f7268d84bbd114f93ba4de6d,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.09999998
       objectReference: {fileID: 0}
     - target: {fileID: 8731201144190871007, guid: 4b8d34b2f7268d84bbd114f93ba4de6d,
         type: 3}

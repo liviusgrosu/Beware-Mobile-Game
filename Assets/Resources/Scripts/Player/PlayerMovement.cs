@@ -65,7 +65,10 @@ public class PlayerMovement : MonoBehaviour
         inputDirection = new Vector3(xMove, 0, zMove);
         inputDirection = inputDirection.normalized * currMovementSpeed;
 
-        rb.MovePosition(transform.position + inputDirection);
+        if (inputDirection.magnitude != 0)
+            rb.MovePosition(transform.position + inputDirection);
+        else
+            rb.velocity = Vector3.zero;
     }
 
     //Deal with slowing down
