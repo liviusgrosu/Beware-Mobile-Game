@@ -39,25 +39,20 @@ public class LevelScreenUI : MonoBehaviour, IUIElement
 
         if(isUIActive)
         {
-            for(int i = 0; i < levelButtons.Count; i++)
+            LevelData currLevelData, prevLevelData;
+            LevelButton currLevel;
+            for (int i = 0; i < levelButtons.Count; i++)
             {
-                if(i == 0)
-                {
-                    LevelData currLevelData = SaveSystem.LoadLevel(levelButtons.ElementAt(i).levelName);
-                    levelButtons.ElementAt(i).ToggleStarImages((currLevelData != null) ? currLevelData.levelStarScore : 0);
-                    levelButtons.ElementAt(i).ToggleButton(true);
-                }
+                currLevel = levelButtons.ElementAt(i);
+                currLevelData = SaveSystem.LoadLevel(currLevel.levelName);
+                levelButtons.ElementAt(i).ToggleStarImages((currLevelData != null) ? currLevelData.levelStarScore : 0);
+
+                if (i == 0) currLevel.ToggleButton(true);
                 else
                 {
-                    LevelData currLevelData = SaveSystem.LoadLevel(levelButtons.ElementAt(i).levelName);
-                    LevelData prevLevelData = SaveSystem.LoadLevel(levelButtons.ElementAt(i - 1).levelName);
-
-                    if (prevLevelData != null)
-                        levelButtons.ElementAt(i).ToggleButton(prevLevelData.levelFinished);
-                    else
-                        levelButtons.ElementAt(i).ToggleButton(false);
-
-                    levelButtons.ElementAt(i).ToggleStarImages((currLevelData != null) ? currLevelData.levelStarScore : 0);
+                    prevLevelData = SaveSystem.LoadLevel(levelButtons.ElementAt(i - 1).levelName);
+                    if (prevLevelData != null) currLevel.ToggleButton(prevLevelData.levelFinished);
+                    else currLevel.ToggleButton(false);
                 }
             }
         }

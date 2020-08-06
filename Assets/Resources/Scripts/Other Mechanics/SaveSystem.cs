@@ -26,7 +26,6 @@ public class SaveSystem : MonoBehaviour
             FileStream stream = new FileStream(path, FileMode.Open);
             LevelData data = formatter.Deserialize(stream) as LevelData;
 
-            print(path);
             stream.Close();
             return data;
         }

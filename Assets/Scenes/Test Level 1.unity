@@ -609,6 +609,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 881559247808419412, guid: b1862ebaca2ca5d44a0f320f5daabb44,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4757825044972602908, guid: b1862ebaca2ca5d44a0f320f5daabb44,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5088023409349341139, guid: b1862ebaca2ca5d44a0f320f5daabb44,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6220588619073007379, guid: b1862ebaca2ca5d44a0f320f5daabb44,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -718,6 +733,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: UI Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6761144967158344503, guid: b1862ebaca2ca5d44a0f320f5daabb44,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b1862ebaca2ca5d44a0f320f5daabb44, type: 3}
