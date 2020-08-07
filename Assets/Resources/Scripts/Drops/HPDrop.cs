@@ -27,9 +27,9 @@ public class HPDrop : MonoBehaviour
         if (currExistanceTime < slowShimmerStartTime)
             colourAlpha = 1f;
         if (currExistanceTime >= slowShimmerStartTime && currExistanceTime < fastShimmerStartTime)
-            colourAlpha = Mathf.PingPong(Time.time, 0.75f) * 1.333f;
+            colourAlpha = Mathf.PingPong(Time.time, 0.75f) * 1.333f; // Change this to math.sin
         else if (currExistanceTime >= fastShimmerStartTime && currExistanceTime < lifeTime)
-            colourAlpha = Mathf.PingPong(Time.time, 0.25f) * 4f;
+            colourAlpha = Mathf.PingPong(Time.time, 0.25f) * 4f; // Change this to math.sin
         else if (currExistanceTime >= lifeTime)
             Destroy(this.gameObject);
 

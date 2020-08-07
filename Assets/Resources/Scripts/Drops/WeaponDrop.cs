@@ -25,7 +25,6 @@ public class WeaponDrop : MonoBehaviour
         currMatCol = rend.material.color;
     }
 
-
     private void Update()
     {
         if (currExistanceTime < slowShimmerStartTime)
