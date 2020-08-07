@@ -7,19 +7,38 @@ public class WeaponDrop : MonoBehaviour
     [SerializeField]
     private float lifeTime;
     [SerializeField]
-    private float shimmerStartTime;
+    private float slowShimmerStartTime, fastShimmerStartTime;
+
+    private float currExistanceTime = 0f;
+
+    private Renderer rend;
+    private Color currMatCol;
+
+    private float colourAlpha;
+
     [SerializeField]
     private EnumDefinitions.WeaponType weaponType;
 
     private void Awake()
     {
-        StartCoroutine(WaitAndDestroy());
+        rend = GetComponent<Renderer>();
+        currMatCol = rend.material.color;
     }
 
-    IEnumerator WaitAndDestroy()
+
+    private void Update()
     {
-        yield return new WaitForSeconds(lifeTime);
-        Destroy(this.gameObject);
+        if (currExistanceTime < slowShimmerStartTime)
+            colourAlpha = 1f;
+        if (currExistanceTime >= slowShimmerStartTime && currExistanceTime < fastShimmerStartTime)
+            colourAlpha = Mathf.PingPong(Time.time, 0.75f) * 1.333f;
+        else if (currExistanceTime >= fastShimmerStartTime && currExistanceTime < lifeTime)
+            colourAlpha = Mathf.PingPong(Time.time, 0.25f) * 4f;
+        else if (currExistanceTime >= lifeTime)
+            Destroy(this.gameObject);
+
+        currExistanceTime += Time.deltaTime;
+        rend.material.color = new Color(currMatCol.r, currMatCol.g, currMatCol.b, colourAlpha);
     }
 
     private void OnTriggerEnter(Collider col)

@@ -126,4 +126,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifeTime: 3
-  shimmerStartTime: 3
+  slowShimmerStartTime: 1
+  fastShimmerStartTime: 2
