@@ -2,9 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerAudioController : MonoBehaviour
+public class SoundController : MonoBehaviour
 {
     private AudioSource audioSrc;
+
+    [Header("Enemy Sounds")]
+    [SerializeField] private AudioClip enemySpawnSound;
+    [SerializeField] private AudioClip enemyDeathSound;
+    [SerializeField] private AudioClip enemyWallBounceSound;
 
     [Header("Weapon Sound")]
     [SerializeField] private AudioClip pistolSound;
@@ -12,14 +17,32 @@ public class PlayerAudioController : MonoBehaviour
     [SerializeField] private AudioClip shotgunSound;
     [SerializeField] private AudioClip chainSound;
 
+    [Header("Player Sound")]
+    [SerializeField] private AudioClip playerHitSound;
+
     private void Awake()
     {
         audioSrc = GetComponent<AudioSource>();
     }
 
+    public void PlayEnemySpawnSound()
+    {
+        audioSrc.PlayOneShot(enemySpawnSound);
+    }
+
+    public void PlayEnemyDeathSound()
+    {
+        audioSrc.PlayOneShot(enemyDeathSound);
+    }
+
+    public void PlayEnemyWallBounce()
+    {
+        audioSrc.PlayOneShot(enemyWallBounceSound);
+    }
+
     public void PlayWeaponFireSound(EnumDefinitions.WeaponType weapon)
     {
-        switch(weapon)
+        switch (weapon)
         {
             case EnumDefinitions.WeaponType.Pistol:
                 audioSrc.PlayOneShot(pistolSound);
@@ -34,5 +57,10 @@ public class PlayerAudioController : MonoBehaviour
                 audioSrc.PlayOneShot(chainSound);
                 break;
         }
+    }
+    
+    public void PlayPlayerHitSound()
+    {
+        audioSrc.PlayOneShot(playerHitSound);
     }
 }

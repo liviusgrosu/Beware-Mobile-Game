@@ -14,6 +14,8 @@ public class EnemyHealthSystem : MonoBehaviour
     private EnemyDropHandler dropHandler;
     private EnemyVariantHandler variantHandler;
 
+    private SoundController audioController;
+
     [SerializeField]
     private GameObject healthCellUI;
     private List<GameObject> healthBar;
@@ -29,8 +31,8 @@ public class EnemyHealthSystem : MonoBehaviour
     private void Awake()
     {
         dropHandler = GetComponent<EnemyDropHandler>();
-        if (dropHandler == null) print("its null");
         variantHandler = GetComponent<EnemyVariantHandler>();
+
 
         canvas = transform.GetChild(0);
         healthBar = new List<GameObject>();
@@ -44,6 +46,9 @@ public class EnemyHealthSystem : MonoBehaviour
     private void Start()
     {
         enemyManager = GameObject.Find("Enemy Manager").GetComponent<EnemyManager>();
+        audioController = GameObject.Find("Sound Controller").GetComponent<SoundController>();
+
+        audioController.PlayEnemySpawnSound();
     }
 
     private void InitHealthUI()
@@ -77,7 +82,9 @@ public class EnemyHealthSystem : MonoBehaviour
 
         if (currHP <= 0)
         {
+            audioController.PlayEnemyDeathSound();
             dropHandler.DropLoot();
+            variantHandler.SpawnVariant();
             enemyManager.RemoveEnemy(gameObject.GetInstanceID());
         }
         else if (currHP > maxHP)

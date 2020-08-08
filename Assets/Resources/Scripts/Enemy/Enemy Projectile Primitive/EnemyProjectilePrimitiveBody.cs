@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class EnemyProjectilePrimitiveBody : MonoBehaviour
 {
+    private SoundController soundController;
+
     EnemyProjectilePrimitiveMovement movement;
 
     private void Start()
     {
         movement = GetComponent<EnemyProjectilePrimitiveMovement>();
+        soundController = GameObject.Find("Sound Controller").GetComponent<SoundController>();
     }
 
     private void OnCollisionEnter(Collision col)
@@ -19,6 +22,7 @@ public class EnemyProjectilePrimitiveBody : MonoBehaviour
                 Vector3 inDirection = movement.currDirection;
                 Vector3 inNormal = col.contacts[0].normal;
                 movement.currDirection = Vector3.Reflect(inDirection, inNormal);
+                soundController.PlayEnemyWallBounce();
                 break;
         }
     }

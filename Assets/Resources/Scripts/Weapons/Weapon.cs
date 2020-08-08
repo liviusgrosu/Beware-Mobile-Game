@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    private PlayerAudioController audioController;
+    private SoundController audioController;
     [SerializeField] private EnumDefinitions.WeaponType weaponType;
 
     [Header("Projectile Properties")]
@@ -60,7 +60,7 @@ public class Weapon : MonoBehaviour
     private void Update()
     {
         if(audioController == null)
-            audioController = transform.root.GetComponent<PlayerAudioController>();
+            audioController = GameObject.Find("Sound Controller").GetComponent<SoundController>();
     }
 
     public void ToggleFiring(bool state)

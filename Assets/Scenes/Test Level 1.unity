@@ -330,6 +330,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &143166764 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1618130571, guid: d68a878cd99bb8d428b73b35ddb1f211,
+    type: 3}
+  m_PrefabInstance: {fileID: 1352561427}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &156589790
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -337,39 +343,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 879137882}
     m_Modifications:
-    - target: {fileID: 1908296113, guid: d68a878cd99bb8d428b73b35ddb1f211, type: 3}
-      propertyPath: containsVariant
+    - target: {fileID: 460360658, guid: d68a878cd99bb8d428b73b35ddb1f211, type: 3}
+      propertyPath: audioSrc
+      value: 
+      objectReference: {fileID: 143166764}
+    - target: {fileID: 1618130571, guid: d68a878cd99bb8d428b73b35ddb1f211, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1618130571, guid: d68a878cd99bb8d428b73b35ddb1f211, type: 3}
+      propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7456462585265003729, guid: d68a878cd99bb8d428b73b35ddb1f211,
-        type: 3}
-      propertyPath: godMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7456462585265003734, guid: d68a878cd99bb8d428b73b35ddb1f211,
-        type: 3}
-      propertyPath: miscDrops.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7456462585265003734, guid: d68a878cd99bb8d428b73b35ddb1f211,
-        type: 3}
-      propertyPath: miscDrops.Array.data[0]
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7456462585265003734, guid: d68a878cd99bb8d428b73b35ddb1f211,
-        type: 3}
-      propertyPath: coinAmount
-      value: 2
+    - target: {fileID: 1618130571, guid: d68a878cd99bb8d428b73b35ddb1f211, type: 3}
+      propertyPath: Priority
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 7456462585265003737, guid: d68a878cd99bb8d428b73b35ddb1f211,
         type: 3}
       propertyPath: m_Name
       value: Enemy Collision Dumb (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7456462585265003737, guid: d68a878cd99bb8d428b73b35ddb1f211,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7456462585265003742, guid: d68a878cd99bb8d428b73b35ddb1f211,
         type: 3}
@@ -872,34 +865,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 879137882}
     m_Modifications:
-    - target: {fileID: 1908296113, guid: d68a878cd99bb8d428b73b35ddb1f211, type: 3}
-      propertyPath: containsVariant
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7456462585265003729, guid: d68a878cd99bb8d428b73b35ddb1f211,
-        type: 3}
-      propertyPath: godMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7456462585265003729, guid: d68a878cd99bb8d428b73b35ddb1f211,
-        type: 3}
-      propertyPath: maxHP
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7456462585265003734, guid: d68a878cd99bb8d428b73b35ddb1f211,
-        type: 3}
-      propertyPath: coinAmount
-      value: 1
-      objectReference: {fileID: 0}
+    - target: {fileID: 460360658, guid: d68a878cd99bb8d428b73b35ddb1f211, type: 3}
+      propertyPath: audioSrc
+      value: 
+      objectReference: {fileID: 143166764}
     - target: {fileID: 7456462585265003737, guid: d68a878cd99bb8d428b73b35ddb1f211,
         type: 3}
       propertyPath: m_Name
       value: Enemy Collision Dumb (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7456462585265003737, guid: d68a878cd99bb8d428b73b35ddb1f211,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7456462585265003742, guid: d68a878cd99bb8d428b73b35ddb1f211,
         type: 3}
@@ -1184,11 +1157,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1118917573193087553, guid: 587099c01b5bba2499f15e917746dfb9,
-        type: 3}
-      propertyPath: godMode
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1118917573193087554, guid: 587099c01b5bba2499f15e917746dfb9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1320,28 +1288,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb3e6f06f53b5e84a926922d51639d8d, type: 3}
---- !u!1 &1049145185 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1118917573193087933, guid: 587099c01b5bba2499f15e917746dfb9,
-    type: 3}
-  m_PrefabInstance: {fileID: 891238706}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1049145195
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1049145185}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed10e7d2dd109854ca6f538c53c634e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pistolSound: {fileID: 8300000, guid: d851cff00f0467c48a45fcfa393b5868, type: 3}
-  sniperSound: {fileID: 8300000, guid: 221986af81b0a2f4194b42f75f206f0e, type: 3}
-  shotgunSound: {fileID: 8300000, guid: 88d32fff111b1d54789d4c2fdd5014d4, type: 3}
-  chainSound: {fileID: 8300000, guid: d851cff00f0467c48a45fcfa393b5868, type: 3}
 --- !u!1001 &1053237643
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1508,34 +1454,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 879137882}
     m_Modifications:
-    - target: {fileID: 1908296113, guid: d68a878cd99bb8d428b73b35ddb1f211, type: 3}
-      propertyPath: containsVariant
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7456462585265003729, guid: d68a878cd99bb8d428b73b35ddb1f211,
-        type: 3}
-      propertyPath: godMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7456462585265003729, guid: d68a878cd99bb8d428b73b35ddb1f211,
-        type: 3}
-      propertyPath: maxHP
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7456462585265003734, guid: d68a878cd99bb8d428b73b35ddb1f211,
-        type: 3}
-      propertyPath: coinAmount
-      value: 1
-      objectReference: {fileID: 0}
+    - target: {fileID: 460360658, guid: d68a878cd99bb8d428b73b35ddb1f211, type: 3}
+      propertyPath: audioSrc
+      value: 
+      objectReference: {fileID: 143166764}
     - target: {fileID: 7456462585265003737, guid: d68a878cd99bb8d428b73b35ddb1f211,
         type: 3}
       propertyPath: m_Name
       value: Enemy Collision Dumb
-      objectReference: {fileID: 0}
-    - target: {fileID: 7456462585265003737, guid: d68a878cd99bb8d428b73b35ddb1f211,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7456462585265003742, guid: d68a878cd99bb8d428b73b35ddb1f211,
         type: 3}

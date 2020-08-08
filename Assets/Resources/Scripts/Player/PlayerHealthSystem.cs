@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class PlayerHealthSystem : MonoBehaviour
 {
+    private SoundController soundController;
 
     public bool godMode;
 
@@ -34,6 +35,8 @@ public class PlayerHealthSystem : MonoBehaviour
 
     private void Start()
     {
+        soundController = GameObject.Find("Sound Controller").GetComponent<SoundController>();
+
         canvas = transform.GetChild(0);
         healthBar = new List<GameObject>();
         cellWidth = healthCellUI.GetComponent<RectTransform>().rect.width;
@@ -82,6 +85,8 @@ public class PlayerHealthSystem : MonoBehaviour
         }
 
         if(amount < 0) StartCoroutine(StayInvinsible());
+
+        soundController.PlayPlayerHitSound();
     }
 
     private void Die()

@@ -19,6 +19,8 @@ GameObject:
   - component: {fileID: 7456462585265003734}
   - component: {fileID: 1908296113}
   - component: {fileID: 5971707564134415480}
+  - component: {fileID: 460360658}
+  - component: {fileID: 1618130571}
   m_Layer: 12
   m_Name: Enemy Collision Dumb
   m_TagString: Enemy
@@ -177,9 +179,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 789e3fd8be8bac045af20a1522adae24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinAmount: 0
+  coinAmount: 2
   weaponDrops: 
-  miscDrops: 
+  miscDrops: 04000000
 --- !u!114 &1908296113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,7 +194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9ff908d2ac6f3643a93e02ceacd0325, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  containsVariant: 0
+  containsVariant: 1
   varientPrefab: {fileID: 7456462585265003737, guid: d0532e59833e96247b670c9c53d02212,
     type: 3}
   variantAmount: 2
@@ -209,6 +211,116 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitmarkerUI: {fileID: 8602429581810793025}
+--- !u!114 &460360658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7456462585265003737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24297153ba454804dadc47e3688997a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSrc: {fileID: 1618130571}
+  deathSound: {fileID: 8300000, guid: ca0d100c389cfad44bacfea55284a390, type: 3}
+--- !u!82 &1618130571
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7456462585265003737}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &7456462586866257440
 GameObject:
   m_ObjectHideFlags: 0
