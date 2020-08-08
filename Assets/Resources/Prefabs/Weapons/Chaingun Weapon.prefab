@@ -71,7 +71,7 @@ GameObject:
   - component: {fileID: 6274339263624944584}
   - component: {fileID: 3710257003022139937}
   m_Layer: 0
-  m_Name: Chain Gun Weapon
+  m_Name: Chaingun Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -106,6 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e483d4da0c101a41992eec26e5e11c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponType: 2
   fireRate: 0.25
   projectileSpeed: 50
   projectilePrefab: {fileID: 9196634944871186572, guid: 7fc100fcb436fe14398fe52762bba37b,

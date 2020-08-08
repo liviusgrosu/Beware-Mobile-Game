@@ -29,6 +29,7 @@ public class EnemyHealthSystem : MonoBehaviour
     private void Awake()
     {
         dropHandler = GetComponent<EnemyDropHandler>();
+        if (dropHandler == null) print("its null");
         variantHandler = GetComponent<EnemyVariantHandler>();
 
         canvas = transform.GetChild(0);

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class MovementJoystickListener : MonoBehaviour, IDragHandler, IPointerDownHandler, IPointerUpHandler, IUIElement
+public class MovementJoystickListener : MonoBehaviour, IDragHandler, IPointerDownHandler, IPointerUpHandler, IUIGenericElement
 {
     private bool isUIActive = true;
 

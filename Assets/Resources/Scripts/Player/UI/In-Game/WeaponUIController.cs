@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class WeaponUIController : MonoBehaviour, IUIElement
+public class WeaponUIController : MonoBehaviour, IUIGenericElement
 {
     private bool isUIActive;
 

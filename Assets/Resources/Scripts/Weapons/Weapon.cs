@@ -7,6 +7,9 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
+    private PlayerAudioController audioController;
+    [SerializeField] private EnumDefinitions.WeaponType weaponType;
+
     [Header("Projectile Properties")]
     public float fireRate;
     public float projectileSpeed;
@@ -54,6 +57,11 @@ public class Weapon : MonoBehaviour
         isFiring = false;
     }
 
+    private void Update()
+    {
+        if(audioController == null)
+            audioController = transform.root.GetComponent<PlayerAudioController>();
+    }
 
     public void ToggleFiring(bool state)
     {
@@ -75,7 +83,8 @@ public class Weapon : MonoBehaviour
 
     private void FireProjectile()
     {
-        if(!isAmmoInfinite) curProjectileCount--;
+        if (audioController != null) audioController.PlayWeaponFireSound(weaponType);
+        if (!isAmmoInfinite) curProjectileCount--;
         switch (fireType)
         {
             case FireType.Sequential:

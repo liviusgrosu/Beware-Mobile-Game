@@ -4,7 +4,7 @@ using System.ComponentModel;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ScoreManager : MonoBehaviour, IUIElement
+public class ScoreManager : MonoBehaviour, IUIGenericElement
 {
 
     private bool isUIActive;

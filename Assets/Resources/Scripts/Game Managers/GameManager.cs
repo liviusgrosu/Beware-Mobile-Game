@@ -11,8 +11,8 @@ public class GameManager : MonoBehaviour
     private PlayerHealthSystem playerHP;
     private ExitDoor exitDoor;
 
-    private IUIElement gameOverUI, gameWinUI, gamePauseUI; 
-    private IUIElement scoreSystemUI, playerWeaponUI, playerJoystickUI;
+    private IUIGenericElement gameOverUI, gameWinUI, gamePauseUI; 
+    private IUIGenericElement scoreSystemUI, playerWeaponUI, playerJoystickUI;
 
     private string currentSceneName;
 
@@ -42,11 +42,11 @@ public class GameManager : MonoBehaviour
         playerHP = GameObject.Find("Player").GetComponent<PlayerHealthSystem>();
         exitDoor = GameObject.Find("Exit Door").GetComponent<ExitDoor>();
 
-        gameOverUI = GameObject.Find("Game End Screen").GetComponent<IUIElement>();
-        scoreSystemUI = GameObject.Find("Score Manager").GetComponent<IUIElement>();
-        gameWinUI = GameObject.Find("Game Win Screen").GetComponent<IUIElement>();
-        playerWeaponUI = GameObject.Find("Weapon Player UI").GetComponent<IUIElement>();
-        playerJoystickUI = GameObject.Find("Virtual Joystick Background").GetComponent<IUIElement>();
+        gameOverUI = GameObject.Find("Game End Screen").GetComponent<IUIGenericElement>();
+        scoreSystemUI = GameObject.Find("Score Manager").GetComponent<IUIGenericElement>();
+        gameWinUI = GameObject.Find("Game Win Screen").GetComponent<IUIGenericElement>();
+        playerWeaponUI = GameObject.Find("Weapon Player UI").GetComponent<IUIGenericElement>();
+        playerJoystickUI = GameObject.Find("Virtual Joystick Background").GetComponent<IUIGenericElement>();
 
         currentSceneName = SceneManager.GetActiveScene().name;
     }

@@ -2,19 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PauseUI : MonoBehaviour, IUIElement
+public class PauseUI : MonoBehaviour, IUIGenericElement
 {
     private bool isUIActive;
     private GameManager gameManager;
+    private MenuSoundController soundController;
 
     private void Start()
     {
+        soundController = transform.parent.GetComponent<MenuSoundController>();
         gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
     }
 
     //Used by the pause button
     public void TogglePause(bool state)
     {
+        soundController.PlayButtonPress();
+
         isUIActive = state;
 
         foreach (Transform child in transform)
@@ -44,12 +48,14 @@ public class PauseUI : MonoBehaviour, IUIElement
 
     public void MenuButtonPress()
     {
+        soundController.PlayButtonPress();
         Time.timeScale = 1f;
         gameManager.GoBackToMainMenu();
     }
 
     public void ReplayButtonPress()
     {
+        soundController.PlayButtonPress();
         Time.timeScale = 1f;
         gameManager.RestartLevel();
     }

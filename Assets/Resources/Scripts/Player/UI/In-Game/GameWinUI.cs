@@ -5,11 +5,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class GameWinUI : MonoBehaviour, IUIElement
+public class GameWinUI : MonoBehaviour, IUIGenericElement
 {
     private bool isUIActive;
 
     private GameManager gameManager;
+    private MenuSoundController soundController;
 
     private ScoreManager scoreManager;
     private List<RectTransform> starUI;
@@ -32,21 +33,25 @@ public class GameWinUI : MonoBehaviour, IUIElement
 
     private void Start()
     {
+        soundController = transform.parent.GetComponent<MenuSoundController>();
         gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
     }
 
     public void ReplayButtonPress()
     {
+        soundController.PlayButtonPress();
         gameManager.RestartLevel();
     }
 
     public void NextLevelButtonPress()
     {
+        soundController.PlayButtonPress();
         gameManager.AdvanceLevel();
     }
 
     public void MenuButtonPress()
     {
+        soundController.PlayButtonPress();
         gameManager.GoBackToMainMenu();
     }
 

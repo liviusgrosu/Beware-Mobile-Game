@@ -609,21 +609,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 881559247808419412, guid: b1862ebaca2ca5d44a0f320f5daabb44,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4757825044972602908, guid: b1862ebaca2ca5d44a0f320f5daabb44,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5088023409349341139, guid: b1862ebaca2ca5d44a0f320f5daabb44,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6220588619073007379, guid: b1862ebaca2ca5d44a0f320f5daabb44,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -733,11 +718,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: UI Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 6761144967158344503, guid: b1862ebaca2ca5d44a0f320f5daabb44,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b1862ebaca2ca5d44a0f320f5daabb44, type: 3}
@@ -1340,6 +1320,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb3e6f06f53b5e84a926922d51639d8d, type: 3}
+--- !u!1 &1049145185 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1118917573193087933, guid: 587099c01b5bba2499f15e917746dfb9,
+    type: 3}
+  m_PrefabInstance: {fileID: 891238706}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1049145195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1049145185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed10e7d2dd109854ca6f538c53c634e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pistolSound: {fileID: 8300000, guid: d851cff00f0467c48a45fcfa393b5868, type: 3}
+  sniperSound: {fileID: 8300000, guid: 221986af81b0a2f4194b42f75f206f0e, type: 3}
+  shotgunSound: {fileID: 8300000, guid: 88d32fff111b1d54789d4c2fdd5014d4, type: 3}
+  chainSound: {fileID: 8300000, guid: d851cff00f0467c48a45fcfa393b5868, type: 3}
 --- !u!1001 &1053237643
 PrefabInstance:
   m_ObjectHideFlags: 0

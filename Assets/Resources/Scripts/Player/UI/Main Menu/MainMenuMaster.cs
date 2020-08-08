@@ -33,13 +33,13 @@ public class MainMenuMaster : MonoBehaviour
         switch (currentPage)
         {
             case MenuPage.Levels:
-                levelsPage.GetComponent<IUIElement>().ToggleUI(true);
+                levelsPage.GetComponent<IUIGenericElement>().ToggleUI(true);
                 break;
             case MenuPage.Title:
-                titlePage.GetComponent<IUIElement>().ToggleUI(true);
+                titlePage.GetComponent<IUIGenericElement>().ToggleUI(true);
                 break;
             case MenuPage.Options:
-                optionsPage.GetComponent<IUIElement>().ToggleUI(true);
+                optionsPage.GetComponent<IUIGenericElement>().ToggleUI(true);
                 break;
         }
     }

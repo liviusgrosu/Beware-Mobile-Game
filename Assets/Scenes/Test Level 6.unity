@@ -1387,20 +1387,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1122928630}
     m_Modifications:
-    - target: {fileID: 7456462585265003729, guid: d68a878cd99bb8d428b73b35ddb1f211,
-        type: 3}
-      propertyPath: maxHP
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7456462585265003737, guid: d68a878cd99bb8d428b73b35ddb1f211,
         type: 3}
       propertyPath: m_Name
       value: Enemy Collision Dumb (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7456462585265003737, guid: d68a878cd99bb8d428b73b35ddb1f211,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7456462585265003742, guid: d68a878cd99bb8d428b73b35ddb1f211,
         type: 3}

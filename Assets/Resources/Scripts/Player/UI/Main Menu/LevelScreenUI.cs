@@ -5,9 +5,10 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LevelScreenUI : MonoBehaviour, IUIElement
+public class LevelScreenUI : MonoBehaviour, IUIGenericElement
 {
     private MainMenuMaster menuMaster;
+    private MenuSoundController soundController;
     private bool isUIActive;
 
     public List<LevelButton> levelButtons;
@@ -17,17 +18,20 @@ public class LevelScreenUI : MonoBehaviour, IUIElement
 
     private void Start()
     {
+        soundController = transform.parent.GetComponent<MenuSoundController>();
         menuMaster = GameObject.Find("Main Menu Master").GetComponent<MainMenuMaster>();
     }
 
     public void BackButtonPress()
     {
         ToggleUI(false);
+        soundController.PlayButtonPress();
         menuMaster.ChangeToPage(MainMenuMaster.MenuPage.Title);
     }
 
     public void LevelSelectButtonPress(int levelId)
     {
+        soundController.PlayButtonPress();
         SceneManager.LoadScene($"{levelNamePrefix} {levelId}");
     }
 
