@@ -42,6 +42,7 @@ public class EnemyColliderPrimitiveMovement : MonoBehaviour
     private MovementState currMovementState, prevMovementState;
 
     private Rigidbody rb;
+
     // Start is called before the first frame update
     void Start()
     {

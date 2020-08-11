@@ -21,7 +21,6 @@ public class EnemyVariantHandler : MonoBehaviour
         {
             for(int i = 0; i < variantAmount; i++)
             {
-                print(transform.position);
                 GameObject variantObj = Instantiate(varientPrefab, transform.position, Quaternion.identity);
                 enemyManager.AddEnemy(variantObj.GetInstanceID(), variantObj.transform);
             }
