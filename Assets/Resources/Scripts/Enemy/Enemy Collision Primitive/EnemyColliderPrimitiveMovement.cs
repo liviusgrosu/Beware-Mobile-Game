@@ -1,9 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.Serialization.Json;
 using UnityEngine;
 using UnityEngine.Monetization;
 
-public class EnemyColliderPrimitiveMovement : MonoBehaviour, IEnemyMovement
+public class EnemyColliderPrimitiveMovement : MonoBehaviour
 {
     private Vector3 _currDirection { get; set; }
     private float _currMovementSpeed;
@@ -56,6 +57,7 @@ public class EnemyColliderPrimitiveMovement : MonoBehaviour, IEnemyMovement
     // Update is called once per frame
     void Update()
     {
+        if (GetComponent<EnemySpawnTravel>() != null) return;
         rb.MovePosition(transform.position + currDirection * currMovementSpeed);
     }
 
@@ -78,10 +80,5 @@ public class EnemyColliderPrimitiveMovement : MonoBehaviour, IEnemyMovement
         }
         prevMovementState = currMovementState;
         currMovementState = state;
-    }
-
-    public void SetMovementSpeed()
-    {
-        
     }
 }

@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class EnemyVariantHandler : MonoBehaviour
 {
-    [SerializeField] private bool containsVariant;
+    public bool containsVariant;
     [SerializeField] private GameObject varientPrefab;
-    [SerializeField] private int variantAmount;
+    public int variantAmount;
 
     EnemyManager enemyManager;
 
@@ -21,6 +21,7 @@ public class EnemyVariantHandler : MonoBehaviour
         {
             for(int i = 0; i < variantAmount; i++)
             {
+                print(transform.position);
                 GameObject variantObj = Instantiate(varientPrefab, transform.position, Quaternion.identity);
                 enemyManager.AddEnemy(variantObj.GetInstanceID(), variantObj.transform);
             }

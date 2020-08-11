@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class EnemyCollisionAdvancedMovement : MonoBehaviour, IEnemyMovement
+public class EnemyCollisionAdvancedMovement : MonoBehaviour
 {
     private Transform player;
     private NavMeshAgent agent;
@@ -55,6 +55,7 @@ public class EnemyCollisionAdvancedMovement : MonoBehaviour, IEnemyMovement
 
     private void Update()
     {
+        if (GetComponent<EnemySpawnTravel>() != null) return;
         agent.destination = player.position;
         agent.isStopped = (Vector3.Distance(transform.position, player.position) <= 1.5f);
     }
@@ -77,10 +78,5 @@ public class EnemyCollisionAdvancedMovement : MonoBehaviour, IEnemyMovement
                 break;
         }
         currMovementState = state;
-    }
-
-    public void SetMovementSpeed()
-    {
-        print("Accessing this fine....");
     }
 }

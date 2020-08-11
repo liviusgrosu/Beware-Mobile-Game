@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class WeaponDrop : MonoBehaviour
 {
+    private SoundController soundController;
+
     [SerializeField]
     private float lifeTime;
     [SerializeField]
@@ -23,6 +25,11 @@ public class WeaponDrop : MonoBehaviour
     {
         rend = GetComponent<Renderer>();
         currMatCol = rend.material.color;
+    }
+
+    private void Start()
+    {
+        soundController = GameObject.Find("Sound Controller").GetComponent<SoundController>();
     }
 
     private void Update()
@@ -46,6 +53,7 @@ public class WeaponDrop : MonoBehaviour
         {
             case "Player":
                 col.gameObject.GetComponent<WeaponController>().SwitchWeapons(weaponType);
+                soundController.PlayWeaponPickUpSound();
                 Destroy(this.gameObject);
                 break;
         }

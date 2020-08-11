@@ -11,15 +11,26 @@ public class SoundController : MonoBehaviour
     [SerializeField] private AudioClip enemyDeathSound;
     [SerializeField] private AudioClip enemyWallBounceSound;
 
-    [Header("Weapon Sound")]
+    [Header("Weapon Sounds")]
     [SerializeField] private AudioClip pistolSound;
     [SerializeField] private AudioClip sniperSound;
     [SerializeField] private AudioClip shotgunSound;
     [SerializeField] private AudioClip chainSound;
 
-    [Header("Player Sound")]
+    [Header("Player Sounds")]
     [SerializeField] private AudioClip playerHitSound;
 
+    [Header("Drop Sounds")]
+    [SerializeField] private AudioClip coinPickupSound;
+    [SerializeField] private AudioClip weaponPickupSound;
+    [SerializeField] private AudioClip healthPickupSound;
+
+    [Header("Movement Sounds")]
+    [SerializeField] private AudioClip regularMovementSound;
+    [SerializeField] private AudioClip slimeMovementSound;
+    [SerializeField] private AudioClip wingFlapMovementSound;
+
+    [SerializeField] private AudioClip doorOpenSound;
     private void Awake()
     {
         audioSrc = GetComponent<AudioSource>();
@@ -63,4 +74,41 @@ public class SoundController : MonoBehaviour
     {
         audioSrc.PlayOneShot(playerHitSound);
     }
+
+    public void PlayMovementSound(EnumDefinitions.MovementSoundTypes movement)
+    {
+        switch (movement)
+        {
+            case EnumDefinitions.MovementSoundTypes.Regular:
+                audioSrc.PlayOneShot(regularMovementSound);
+                break;
+            case EnumDefinitions.MovementSoundTypes.Slime:
+                audioSrc.PlayOneShot(slimeMovementSound);
+                break;
+            case EnumDefinitions.MovementSoundTypes.WingFlap:
+                audioSrc.PlayOneShot(wingFlapMovementSound);
+                break;
+        }
+    }
+
+    public void PlayCoinPickUpSound()
+    {
+        audioSrc.PlayOneShot(coinPickupSound);
+    }
+
+    public void PlayWeaponPickUpSound()
+    {
+        audioSrc.PlayOneShot(weaponPickupSound);
+    }
+
+    public void PlayHPPickUpSound()
+    {
+        audioSrc.PlayOneShot(healthPickupSound);
+    }
+
+    public void PlayerDoorOpenSound()
+    {
+        audioSrc.PlayOneShot(doorOpenSound);
+    }
 }
+

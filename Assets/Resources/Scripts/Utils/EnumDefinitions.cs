@@ -16,4 +16,11 @@ public class EnumDefinitions
     {
         HP = 4
     }
+
+    public enum MovementSoundTypes
+    {
+        Regular,
+        Slime,
+        WingFlap
+    }
 }

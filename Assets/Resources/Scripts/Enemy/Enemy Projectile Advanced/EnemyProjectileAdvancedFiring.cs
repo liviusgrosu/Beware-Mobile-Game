@@ -30,6 +30,7 @@ public class EnemyProjectileAdvancedFiring : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GetComponent<EnemySpawnTravel>() != null) return;
         if (movement.behaviorState == EnemyProjectileAdvancedMovement.BehaviourState.Moving)
         {
             if (weaponController.IsFiringWeapon()) weaponController.ToggleWeaponFire(false);

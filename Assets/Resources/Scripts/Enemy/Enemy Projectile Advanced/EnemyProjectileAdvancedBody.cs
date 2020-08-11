@@ -14,5 +14,4 @@ public class EnemyProjectileAdvancedBody : MonoBehaviour
                 break;
         }
     }
-
 }

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class HPDrop : MonoBehaviour
 {
+    private SoundController soundController;
+
     [SerializeField]
     private float lifeTime;
     [SerializeField]
@@ -20,6 +22,11 @@ public class HPDrop : MonoBehaviour
     {
         rend = GetComponent<Renderer>();
         currMatCol = rend.material.color;
+    }
+
+    private void Start()
+    {
+        soundController = GameObject.Find("Sound Controller").GetComponent<SoundController>();
     }
 
     private void Update()
@@ -46,6 +53,7 @@ public class HPDrop : MonoBehaviour
                 if (!playerHealth.IsHealthFull())
                 {
                     playerHealth.ChangeHealth(1);
+                    soundController.PlayHPPickUpSound();
                     Destroy(this.gameObject);
                 }
                 break;

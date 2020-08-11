@@ -7,31 +7,42 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
 {
+    private EnemyWaveSystem waveSystem;
+
     public Dictionary<int, Transform> enemyInstanceMap;
     Transform currentClosestEnemy, previousClosestEnemy;
+
+    private int? expectedWaveCount = 0;
+    private bool levelIsFinished;
     private void Start()
     {
+        waveSystem = GameObject.Find("Enemy Wave System").GetComponent<EnemyWaveSystem>();
         enemyInstanceMap = new Dictionary<int, Transform>();
-        GenerateEnemyList();
     }
 
-    private void GenerateEnemyList()
+    private void Update()
     {
-        foreach (GameObject enemy in GameObject.FindGameObjectsWithTag("Enemy"))
-            AddEnemy(enemy.GetInstanceID(), enemy.transform);
+        if (!levelIsFinished && !IsMoreEnemies() && expectedWaveCount <= 0)
+        {
+            expectedWaveCount = waveSystem.RequestWave();
+            if (expectedWaveCount == null)
+            {
+                levelIsFinished = true;
+                return;
+            }
+        }
     }
 
     //Get the enemy thats closest to the given position
     public Transform GetClosestEnemy(Vector3 pos)
     {
         if (!enemyInstanceMap.Any()) return null;
-
         if (currentClosestEnemy != null) currentClosestEnemy.gameObject.GetComponent<EnemyHitMarker>().ToggleHitmarker(false);
 
         currentClosestEnemy = enemyInstanceMap.First().Value;
         foreach(KeyValuePair<int, Transform> enemy in enemyInstanceMap.Skip(1))
         {
-            if (Vector3.Distance(pos, enemy.Value.position) < Vector3.Distance(pos, currentClosestEnemy.position))
+            if (Vector3.Distance(pos, enemy.Value.position) <Vector3.Distance(pos, currentClosestEnemy.position))
                 currentClosestEnemy = enemy.Value;
         }
 
@@ -42,6 +53,8 @@ public class EnemyManager : MonoBehaviour
     //Add an enemies to the enemy manager list
     public void AddEnemy(int enemyID, Transform enemyObj)
     {
+        if (enemyInstanceMap.ContainsKey(enemyID)) return;
+        expectedWaveCount--;
         enemyInstanceMap.Add(enemyID, enemyObj);
     }
 

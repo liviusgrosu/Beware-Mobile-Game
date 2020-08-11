@@ -15,12 +15,12 @@ GameObject:
   - component: {fileID: 7456462585265003731}
   - component: {fileID: 7456462585265003728}
   - component: {fileID: 7456462585265003743}
-  - component: {fileID: 7456462585265003729}
   - component: {fileID: 7456462585265003734}
+  - component: {fileID: -8638974211282346015}
   - component: {fileID: 1908296113}
   - component: {fileID: 5971707564134415480}
-  - component: {fileID: 460360658}
   - component: {fileID: 1618130571}
+  - component: {fileID: 5617126556956375833}
   m_Layer: 12
   m_Name: Enemy Collision Dumb
   m_TagString: Enemy
@@ -149,7 +149,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7f7a763a0f8a0d47a3c58595aec8927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7456462585265003729
+--- !u!114 &7456462585265003734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7456462585265003737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 789e3fd8be8bac045af20a1522adae24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinAmount: 0
+  weaponDrops: 
+  miscDrops: 
+--- !u!114 &-8638974211282346015
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -167,21 +182,6 @@ MonoBehaviour:
     type: 3}
   fullHPImg: {fileID: 21300000, guid: bc95fa4484c2be84390558616d7214c9, type: 3}
   emptyHPImg: {fileID: 21300000, guid: d6220756d6f795b4695c07acd6f871a2, type: 3}
---- !u!114 &7456462585265003734
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7456462585265003737}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 789e3fd8be8bac045af20a1522adae24, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  coinAmount: 2
-  weaponDrops: 
-  miscDrops: 04000000
 --- !u!114 &1908296113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -211,20 +211,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitmarkerUI: {fileID: 8602429581810793025}
---- !u!114 &460360658
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7456462585265003737}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24297153ba454804dadc47e3688997a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioSrc: {fileID: 1618130571}
-  deathSound: {fileID: 8300000, guid: ca0d100c389cfad44bacfea55284a390, type: 3}
 --- !u!82 &1618130571
 AudioSource:
   m_ObjectHideFlags: 0
@@ -321,6 +307,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5617126556956375833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7456462585265003737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d28bd4e03271d24c9b06ca0e22f76a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementSpeed: 3
 --- !u!1 &7456462586866257440
 GameObject:
   m_ObjectHideFlags: 0

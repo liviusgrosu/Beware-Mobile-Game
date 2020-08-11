@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class CoinDrop : MonoBehaviour
 {
+    private SoundController soundController;
+
     [SerializeField]
     private float lifeTime;
     [SerializeField]
@@ -27,6 +29,7 @@ public class CoinDrop : MonoBehaviour
     private void Start()
     {
         GameObject.Find("Score Manager").GetComponent<ScoreManager>().AddMaxScore();
+        soundController = GameObject.Find("Sound Controller").GetComponent<SoundController>();
     }
 
     private void Update()
@@ -50,6 +53,7 @@ public class CoinDrop : MonoBehaviour
         {
             case "Player":
                 GameObject.Find("Score Manager").GetComponent<ScoreManager>().AddCurrentScore();
+                soundController.PlayCoinPickUpSound();
                 Destroy(this.gameObject);
                 break;
         }

@@ -75,7 +75,11 @@ public class PlayerHealthSystem : MonoBehaviour
 
         if (currHP > 0) currHP += amount;
 
-        if (currHP <= 0) Die();
+        if (currHP <= 0)
+        {
+            Die();
+            return;
+        }
         else if (currHP > maxHP) currHP = maxHP;
 
         for (int i = 0; i < maxHP; i++)
@@ -84,14 +88,18 @@ public class PlayerHealthSystem : MonoBehaviour
             else healthBar.ElementAt(i).GetComponent<Image>().sprite = emptyHPImg;
         }
 
-        if(amount < 0) StartCoroutine(StayInvinsible());
-
-        soundController.PlayPlayerHitSound();
+        if (amount < 0)
+        {
+            soundController.PlayPlayerHitSound();
+            StartCoroutine(StayInvinsible());
+        }
     }
 
     private void Die()
     {
+        soundController.PlayEnemyDeathSound();
         GetComponent<PlayerMovement>().enabled = false;
+        GetComponent<CapsuleCollider>().enabled = false;
         GetComponent<PlayerAttackingBehaviour>().enabled = false;
     }
 

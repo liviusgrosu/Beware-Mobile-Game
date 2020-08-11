@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class EnemyProjectileAdvancedMovement : MonoBehaviour, IEnemyMovement
+public class EnemyProjectileAdvancedMovement : MonoBehaviour
 {
     private Transform player;
     private NavMeshAgent agent;
@@ -80,8 +80,7 @@ public class EnemyProjectileAdvancedMovement : MonoBehaviour, IEnemyMovement
 
     private void Update()
     {
-
-
+        if (GetComponent<EnemySpawnTravel>() != null) return;
         switch (behaviorState)
         {
             case BehaviourState.Attacking:
@@ -130,10 +129,5 @@ public class EnemyProjectileAdvancedMovement : MonoBehaviour, IEnemyMovement
             }
 
         }
-    }
-
-    public void SetMovementSpeed()
-    {
-        print("Accessing this fine....");
     }
 }

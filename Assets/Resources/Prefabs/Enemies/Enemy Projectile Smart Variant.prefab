@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4774285504579854403}
   - component: {fileID: 6908130459463744195}
   - component: {fileID: -554298738031289545}
+  - component: {fileID: 199143329114735201}
   m_Layer: 11
   m_Name: Enemy Projectile Smart Variant
   m_TagString: Enemy
@@ -251,6 +252,19 @@ MonoBehaviour:
   containsVariant: 0
   varientPrefab: {fileID: 0}
   variantAmount: 0
+--- !u!114 &199143329114735201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 259839320579021724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d28bd4e03271d24c9b06ca0e22f76a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementSpeed: 3
 --- !u!1 &259839321063546276
 GameObject:
   m_ObjectHideFlags: 0

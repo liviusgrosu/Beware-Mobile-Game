@@ -13,6 +13,8 @@ public class ExitDoor : MonoBehaviour
     [HideInInspector]
     public bool playerFinished;
 
+    private bool playedDoorOpenSound;
+
     private void Awake()
     {
         rend = GetComponent<Renderer>();
@@ -27,12 +29,21 @@ public class ExitDoor : MonoBehaviour
     private void Update()
     {
         if (!enemyManager.IsMoreEnemies())
+        {
             rend.material = OpenMaterial;
+            if (!playedDoorOpenSound) PlayOpenDoorSound();
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         if(!enemyManager.IsMoreEnemies())
             playerFinished = true;
+    }
+
+    private void PlayOpenDoorSound()
+    {
+        playedDoorOpenSound = true;
+        GameObject.Find("Sound Controller").GetComponent<SoundController>().PlayerDoorOpenSound();
     }
 }
