@@ -9,7 +9,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     private PlayerHealthSystem playerHP;
-    private ExitDoor exitDoor;
+    private ExitDoorCollider exitDoor;
 
     private IUIGenericElement gameOverUI, gameWinUI, gamePauseUI; 
     private IUIGenericElement scoreSystemUI, playerWeaponUI, playerJoystickUI;
@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         playerHP = GameObject.Find("Player").GetComponent<PlayerHealthSystem>();
-        exitDoor = GameObject.Find("Exit Door").GetComponent<ExitDoor>();
+        exitDoor = GameObject.Find("Exit Door Collider").GetComponent<ExitDoorCollider>();
 
         gameOverUI = GameObject.Find("Game End Screen").GetComponent<IUIGenericElement>();
         scoreSystemUI = GameObject.Find("Score Manager").GetComponent<IUIGenericElement>();

@@ -24,8 +24,9 @@ public class EnemyManager : MonoBehaviour
     {
         if (!levelIsFinished && !IsMoreEnemies() && expectedWaveCount <= 0)
         {
-            expectedWaveCount = waveSystem.RequestWave();
-            if (expectedWaveCount == null)
+            if (waveSystem.IsMoreWaves())
+                expectedWaveCount = waveSystem.RequestWave();
+            else
             {
                 levelIsFinished = true;
                 return;

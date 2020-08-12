@@ -12,6 +12,7 @@ public class EnemyWaveSystem : MonoBehaviour
     [SerializeField] private MulitDimensionalGO[] enemyWaves;
 
     private List<Transform> spawnPoints;
+    private ExitDoorController exitDoorController;
 
     private void Awake()
     {
@@ -22,10 +23,20 @@ public class EnemyWaveSystem : MonoBehaviour
         spawnPoints.RemoveAt(0);
     }
 
+    private void Start()
+    {
+        exitDoorController = GameObject.Find("Exit Door").GetComponent<ExitDoorController>();
+    }
+
     public int? RequestWave()
     {
         waveCounter++;
-        if (waveCounter > enemyWaves.Length) return null;
+        if (waveCounter > enemyWaves.Length)
+        {
+            exitDoorController.TriggerFullOpen();
+            return null;
+        }
+        else exitDoorController.TriggerMomentOpen();
 
         int extraEntities = 0;
         foreach(GameObject entity in enemyWaves[waveCounter - 1].Objects)
@@ -47,5 +58,10 @@ public class EnemyWaveSystem : MonoBehaviour
             enemy.GetComponent<EnemySpawnTravel>().StartTravel(spawnPoints.ElementAt(i % spawnPoints.Count).position);
             yield return new WaitForSeconds(0.1f);
         }
+    }
+
+    public bool IsMoreWaves()
+    {
+        return !(waveCounter > enemyWaves.Length);
     }
 }
