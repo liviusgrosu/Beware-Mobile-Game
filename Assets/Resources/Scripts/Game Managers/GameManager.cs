@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     private ExitDoorCollider exitDoor;
 
     private IUIGenericElement gameOverUI, gameWinUI, gamePauseUI; 
-    private IUIGenericElement scoreSystemUI, playerWeaponUI, playerJoystickUI;
+    private IUIGenericElement scoreSystemUI, playerWeaponUI, playerJoystickUI, waveIndicatorUI;
 
     private string currentSceneName;
 
@@ -44,6 +44,8 @@ public class GameManager : MonoBehaviour
 
         gameOverUI = GameObject.Find("Game End Screen").GetComponent<IUIGenericElement>();
         scoreSystemUI = GameObject.Find("Score Manager").GetComponent<IUIGenericElement>();
+        waveIndicatorUI = GameObject.Find("Wave Indicator UI").GetComponent<IUIGenericElement>();
+
         gameWinUI = GameObject.Find("Game Win Screen").GetComponent<IUIGenericElement>();
         playerWeaponUI = GameObject.Find("Weapon Player UI").GetComponent<IUIGenericElement>();
         playerJoystickUI = GameObject.Find("Virtual Joystick Background").GetComponent<IUIGenericElement>();
@@ -69,11 +71,12 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void ToggleInGameUI(bool state)
+    public void ToggleInGameUI(bool state)
     {
         scoreSystemUI.ToggleUI(state);
         playerWeaponUI.ToggleUI(state);
         playerJoystickUI.ToggleUI(state);
+        waveIndicatorUI.ToggleUI(state);
     }
 
     public void RestartLevel()

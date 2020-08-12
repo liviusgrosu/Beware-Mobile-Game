@@ -4682,8 +4682,6 @@ MonoBehaviour:
   enemyWaves:
   - Objects:
     - {fileID: 7456462585265003737, guid: d68a878cd99bb8d428b73b35ddb1f211, type: 3}
-  - Objects:
-    - {fileID: 7456462585265003737, guid: d68a878cd99bb8d428b73b35ddb1f211, type: 3}
 --- !u!1 &1472558431
 GameObject:
   m_ObjectHideFlags: 0

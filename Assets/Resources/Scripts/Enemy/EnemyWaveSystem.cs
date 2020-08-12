@@ -13,6 +13,7 @@ public class EnemyWaveSystem : MonoBehaviour
 
     private List<Transform> spawnPoints;
     private ExitDoorController exitDoorController;
+    private EnemyWavesUI waveUI;
 
     private void Awake()
     {
@@ -26,17 +27,24 @@ public class EnemyWaveSystem : MonoBehaviour
     private void Start()
     {
         exitDoorController = GameObject.Find("Exit Door").GetComponent<ExitDoorController>();
+        waveUI = GameObject.Find("Wave Indicator UI").GetComponent<EnemyWavesUI>();
+
+        if (enemyWaves.Length <= 1) waveUI.ToggleUI(false);
     }
 
     public int? RequestWave()
     {
         waveCounter++;
+
         if (waveCounter > enemyWaves.Length)
         {
             exitDoorController.TriggerFullOpen();
+            waveUI.UpdateUI("CLEAR");
             return null;
         }
         else exitDoorController.TriggerMomentOpen();
+
+        waveUI.UpdateUI(waveCounter, enemyWaves.Length);
 
         int extraEntities = 0;
         foreach(GameObject entity in enemyWaves[waveCounter - 1].Objects)

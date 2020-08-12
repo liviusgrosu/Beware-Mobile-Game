@@ -31,6 +31,8 @@ public class PauseUI : MonoBehaviour, IUIGenericElement
 
         if (isUIActive) Time.timeScale = 0f;
         else Time.timeScale = 1f;
+
+        gameManager.ToggleInGameUI(!state);
     }
 
     //Used by the game manager
