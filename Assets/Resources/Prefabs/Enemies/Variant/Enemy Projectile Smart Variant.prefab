@@ -183,9 +183,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 789e3fd8be8bac045af20a1522adae24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinAmount: 2
-  weaponDrops: 
-  miscDrops: 
+  coinAmount: 4
+  weaponDrop: 0
+  miscDrops: 0
 --- !u!114 &2868869684663617897
 MonoBehaviour:
   m_ObjectHideFlags: 0
