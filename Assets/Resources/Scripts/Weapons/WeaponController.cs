@@ -20,7 +20,9 @@ public class WeaponController : MonoBehaviour
 
     private void Start()
     {
-        isPlayer = this.gameObject.tag == "Player" ? true : false; 
+        isPlayer = this.gameObject.tag == "Player" ? true : false;
+
+        //if (!isPlayer) Debug.Break();
 
         uiController = GameObject.Find("Weapon Player UI").GetComponent<WeaponUIController>();
         SwitchWeapons(EnumDefinitions.WeaponType.Pistol);
@@ -42,14 +44,11 @@ public class WeaponController : MonoBehaviour
 
     public void SwitchWeapons(EnumDefinitions.WeaponType nextWeapon)
     {
-        if ((int)nextWeapon < testWeapons.Length)
-        {
-            Destroy(currentWeapon);
-            GameObject weaponPrefab = Resources.Load(string.Format("Prefabs/Weapons/{0} Weapon", nextWeapon.ToString())) as GameObject;
-            currentWeapon = Instantiate(weaponPrefab, weaponSpawn.position, weaponSpawn.rotation);
-            currentWeapon.transform.parent = weaponSpawn;
-            uiController.ChangeWeaponInfo(currentWeapon.GetComponent<Weapon>().weaponIcon, currentWeapon.GetComponent<Weapon>().maxProjectileCount);
-        }
+        Destroy(currentWeapon);
+        GameObject weaponPrefab = Resources.Load(string.Format("Prefabs/Weapons/{0} Weapon", nextWeapon.ToString())) as GameObject;
+        currentWeapon = Instantiate(weaponPrefab, weaponSpawn.position, weaponSpawn.rotation);
+        currentWeapon.transform.parent = weaponSpawn;
+        uiController.ChangeWeaponInfo(currentWeapon.GetComponent<Weapon>().weaponIcon, currentWeapon.GetComponent<Weapon>().maxProjectileCount);
     }
 
     public void ToggleWeaponFire(bool state) { if (currentWeapon != null) currentWeapon.GetComponent<Weapon>().ToggleFiring(state); }

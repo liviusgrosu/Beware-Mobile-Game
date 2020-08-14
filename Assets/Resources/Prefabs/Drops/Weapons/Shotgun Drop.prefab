@@ -126,10 +126,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3045fa3d02321ac4a89fdd0de37365a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeTime: 99
-  slowShimmerStartTime: 0
-  fastShimmerStartTime: 0
-  weaponType: 1
+  lifeTime: 10
+  slowShimmerStartTime: 5
+  fastShimmerStartTime: 7
+  weaponType: 2
 --- !u!114 &18146052909280759
 MonoBehaviour:
   m_ObjectHideFlags: 0

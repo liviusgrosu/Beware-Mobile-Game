@@ -357,7 +357,7 @@ PrefabInstance:
     - target: {fileID: 1755477044981619880, guid: 8b3434188ad18134d8ab6727bfe64602,
         type: 3}
       propertyPath: enemyWaves.Array.data[0].enemy.Array.data[0].coinDropAmount
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1755477044981619880, guid: 8b3434188ad18134d8ab6727bfe64602,
         type: 3}
@@ -393,7 +393,7 @@ PrefabInstance:
     - target: {fileID: 1755477044981619880, guid: 8b3434188ad18134d8ab6727bfe64602,
         type: 3}
       propertyPath: enemyWaves.Array.data[0].enemy.Array.data[1].coinDropAmount
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1755477044981619880, guid: 8b3434188ad18134d8ab6727bfe64602,
         type: 3}
@@ -429,7 +429,7 @@ PrefabInstance:
     - target: {fileID: 1755477044981619880, guid: 8b3434188ad18134d8ab6727bfe64602,
         type: 3}
       propertyPath: enemyWaves.Array.data[0].enemy.Array.data[2].coinDropAmount
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1755477044981619880, guid: 8b3434188ad18134d8ab6727bfe64602,
         type: 3}
@@ -465,7 +465,7 @@ PrefabInstance:
     - target: {fileID: 1755477044981619880, guid: 8b3434188ad18134d8ab6727bfe64602,
         type: 3}
       propertyPath: enemyWaves.Array.data[0].enemy.Array.data[3].coinDropAmount
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1755477044981619880, guid: 8b3434188ad18134d8ab6727bfe64602,
         type: 3}

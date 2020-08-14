@@ -230,8 +230,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinAmount: 2
-  weaponDrops: 
-  miscDrops: 
+  weaponDrop: 0
+  miscDrops: 0
 --- !u!114 &3199876714568002178
 MonoBehaviour:
   m_ObjectHideFlags: 0

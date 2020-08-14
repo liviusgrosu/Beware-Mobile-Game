@@ -198,8 +198,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinAmount: 4
-  weaponDrops: 
-  miscDrops: 
+  weaponDrop: 0
+  miscDrops: 0
 --- !u!114 &8843846210773752772
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -278,7 +278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d28bd4e03271d24c9b06ca0e22f76a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 1
+  movementSpeed: 3
 --- !u!1 &259839321063546276
 GameObject:
   m_ObjectHideFlags: 0
