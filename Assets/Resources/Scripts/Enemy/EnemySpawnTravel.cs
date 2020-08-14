@@ -38,9 +38,7 @@ public class EnemySpawnTravel : MonoBehaviour
         {
             float distCovered = (Time.time - startTime) * movementSpeed;
             float journeyPerc = distCovered / journeyLength;
-
             transform.position = Vector3.Lerp(start, destination, Mathf.SmoothStep(0f, 1f, journeyPerc));
-
 
             if (Vector3.Distance(transform.position, destination) <= 0.01f)
             {

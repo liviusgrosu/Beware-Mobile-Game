@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyVariantHandler : MonoBehaviour
 {
     public bool containsVariant;
-    [SerializeField] private GameObject varientPrefab;
+    public GameObject varientPrefab;
     public int variantAmount;
 
     EnemyManager enemyManager;

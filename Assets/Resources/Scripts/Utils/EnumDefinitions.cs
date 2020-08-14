@@ -6,15 +6,17 @@ public class EnumDefinitions
 {
     public enum WeaponType
     {
-        Pistol = 0,
-        Shotgun = 1,
-        Chaingun = 2,
-        Sniper = 3
+        None = 0,
+        Pistol = 1,
+        Shotgun = 2,
+        Chaingun = 3,
+        Sniper = 4
     }
 
     public enum MiscDropTypes
     {
-        HP = 4
+        None = 0,
+        HP = 5
     }
 
     public enum MovementSoundTypes

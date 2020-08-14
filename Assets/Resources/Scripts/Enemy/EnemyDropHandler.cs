@@ -4,26 +4,24 @@ using UnityEngine;
 
 public class EnemyDropHandler : MonoBehaviour
 {
-
-    [SerializeField]
-    private int coinAmount;
+    public int coinAmount;
     private GameObject coinPrefab;
     private bool isQuitting;
 
-    [SerializeField] private EnumDefinitions.WeaponType[] weaponDrops;
-    [SerializeField] private EnumDefinitions.MiscDropTypes[] miscDrops;
+    public EnumDefinitions.WeaponType weaponDrop;
+    public EnumDefinitions.MiscDropTypes miscDrops;
 
     public void DropLoot()
     {
-        foreach(EnumDefinitions.WeaponType weapon in weaponDrops)
+        if (weaponDrop != EnumDefinitions.WeaponType.None)
         {
-            GameObject obj = Resources.Load(string.Format("Prefabs/Drops/Weapons/{0} Drop", weapon.ToString())) as GameObject;
+            GameObject obj = Resources.Load(string.Format("Prefabs/Drops/Weapons/{0} Drop", weaponDrop.ToString())) as GameObject;
             Instantiate(obj, transform.position, Quaternion.identity);
         }
 
-        foreach (EnumDefinitions.MiscDropTypes misc in miscDrops)
+        if (miscDrops != EnumDefinitions.MiscDropTypes.None)
         {
-            GameObject obj = Resources.Load(string.Format("Prefabs/Drops/Misc/{0} Drop", misc.ToString())) as GameObject;
+            GameObject obj = Resources.Load(string.Format("Prefabs/Drops/Misc/{0} Drop", miscDrops.ToString())) as GameObject;
             Instantiate(obj, transform.position, Quaternion.identity);
         }
             

@@ -9,7 +9,7 @@ public class EnemyWaveSystem : MonoBehaviour
 {
     private int waveCounter = 0;
 
-    [SerializeField] private MulitDimensionalGO[] enemyWaves;
+    [SerializeField] private EnemyWaveObject[] enemyWaves;
 
     private List<Transform> spawnPoints;
     private ExitDoorController exitDoorController;
@@ -47,22 +47,28 @@ public class EnemyWaveSystem : MonoBehaviour
         waveUI.UpdateUI(waveCounter, enemyWaves.Length);
 
         int extraEntities = 0;
-        foreach(GameObject entity in enemyWaves[waveCounter - 1].Objects)
-        {
-            EnemyVariantHandler objVarient = entity.GetComponent<EnemyVariantHandler>();
-            if (objVarient != null && objVarient.containsVariant)
-                extraEntities += objVarient.variantAmount;
-        }
+        foreach(EnemyInstaParams entity in enemyWaves[waveCounter - 1].enemy)
+            if (entity.allowVariant) extraEntities += entity.variantAmount;
 
         StartCoroutine(SpawnWave(enemyWaves[waveCounter - 1]));
-        return enemyWaves[waveCounter - 1].Objects.Length + extraEntities;
+        return enemyWaves[waveCounter - 1].enemy.Length + extraEntities;
     }
 
-    IEnumerator SpawnWave(MulitDimensionalGO wave)
+    IEnumerator SpawnWave(EnemyWaveObject wave)
     {
-        for (int i = 0; i < wave.Objects.Length; i++)
+        for(int i = 0; i < enemyWaves[waveCounter - 1].enemy.Length; i++)
         {
-            GameObject enemy = Instantiate(wave.Objects[i], this.transform.position, Quaternion.identity);
+            EnemyInstaParams entity = enemyWaves[waveCounter - 1].enemy[i];
+
+            GameObject enemy = Instantiate(entity.enemyObj, this.transform.position, Quaternion.identity);
+            enemy.GetComponent<EnemyVariantHandler>().containsVariant = entity.allowVariant;
+            enemy.GetComponent<EnemyVariantHandler>().variantAmount = entity.variantAmount;
+            enemy.GetComponent<EnemyVariantHandler>().varientPrefab = entity.variantObject;
+
+            enemy.GetComponent<EnemyDropHandler>().weaponDrop = entity.weaponDrop;
+            enemy.GetComponent<EnemyDropHandler>().coinAmount = entity.coinDropAmount;
+            enemy.GetComponent<EnemyDropHandler>().miscDrops = entity.miscDrop;
+
             enemy.GetComponent<EnemySpawnTravel>().StartTravel(spawnPoints.ElementAt(i % spawnPoints.Count).position);
             yield return new WaitForSeconds(0.1f);
         }
