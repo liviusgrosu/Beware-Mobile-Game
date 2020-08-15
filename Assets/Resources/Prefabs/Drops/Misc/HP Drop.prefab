@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bab819faa8b4c064d8706ebb82d0b13e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeTime: 3
+  lifeTime: 99
   slowShimmerStartTime: 1
   fastShimmerStartTime: 2
 --- !u!114 &5008190390734427226

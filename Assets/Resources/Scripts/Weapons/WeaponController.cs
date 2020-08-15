@@ -53,5 +53,8 @@ public class WeaponController : MonoBehaviour
 
     public void ToggleWeaponFire(bool state) { if (currentWeapon != null) currentWeapon.GetComponent<Weapon>().ToggleFiring(state); }
     public bool IsFiringWeapon() { return (currentWeapon != null) ? currentWeapon.GetComponent<Weapon>().isFiring : false; }
-    public int CurrentProjectileCount() { return currentWeapon.GetComponent<Weapon>().curProjectileCount; }
+    public int CurrentProjectileCount() 
+    { 
+        return (currentWeapon != null) ? currentWeapon.GetComponent<Weapon>().curProjectileCount : 0; 
+    }
 }

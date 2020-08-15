@@ -74,6 +74,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e483d4da0c101a41992eec26e5e11c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponType: 1
   fireRate: 0.75
   projectileSpeed: 50
   projectilePrefab: {fileID: 9196634944871186572, guid: ea12848d5224d3847b07f31d49927c5e,
