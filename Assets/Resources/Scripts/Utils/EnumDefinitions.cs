@@ -21,8 +21,15 @@ public class EnumDefinitions
 
     public enum MovementSoundTypes
     {
-        Regular,
+        Grass,
         Slime,
         WingFlap
+    }
+
+    public enum MovementState
+    {
+        Slow,
+        Regular,
+        Fast
     }
 }

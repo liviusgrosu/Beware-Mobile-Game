@@ -48,7 +48,7 @@ public class GameManager : MonoBehaviour
 
         gameWinUI = GameObject.Find("Game Win Screen").GetComponent<IUIGenericElement>();
         playerWeaponUI = GameObject.Find("Weapon Player UI").GetComponent<IUIGenericElement>();
-        playerJoystickUI = GameObject.Find("Virtual Joystick Background").GetComponent<IUIGenericElement>();
+        playerJoystickUI = GameObject.Find("Virtual Joystick Handler").GetComponent<IUIGenericElement>();
 
         currentSceneName = SceneManager.GetActiveScene().name;
     }

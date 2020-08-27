@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody rb;
 
-    private MovementJoystickListener movementJoystickListener;
+    private DynamicJoystickHandler movementJoystickListener;
 
     private Vector3 inputDirection;
     private float zMove, xMove;
@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
 
     private float _currMovementSpeed;
 
+    private Vector3 prevPos, curPos;
 
     //Regular movementspeed changes depending on the enemy varient
 
@@ -31,25 +32,20 @@ public class PlayerMovement : MonoBehaviour
         set { _currMovementSpeed = value; }
     }
 
-    public enum MovementState
-    {
-        Slow,
-        Regular,
-        Fast
-    }
-
-    private MovementState currMovementState, prevMovementState;
+    private EnumDefinitions.MovementState currMovementState, prevMovementState;
 
     private void Awake()
     {
-        currMovementState = MovementState.Regular;
+        currMovementState = EnumDefinitions.MovementState.Regular;
+
+        prevPos = curPos = Vector3.zero;
     }
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        movementJoystickListener = GameObject.Find("Virtual Joystick Background").GetComponent<MovementJoystickListener>();
+        movementJoystickListener = GameObject.Find("Virtual Joystick Handler").GetComponent<DynamicJoystickHandler>();
 
         currMovementSpeed = regMovementSpeed;
     }
@@ -68,7 +64,7 @@ public class PlayerMovement : MonoBehaviour
         zMove = movementJoystickListener.Vertical();
 
         inputDirection = new Vector3(xMove, 0, zMove);
-        inputDirection = inputDirection.normalized * currMovementSpeed;
+        inputDirection *= currMovementSpeed;
 
         if (inputDirection.magnitude != 0)
             rb.MovePosition(transform.position + inputDirection);
@@ -77,19 +73,19 @@ public class PlayerMovement : MonoBehaviour
     }
 
     //Deal with slowing down
-    public void ChangeMovementState(MovementState state)
+    public void ChangeMovementState(EnumDefinitions.MovementState state)
     {
         if (state == currMovementState) return;
 
         switch (state)
         {
-            case MovementState.Slow:
+            case EnumDefinitions.MovementState.Slow:
                 currMovementSpeed = slowMovementSpeed;
                 break;
-            case MovementState.Regular:
+            case EnumDefinitions.MovementState.Regular:
                 currMovementSpeed = regMovementSpeed;
                 break;
-            case MovementState.Fast:
+            case EnumDefinitions.MovementState.Fast:
                 currMovementSpeed = fastMovementSpeed;
                 break;
         }
@@ -105,5 +101,10 @@ public class PlayerMovement : MonoBehaviour
     public Vector3 GetMovingDirection()
     {
         return inputDirection;
+    }
+
+    public float GetMovingSpeed()
+    {
+        return inputDirection.magnitude;
     }
 }

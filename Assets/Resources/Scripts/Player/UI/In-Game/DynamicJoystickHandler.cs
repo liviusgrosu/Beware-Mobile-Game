@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class MovementJoystickListener : MonoBehaviour, IDragHandler, IPointerDownHandler, IPointerUpHandler, IUIGenericElement
+public class DynamicJoystickHandler: MonoBehaviour, IDragHandler, IPointerDownHandler, IPointerUpHandler, IUIGenericElement
 {
     private bool isUIActive = true;
 
@@ -14,15 +14,17 @@ public class MovementJoystickListener : MonoBehaviour, IDragHandler, IPointerDow
     private Image joystick;
     private Vector3 inputVector;
 
-    private void Awake()
-    {
-        background = GetComponent<Image>();
-        joystick = transform.GetChild(0).GetComponent<Image>();
-    }
-
+    public RectTransform restingPosition;
+    private Vector3 backgroundRestingSpot;
+    
     // Start is called before the first frame update
     void Start()
     {
+        background = GameObject.Find("Virtual Joystick Background").GetComponent<Image>();
+        joystick = GameObject.Find("Virtual Joystick Stick").GetComponent<Image>();
+
+        backgroundRestingSpot = background.rectTransform.anchoredPosition;
+
         directionBackground = GameObject.Find("PI Background").GetComponent<Image>();
         directionIndicator = GameObject.Find("PI Joystick").GetComponent<Image>();
     }
@@ -57,11 +59,14 @@ public class MovementJoystickListener : MonoBehaviour, IDragHandler, IPointerDow
 
     public virtual void OnPointerDown(PointerEventData ped)
     {
+        background.rectTransform.position = Input.mousePosition;
         OnDrag(ped);
     }
 
     public virtual void OnPointerUp(PointerEventData ped)
     {
+        background.rectTransform.anchoredPosition = backgroundRestingSpot;
+
         inputVector = Vector3.zero;
         joystick.rectTransform.anchoredPosition = Vector3.zero;
         directionIndicator.rectTransform.anchoredPosition = Vector3.zero;
@@ -87,7 +92,7 @@ public class MovementJoystickListener : MonoBehaviour, IDragHandler, IPointerDow
     {
         isUIActive = state;
         //TODO: refactor this
-        GetComponent<Image>().enabled = state;
-        transform.GetChild(0).gameObject.SetActive(state);
+        background.enabled = state;
+        joystick.gameObject.SetActive(state);
     }
 }

@@ -79,7 +79,7 @@ public class SoundController : MonoBehaviour
     {
         switch (movement)
         {
-            case EnumDefinitions.MovementSoundTypes.Regular:
+            case EnumDefinitions.MovementSoundTypes.Grass:
                 audioSrc.PlayOneShot(regularMovementSound);
                 break;
             case EnumDefinitions.MovementSoundTypes.Slime:

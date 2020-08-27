@@ -301,6 +301,7 @@ GameObject:
   - component: {fileID: 1118917573193087557}
   - component: {fileID: 1118917573193087552}
   - component: {fileID: 1118917573193087553}
+  - component: {fileID: 1716993749157062482}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -410,11 +411,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponSpawn: {fileID: 1118917572301132718}
-  testWeapons:
-  - {fileID: 5000509310322805231, guid: 6833f807f041f7f4bbce3507f26006e0, type: 3}
-  - {fileID: 5000509310322805231, guid: 9999c917efc833f479e49bfbf14c7bb4, type: 3}
-  - {fileID: 5000509310322805231, guid: 593f0340b3a015f488d983cd6f592bcc, type: 3}
-  - {fileID: 5000509310322805231, guid: 35df335e50aad374c8d2243098704d88, type: 3}
+  startingWeapon: 1
 --- !u!114 &1118917573193087553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -437,6 +434,20 @@ MonoBehaviour:
   invincibleMat: {fileID: 2100000, guid: c2ca491e983d39a458f6ea8eb1324e00, type: 2}
   rend: {fileID: 1118917574157273049}
   invincibleTime: 2
+--- !u!114 &1716993749157062482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1118917573193087933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ad14941e7040d649829805fce4447ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxWaitCycleTime: 13
+  movementSound: 0
 --- !u!1 &1118917573406447954
 GameObject:
   m_ObjectHideFlags: 0

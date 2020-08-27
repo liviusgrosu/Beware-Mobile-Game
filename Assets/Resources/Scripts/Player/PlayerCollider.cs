@@ -5,10 +5,12 @@ using UnityEngine;
 public class PlayerCollider : MonoBehaviour
 {
     PlayerMovement movement;
+    PlayerFootSoundController footController;
 
     void Start()
     {
         movement = GetComponent<PlayerMovement>();
+        footController = GetComponent<PlayerFootSoundController>();
     }
 
     private void OnTriggerEnter(Collider col)
@@ -16,17 +18,12 @@ public class PlayerCollider : MonoBehaviour
         switch (col.gameObject.tag)
         {
             case "Slime":
-                movement.ChangeMovementState(PlayerMovement.MovementState.Slow);
+                movement.ChangeMovementState(EnumDefinitions.MovementState.Slow);
+                footController.ChangeMovementSoundType(EnumDefinitions.MovementSoundTypes.Slime);
                 break;
-        }
-    }
-
-    private void OnTriggerExit(Collider col)
-    {
-        switch (col.gameObject.tag)
-        {
-            case "Slime":
-                movement.ChangeMovementState(PlayerMovement.MovementState.Regular);
+            case "Grass":
+                movement.ChangeMovementState(EnumDefinitions.MovementState.Regular);
+                footController.ChangeMovementSoundType(EnumDefinitions.MovementSoundTypes.Grass);
                 break;
         }
     }

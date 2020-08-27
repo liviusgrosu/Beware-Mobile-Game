@@ -12,9 +12,7 @@ public class WeaponController : MonoBehaviour
     [SerializeField]
     private Transform weaponSpawn;
 
-    //TEST
-    [SerializeField]
-    GameObject[] testWeapons;
+    public EnumDefinitions.WeaponType startingWeapon = EnumDefinitions.WeaponType.Pistol;
 
     private bool isPlayer;
 
@@ -25,7 +23,7 @@ public class WeaponController : MonoBehaviour
         //if (!isPlayer) Debug.Break();
 
         uiController = GameObject.Find("Weapon Player UI").GetComponent<WeaponUIController>();
-        SwitchWeapons(EnumDefinitions.WeaponType.Pistol);
+        SwitchWeapons(startingWeapon);
     }
 
     private void Update()

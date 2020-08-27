@@ -56,8 +56,9 @@ MonoBehaviour:
   coinPickupSound: {fileID: 8300000, guid: 77674190803d54c41aebd085c5829125, type: 3}
   weaponPickupSound: {fileID: 8300000, guid: cd44328e89a54c94bbb71192641db0e9, type: 3}
   healthPickupSound: {fileID: 8300000, guid: 9d93f45599d0ccd4f978ba9f95a32654, type: 3}
-  regularMovementSound: {fileID: 0}
-  slimeMovementSound: {fileID: 0}
+  regularMovementSound: {fileID: 8300000, guid: 57b74ae672365774792415d6abfaa352,
+    type: 3}
+  slimeMovementSound: {fileID: 8300000, guid: 2dd87b2bfbc497749a6022e13aab59fa, type: 3}
   wingFlapMovementSound: {fileID: 0}
   doorOpenSound: {fileID: 8300000, guid: 6867c26841f3df542b9af06e2a4103f2, type: 3}
 --- !u!82 &7455770802344387253
@@ -72,7 +73,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0
+  m_Volume: 0.489
   m_Pitch: 1
   Loop: 0
   Mute: 0

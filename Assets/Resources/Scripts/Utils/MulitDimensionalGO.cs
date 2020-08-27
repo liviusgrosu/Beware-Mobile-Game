@@ -18,6 +18,8 @@ public class EnemyInstaParams
     public int variantAmount;
     public GameObject variantObject;
 
+    public EnumDefinitions.WeaponType startingWeapon;
+
     public EnumDefinitions.WeaponType weaponDrop;
     public int coinDropAmount;
     public EnumDefinitions.MiscDropTypes miscDrop;

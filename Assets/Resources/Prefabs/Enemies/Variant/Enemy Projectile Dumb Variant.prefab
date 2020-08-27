@@ -323,6 +323,7 @@ MonoBehaviour:
   weaponSpawn: {fileID: 1293479143}
   testWeapons:
   - {fileID: 5000509310322805231, guid: 6833f807f041f7f4bbce3507f26006e0, type: 3}
+  startingWeapon: 1
 --- !u!114 &3369465902322583888
 MonoBehaviour:
   m_ObjectHideFlags: 0
