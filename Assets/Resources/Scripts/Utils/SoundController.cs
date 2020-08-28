@@ -30,6 +30,10 @@ public class SoundController : MonoBehaviour
     [SerializeField] private AudioClip slimeMovementSound;
     [SerializeField] private AudioClip wingFlapMovementSound;
 
+    [Header("Menu Sounds")]
+    [SerializeField] private AudioClip starCollectSound;
+    [SerializeField] private AudioClip buttonPressSound;
+
     [SerializeField] private AudioClip doorOpenSound;
     private void Awake()
     {
@@ -75,9 +79,9 @@ public class SoundController : MonoBehaviour
         audioSrc.PlayOneShot(playerHitSound);
     }
 
-    public void PlayMovementSound(EnumDefinitions.MovementSoundTypes movement)
+    public void PlayMovementSound(EnumDefinitions.MovementSoundTypes type)
     {
-        switch (movement)
+        switch (type)
         {
             case EnumDefinitions.MovementSoundTypes.Grass:
                 audioSrc.PlayOneShot(regularMovementSound);
@@ -87,6 +91,19 @@ public class SoundController : MonoBehaviour
                 break;
             case EnumDefinitions.MovementSoundTypes.WingFlap:
                 audioSrc.PlayOneShot(wingFlapMovementSound);
+                break;
+        }
+    }
+
+    public void PlayMenuSound(EnumDefinitions.MenuSoundClip type)
+    {
+        switch(type)
+        {
+            case EnumDefinitions.MenuSoundClip.ButtonPress:
+                audioSrc.PlayOneShot(buttonPressSound);
+                break;
+            case EnumDefinitions.MenuSoundClip.StarCollect:
+                audioSrc.PlayOneShot(starCollectSound);
                 break;
         }
     }

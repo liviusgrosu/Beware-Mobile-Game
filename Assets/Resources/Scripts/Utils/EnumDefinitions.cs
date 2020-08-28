@@ -32,4 +32,10 @@ public class EnumDefinitions
         Regular,
         Fast
     }
+
+    public enum MenuSoundClip
+    {
+        ButtonPress,
+        StarCollect
+    }
 }

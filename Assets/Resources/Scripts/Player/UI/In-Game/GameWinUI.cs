@@ -10,7 +10,7 @@ public class GameWinUI : MonoBehaviour, IUIGenericElement
     private bool isUIActive;
 
     private GameManager gameManager;
-    private MenuSoundController soundController;
+    private SoundController soundController;
 
     private ScoreManager scoreManager;
     private List<RectTransform> starUI;
@@ -19,6 +19,8 @@ public class GameWinUI : MonoBehaviour, IUIGenericElement
 
     [SerializeField] private Sprite lockedBackground;
     [SerializeField] private Transform advanceLevelButton;
+
+    private bool displayStarScore;
 
     private void Awake()
     {
@@ -33,25 +35,25 @@ public class GameWinUI : MonoBehaviour, IUIGenericElement
 
     private void Start()
     {
-        soundController = transform.parent.GetComponent<MenuSoundController>();
         gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
+        soundController = GameObject.Find("Sound Controller").GetComponent<SoundController>();
     }
 
     public void ReplayButtonPress()
     {
-        soundController.PlayButtonPress();
+        soundController.PlayMenuSound(EnumDefinitions.MenuSoundClip.ButtonPress);
         gameManager.RestartLevel();
     }
 
     public void NextLevelButtonPress()
     {
-        soundController.PlayButtonPress();
+        soundController.PlayMenuSound(EnumDefinitions.MenuSoundClip.ButtonPress);
         gameManager.AdvanceLevel();
     }
 
     public void MenuButtonPress()
     {
-        soundController.PlayButtonPress();
+        soundController.PlayMenuSound(EnumDefinitions.MenuSoundClip.ButtonPress);
         gameManager.GoBackToMainMenu();
     }
 
@@ -68,8 +70,7 @@ public class GameWinUI : MonoBehaviour, IUIGenericElement
 
         if(isUIActive)
         {
-            for(int i = 0; i < starUI.Count; i++)
-                starUI.ElementAt(i).GetComponent<Image>().sprite = (i <= scoreManager.starTotal - 1) ? fullStar : emptyStar;
+            StartCoroutine(UnlockStarScore());
 
             SaveSystem.SaveLevel(SceneManager.GetActiveScene().name, true, scoreManager.starTotal);
 
@@ -78,6 +79,18 @@ public class GameWinUI : MonoBehaviour, IUIGenericElement
                 advanceLevelButton.GetComponent<Button>().enabled = false;
                 advanceLevelButton.GetComponent<Image>().sprite = lockedBackground;
             }
+        }
+    }
+    IEnumerator UnlockStarScore()
+    {
+        if (!displayStarScore) displayStarScore = true;
+        else yield break;
+
+        for (int starIdx = 0; starIdx < scoreManager.starTotal; starIdx++)
+        {
+            yield return new WaitForSeconds(0.5f);
+            starUI.ElementAt(starIdx).GetComponent<Image>().sprite = fullStar;
+            soundController.PlayMenuSound(EnumDefinitions.MenuSoundClip.StarCollect);
         }
     }
 }

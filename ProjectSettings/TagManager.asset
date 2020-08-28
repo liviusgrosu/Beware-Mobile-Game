@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Projectile Bullet
   - Drop
+  - Grass
   layers:
   - Default
   - TransparentFX
