@@ -24,6 +24,9 @@ public class PlayerAttackingBehaviour : MonoBehaviour
     const int LOOK_MOVEMENT = 1;
     const int LOOK_ENEMY = 2;
 
+    private bool isGenerallyLookingAtEnemy;
+    [SerializeField] private float angleRelativeTargetLook = 20f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -56,7 +59,7 @@ public class PlayerAttackingBehaviour : MonoBehaviour
                     nearestTarget = enemyManager.GetClosestEnemy(transform.position);
                 
                 RotateTowardsTarget(LOOK_ENEMY);
-                if (!weaponController.IsFiringWeapon()) weaponController.ToggleWeaponFire(true);
+                if (!weaponController.IsFiringWeapon() && isGenerallyLookingAtEnemy) weaponController.ToggleWeaponFire(true);
             }
             else
             {
@@ -84,5 +87,7 @@ public class PlayerAttackingBehaviour : MonoBehaviour
         Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
         playerBody.rotation = Quaternion.RotateTowards(playerBody.rotation, targetRotation, rotationSpeed * Time.deltaTime);
         playerBody.eulerAngles = new Vector3(0, playerBody.eulerAngles.y, 0);
+
+        isGenerallyLookingAtEnemy = (Vector3.Angle(playerBody.forward, targetDirection) < angleRelativeTargetLook);
     }
 }

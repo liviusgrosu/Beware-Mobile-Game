@@ -69,7 +69,8 @@ public class EnemyWaveSystem : MonoBehaviour
             enemy.GetComponent<EnemyDropHandler>().coinAmount = entity.coinDropAmount;
             enemy.GetComponent<EnemyDropHandler>().miscDrops = entity.miscDrop;
 
-            enemy.GetComponent<WeaponController>().startingWeapon = entity.startingWeapon;
+            if(enemy.GetComponent<WeaponController>() != null)
+                enemy.GetComponent<WeaponController>().startingWeapon = entity.startingWeapon;
 
             enemy.GetComponent<EnemySpawnTravel>().StartTravel(spawnPoints.ElementAt(i % spawnPoints.Count).position);
             yield return new WaitForSeconds(0.1f);
