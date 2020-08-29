@@ -90,4 +90,9 @@ public class PlayerAttackingBehaviour : MonoBehaviour
 
         isGenerallyLookingAtEnemy = (Vector3.Angle(playerBody.forward, targetDirection) < angleRelativeTargetLook);
     }
+
+    public Transform GetNearestTarget()
+    {
+        return nearestTarget;
+    }
 }

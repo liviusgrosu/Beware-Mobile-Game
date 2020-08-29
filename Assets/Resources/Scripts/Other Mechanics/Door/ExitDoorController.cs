@@ -38,4 +38,9 @@ public class ExitDoorController : MonoBehaviour
         yield return new WaitForSeconds(1.0f);
         anim.SetTrigger("Close Door");
     }
+
+    public bool IsStuckOpen()
+    {
+        return doorStuckOpen;
+    }
 }
