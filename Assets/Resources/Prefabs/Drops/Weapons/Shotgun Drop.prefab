@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -1438314376601010898}
   - component: {fileID: -5992008828379368059}
   - component: {fileID: 18146052909280759}
+  - component: {fileID: 5578565951415106941}
   m_Layer: 13
   m_Name: Shotgun Drop
   m_TagString: Drop
@@ -112,7 +113,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &-5992008828379368059
 MonoBehaviour:
@@ -144,3 +145,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turnSpeed: 0.15
   bobbingMultiplier: 0.15
+--- !u!114 &5578565951415106941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4438630218146824919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 733846297d4412f488d7cd53621709e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

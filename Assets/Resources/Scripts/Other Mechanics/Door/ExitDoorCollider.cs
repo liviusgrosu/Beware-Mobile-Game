@@ -25,9 +25,12 @@ public class ExitDoorCollider : MonoBehaviour
         doorIsOpenToPlayer = true;
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision col)
     {
-        if (doorIsOpenToPlayer)
-            playerFinished = true;
+        if (col.gameObject.tag == "Player")
+        {
+            if (doorIsOpenToPlayer)
+                playerFinished = true;
+        }
     }
 }

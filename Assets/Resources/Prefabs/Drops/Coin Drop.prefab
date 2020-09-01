@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4053281750708700558}
   - component: {fileID: 2227721466089345135}
   - component: {fileID: -6380985162830359835}
+  - component: {fileID: 5655647232113279583}
   m_Layer: 13
   m_Name: Coin Drop
   m_TagString: Drop
@@ -127,7 +128,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &-6380985162830359835
 MonoBehaviour:
@@ -143,3 +144,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turnSpeed: 0.15
   bobbingMultiplier: 0.15
+--- !u!114 &5655647232113279583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4438630218146824919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 733846297d4412f488d7cd53621709e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -7,6 +7,9 @@ using UnityEngine;
 
 public class EnemyWaveSystem : MonoBehaviour
 {
+    [SerializeField]
+    private bool debugDisableWaves;
+
     private int waveCounter = 0;
 
     [SerializeField] private EnemyWaveObject[] enemyWaves;
@@ -36,7 +39,7 @@ public class EnemyWaveSystem : MonoBehaviour
     {
         waveCounter++;
 
-        if (waveCounter > enemyWaves.Length)
+        if (waveCounter > enemyWaves.Length || debugDisableWaves)
         {
             exitDoorController.TriggerFullOpen();
             waveUI.UpdateUI("CLEAR");

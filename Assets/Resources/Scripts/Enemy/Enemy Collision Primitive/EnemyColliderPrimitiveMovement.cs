@@ -50,7 +50,7 @@ public class EnemyColliderPrimitiveMovement : MonoBehaviour
         currMovementState = MovementState.Regular;
 
         int[] directions = new int[] { 1, -1 };
-        currDirection = new Vector3(directions[Random.Range(0, 2)], 0, directions[Random.Range(0, 2)]);
+        currDirection = new Vector3(directions[Random.Range(0, 2)], 0, -1);
 
         rb = GetComponent<Rigidbody>();
     }
