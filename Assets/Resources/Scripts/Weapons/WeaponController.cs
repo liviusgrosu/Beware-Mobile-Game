@@ -42,11 +42,14 @@ public class WeaponController : MonoBehaviour
 
     public void SwitchWeapons(EnumDefinitions.WeaponType nextWeapon)
     {
-        Destroy(currentWeapon);
-        GameObject weaponPrefab = Resources.Load(string.Format("Prefabs/Weapons/{0} Weapon", nextWeapon.ToString())) as GameObject;
-        currentWeapon = Instantiate(weaponPrefab, weaponSpawn.position, weaponSpawn.rotation);
-        currentWeapon.transform.parent = weaponSpawn;
-        uiController.ChangeWeaponInfo(currentWeapon.GetComponent<Weapon>().weaponIcon, currentWeapon.GetComponent<Weapon>().maxProjectileCount);
+        if (nextWeapon != EnumDefinitions.WeaponType.None)
+        {
+            Destroy(currentWeapon);
+            GameObject weaponPrefab = Resources.Load(string.Format("Prefabs/Weapons/{0} Weapon", nextWeapon.ToString())) as GameObject;
+            currentWeapon = Instantiate(weaponPrefab, weaponSpawn.position, weaponSpawn.rotation);
+            currentWeapon.transform.parent = weaponSpawn;
+            uiController.ChangeWeaponInfo(currentWeapon.GetComponent<Weapon>().weaponIcon, currentWeapon.GetComponent<Weapon>().maxProjectileCount);
+        }
     }
 
     public void ToggleWeaponFire(bool state) { if (currentWeapon != null) currentWeapon.GetComponent<Weapon>().ToggleFiring(state); }

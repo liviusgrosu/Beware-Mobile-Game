@@ -8,12 +8,14 @@ public class DropRespawnCollider : MonoBehaviour
 
     private void Start()
     {
-        respawnController = GameObject.Find("Drop Respawn Controller").GetComponent<DropRespawnController>();
+        GameObject respawnControllerObj = GameObject.Find("Drop Respawn Controller");
+        if (respawnControllerObj != null)
+            respawnController = GameObject.Find("Drop Respawn Controller").GetComponent<DropRespawnController>();
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Drop")
+        if (respawnController != null && collision.gameObject.tag == "Drop")
             respawnController.AddDropToController(collision.gameObject.transform);
     }
 }

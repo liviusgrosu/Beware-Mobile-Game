@@ -16,9 +16,6 @@ public class GameManager : MonoBehaviour
 
     private string currentSceneName;
 
-    [SerializeField]
-    private string levelNamePrefix;
-
     public bool changingScene;
 
     private enum GameState
@@ -94,19 +91,22 @@ public class GameManager : MonoBehaviour
     public void AdvanceLevel()
     {
         changingScene = true;
-        int nextLevelId = GetLevelId() + 1;
-        SceneManager.LoadScene($"{levelNamePrefix} {nextLevelId}");
+        int[] nextLevelParam = GetLevelIds();
+        SceneManager.LoadScene($"World {nextLevelParam[0]} Level {nextLevelParam[1] + 1}");
     }
 
     public bool IsAnotherLevelAvailable()
     {
-        int nextLevelId = GetLevelId() + 1;
-        return Application.CanStreamedLevelBeLoaded($"{levelNamePrefix} {nextLevelId}");
+        int[] nextLevelParam = GetLevelIds();
+        return Application.CanStreamedLevelBeLoaded($"World {nextLevelParam[0]} Level {nextLevelParam[1] + 1}");
     }
 
-    private int GetLevelId()
+    private int[] GetLevelIds()
     {
-        string currSceneName = SceneManager.GetActiveScene().name;
-        return int.Parse(currSceneName.Split().Last());
+        List<String> leveParams = SceneManager.GetActiveScene().name.Split(' ').ToList();
+        int worldId = int.Parse(leveParams.ElementAt(1));
+        int levelId = int.Parse(leveParams.ElementAt(3));
+
+        return new int[] { worldId, levelId };
     }
 }
