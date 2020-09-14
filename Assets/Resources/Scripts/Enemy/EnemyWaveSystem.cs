@@ -29,7 +29,7 @@ public class EnemyWaveSystem : MonoBehaviour
 
     private void Start()
     {
-        exitDoorController = GameObject.Find("Exit Door").GetComponent<ExitDoorController>();
+        exitDoorController = GameObject.FindWithTag("Exit Door").GetComponent<ExitDoorController>();
         waveUI = GameObject.Find("Wave Indicator UI").GetComponent<EnemyWavesUI>();
 
         if (enemyWaves.Length <= 1) waveUI.ToggleUI(false);

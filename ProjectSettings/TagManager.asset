@@ -10,6 +10,7 @@ TagManager:
   - Projectile Bullet
   - Drop
   - Grass
+  - Exit Door
   layers:
   - Default
   - TransparentFX
