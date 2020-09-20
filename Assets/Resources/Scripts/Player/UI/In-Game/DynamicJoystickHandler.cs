@@ -16,6 +16,7 @@ public class DynamicJoystickHandler: MonoBehaviour, IDragHandler, IPointerDownHa
     private Vector3 backgroundRestingSpot, joystickRestingSpot, directionIndicatorRestingPoint;
 
     private Camera uiCam;
+    private float canvasToCamOffset;
     
     // Start is called before the first frame update
     void Start()
@@ -26,6 +27,8 @@ public class DynamicJoystickHandler: MonoBehaviour, IDragHandler, IPointerDownHa
         joystick = GameObject.Find("Virtual Joystick Stick").GetComponent<Image>();
 
         directionBackground = GameObject.Find("PI Joystick").GetComponent<Image>();
+
+        canvasToCamOffset = GameObject.Find("UI Canvas").GetComponent<Canvas>().planeDistance;
 
         backgroundRestingSpot = background.rectTransform.localPosition;
         joystickRestingSpot = joystick.rectTransform.localPosition;
@@ -40,7 +43,7 @@ public class DynamicJoystickHandler: MonoBehaviour, IDragHandler, IPointerDownHa
             return;
         }
 
-        Vector3 mousePoint = uiCam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, uiCam.nearClipPlane));
+        Vector3 mousePoint = uiCam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, uiCam.nearClipPlane + canvasToCamOffset));
         Vector3 backgroundCentre = background.rectTransform.position;
         float distance = Vector3.Distance(mousePoint, backgroundCentre);
         if (distance > 1f)
@@ -64,7 +67,7 @@ public class DynamicJoystickHandler: MonoBehaviour, IDragHandler, IPointerDownHa
 
     public virtual void OnPointerDown(PointerEventData ped)
     {
-        Vector3 point = uiCam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, uiCam.nearClipPlane));
+        Vector3 point = uiCam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, uiCam.nearClipPlane + canvasToCamOffset));
         background.rectTransform.position = point;
     }
 
