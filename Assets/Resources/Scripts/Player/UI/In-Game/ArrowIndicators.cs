@@ -71,6 +71,8 @@ public class ArrowIndicators : MonoBehaviour
             targetDirection = targetArrowNewPos - centreOfScreen;
             float angle = Mathf.Atan2(targetDirection.y, targetDirection.x) * Mathf.Rad2Deg - 90f;
             indicatorImg.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            // Lock rotation on x axis to compensate for UI cameras rotation
+            indicatorImg.eulerAngles = new Vector3(60, 0, indicatorImg.eulerAngles.z);
         }
     }
 }
