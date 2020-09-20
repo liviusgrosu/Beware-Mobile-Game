@@ -7,7 +7,7 @@ public class ArrowIndicators : MonoBehaviour
 {
     private PlayerAttackingBehaviour attackingBehaviour;
     private GameObject door;
-    private Camera mainCam;
+    private Camera uiCam;
 
     public RectTransform enemyIndicatorImg, doorIndicatorImg;
 
@@ -27,7 +27,7 @@ public class ArrowIndicators : MonoBehaviour
         attackingBehaviour = GameObject.Find("Player").GetComponent<PlayerAttackingBehaviour>();
         door = GameObject.Find("Exit Door");
 
-        mainCam = Camera.main;
+        uiCam = GameObject.Find("UI Camera").GetComponent<Camera>();
         centreOfScreen = new Vector3(Screen.width / 2f, Screen.height / 2f, 0);
     }
 
@@ -46,7 +46,7 @@ public class ArrowIndicators : MonoBehaviour
     private void CalculateTargetIndicator(Vector3 targetPos, RectTransform indicatorImg)
     {
         //get viewport positions
-        screenTargetPos = mainCam.WorldToViewportPoint(targetPos);
+        screenTargetPos = uiCam.WorldToViewportPoint(targetPos);
 
         // If enemy is out of camera bounds then don't display the arrow
         isTargetOffScreen = (screenTargetPos.x >= 0 && screenTargetPos.x <= 1 && screenTargetPos.y >= 0 && screenTargetPos.y <= 1);

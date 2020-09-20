@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     private string currentSceneName;
 
     public bool changingScene;
+    public bool stopAdvanceToNextLevel;
 
     private enum GameState
     { 
@@ -97,6 +98,7 @@ public class GameManager : MonoBehaviour
 
     public bool IsAnotherLevelAvailable()
     {
+        if (stopAdvanceToNextLevel) return false;
         int[] nextLevelParam = GetLevelIds();
         return Application.CanStreamedLevelBeLoaded($"World {nextLevelParam[0]} Level {nextLevelParam[1] + 1}");
     }

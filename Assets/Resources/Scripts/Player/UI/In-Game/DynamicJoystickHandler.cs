@@ -8,68 +8,77 @@ public class DynamicJoystickHandler: MonoBehaviour, IDragHandler, IPointerDownHa
 {
     private bool isUIActive = true;
 
-    private Image directionIndicator;
     private Image directionBackground;
     private Image background;
     private Image joystick;
     private Vector3 inputVector;
 
-    public RectTransform restingPosition;
-    private Vector3 backgroundRestingSpot;
+    private Vector3 backgroundRestingSpot, joystickRestingSpot, directionIndicatorRestingPoint;
+
+    private Camera uiCam;
     
     // Start is called before the first frame update
     void Start()
     {
+        uiCam = GameObject.Find("UI Camera").GetComponent<Camera>();
+
         background = GameObject.Find("Virtual Joystick Background").GetComponent<Image>();
         joystick = GameObject.Find("Virtual Joystick Stick").GetComponent<Image>();
 
-        backgroundRestingSpot = background.rectTransform.anchoredPosition;
+        directionBackground = GameObject.Find("PI Joystick").GetComponent<Image>();
 
-        directionBackground = GameObject.Find("PI Background").GetComponent<Image>();
-        directionIndicator = GameObject.Find("PI Joystick").GetComponent<Image>();
+        backgroundRestingSpot = background.rectTransform.localPosition;
+        joystickRestingSpot = joystick.rectTransform.localPosition;
+        directionIndicatorRestingPoint = directionBackground.rectTransform.localPosition;
     }
 
     public virtual void OnDrag(PointerEventData ped)
     {
         if (!isUIActive)
         {
-            inputVector = Vector3.zero;
-            joystick.rectTransform.anchoredPosition = Vector3.zero;
-            directionIndicator.rectTransform.anchoredPosition = Vector3.zero;
+            ResetUILocations();
             return;
         }
 
-        Vector2 pos;
-        if (RectTransformUtility.ScreenPointToLocalPointInRectangle(
-            background.rectTransform,
-            ped.position,
-            ped.pressEventCamera,
-            out pos))
+        Vector3 mousePoint = uiCam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, uiCam.nearClipPlane));
+        Vector3 backgroundCentre = background.rectTransform.position;
+        float distance = Vector3.Distance(mousePoint, backgroundCentre);
+        if (distance > 1f)
         {
-            pos.x = (pos.x / background.rectTransform.sizeDelta.x);
-            pos.y = (pos.y / background.rectTransform.sizeDelta.y);
-
-            inputVector = new Vector3(pos.x * 2, 0, pos.y * 2);
-            inputVector = (inputVector.magnitude > 1f) ? inputVector.normalized : inputVector;
-
-            joystick.rectTransform.anchoredPosition = new Vector3(inputVector.x * (background.rectTransform.sizeDelta.x / 3), inputVector.z * (background.rectTransform.sizeDelta.y / 3));
-            directionIndicator.rectTransform.anchoredPosition = new Vector3(inputVector.x * 7f * (directionBackground.rectTransform.sizeDelta.x / 3), inputVector.z * 7f * (directionBackground.rectTransform.sizeDelta.y / 3));
+            Vector3 mousePointDir = mousePoint - backgroundCentre;
+            mousePointDir *= 1 / distance;
+            mousePoint = backgroundCentre + mousePointDir;
         }
+
+        joystick.rectTransform.position = mousePoint;
+        Vector2 moveDir = new Vector2(
+            joystick.rectTransform.localPosition.x / background.rectTransform.sizeDelta.x, 
+            joystick.rectTransform.localPosition.y / background.rectTransform.sizeDelta.y
+            );
+
+        inputVector = new Vector3(moveDir.x * 2, 0, moveDir.y * 2);
+        inputVector = (inputVector.magnitude > 1f) ? inputVector.normalized : inputVector;
+        
+        directionBackground.rectTransform.localPosition = new Vector3(inputVector.x, directionBackground.rectTransform.localPosition.y, inputVector.z);
     }
 
     public virtual void OnPointerDown(PointerEventData ped)
     {
-        background.rectTransform.position = Input.mousePosition;
-        OnDrag(ped);
+        Vector3 point = uiCam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, uiCam.nearClipPlane));
+        background.rectTransform.position = point;
     }
 
     public virtual void OnPointerUp(PointerEventData ped)
     {
-        background.rectTransform.anchoredPosition = backgroundRestingSpot;
+        ResetUILocations();
+    }
 
+    private void ResetUILocations()
+    {
         inputVector = Vector3.zero;
-        joystick.rectTransform.anchoredPosition = Vector3.zero;
-        directionIndicator.rectTransform.anchoredPosition = Vector3.zero;
+        joystick.rectTransform.localPosition = joystickRestingSpot;
+        directionBackground.rectTransform.localPosition = directionIndicatorRestingPoint;
+        background.rectTransform.localPosition = backgroundRestingSpot;
     }
 
     public float Horizontal()

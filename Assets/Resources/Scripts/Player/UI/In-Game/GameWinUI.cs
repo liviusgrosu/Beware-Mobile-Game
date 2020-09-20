@@ -17,6 +17,8 @@ public class GameWinUI : MonoBehaviour, IUIGenericElement
 
     public Sprite emptyStar, fullStar;
 
+    public ParticleSystem starBurstEffect;
+
     [SerializeField] private Sprite lockedBackground;
     [SerializeField] private Transform advanceLevelButton;
 
