@@ -24,6 +24,8 @@ public class GameWinUI : MonoBehaviour, IUIGenericElement
 
     private bool displayStarScore;
 
+    [SerializeField] private ParticleSystem starBurstParticles;
+
     private void Awake()
     {
         scoreManager = GameObject.Find("Score Manager").GetComponent<ScoreManager>();
@@ -91,6 +93,9 @@ public class GameWinUI : MonoBehaviour, IUIGenericElement
         for (int starIdx = 0; starIdx < scoreManager.starTotal; starIdx++)
         {
             yield return new WaitForSeconds(0.5f);
+            Vector3 starPos = starUI.ElementAt(starIdx).transform.position;
+            starBurstParticles.transform.position = new Vector3(starPos.x, starPos.y, starBurstParticles.transform.position.z);
+            starBurstParticles.Play();
             starUI.ElementAt(starIdx).GetComponent<Image>().sprite = fullStar;
             soundController.PlayMenuSound(EnumDefinitions.MenuSoundClip.StarCollect);
         }
