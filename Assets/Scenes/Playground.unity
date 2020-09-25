@@ -22003,6 +22003,28 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7549480650268422151, guid: 69545059670dbb547b2743966ce1e618,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b5ddbae6f1920d2478c5ebf51cc9a875,
+        type: 3}
+    - target: {fileID: 7549480651226073139, guid: 69545059670dbb547b2743966ce1e618,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7549480651871964230, guid: 69545059670dbb547b2743966ce1e618,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: eee2e4105c91fce4088f5fe9b18a6d83,
+        type: 3}
+    - target: {fileID: 7549480652024476860, guid: 69545059670dbb547b2743966ce1e618,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 7549480652071215410, guid: 69545059670dbb547b2743966ce1e618,
         type: 3}
       propertyPath: m_Name
@@ -22118,6 +22140,11 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1743333520}
+    - target: {fileID: 7549480652071215415, guid: 69545059670dbb547b2743966ce1e618,
+        type: 3}
+      propertyPath: m_PlaneDistance
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69545059670dbb547b2743966ce1e618, type: 3}
 --- !u!1001 &7688799013565825017
