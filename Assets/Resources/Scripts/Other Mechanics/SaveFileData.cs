@@ -16,3 +16,16 @@ public class LevelData
         this.levelStarScore = levelStarScore;
     }
 }
+
+[System.Serializable]
+public class SettingData
+{
+    public float sfxLevel;
+    public float musicLevel;
+
+    public SettingData(float sfxLevel, float musicLevel)
+    {
+       this.sfxLevel = sfxLevel;
+       this.musicLevel = musicLevel;
+    }
+}

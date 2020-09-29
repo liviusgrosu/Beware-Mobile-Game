@@ -35,17 +35,24 @@ public class LevelButton : MonoBehaviour
         }
     }
 
+    public void ToggleStarsOff()
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            stars[i].gameObject.SetActive(false);
+        }
+    }
+
     public void ToggleButton(bool? isUnlocked)
     {
         switch(isUnlocked)
         {
             case true:
-                GetComponent<Image>().sprite = unlockedBackground;
                 break;
             case false:
                 lockedSymbol.gameObject.SetActive(true);
-                GetComponent<Button>().enabled = false;
-                GetComponent<Image>().sprite = lockedBackground;
+                GetComponent<Button>().interactable = false;
+                ToggleStarsOff();
                 break;
             default:
                 return;
