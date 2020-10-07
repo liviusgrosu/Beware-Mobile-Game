@@ -19,7 +19,6 @@ public class GameWinUI : MonoBehaviour, IUIGenericElement
 
     public ParticleSystem starBurstEffect;
 
-    [SerializeField] private Sprite lockedBackground;
     [SerializeField] private Transform advanceLevelButton;
 
     private bool displayStarScore;
@@ -80,8 +79,7 @@ public class GameWinUI : MonoBehaviour, IUIGenericElement
 
             if (!gameManager.IsAnotherLevelAvailable())
             {
-                advanceLevelButton.GetComponent<Button>().enabled = false;
-                advanceLevelButton.GetComponent<Image>().sprite = lockedBackground;
+                advanceLevelButton.GetComponent<Button>().interactable = false;
             }
         }
     }

@@ -8,7 +8,7 @@ public class WeaponUIController : MonoBehaviour, IUIGenericElement
     private bool isUIActive;
 
     [SerializeField]
-    private Text curAmmoCountText, maxAmmoCountText;
+    private Text curAmmoCountText;
     [SerializeField]
     private Image weaponIconImg;
 
@@ -27,7 +27,6 @@ public class WeaponUIController : MonoBehaviour, IUIGenericElement
     public void ChangeWeaponInfo(Sprite weaponIcon, int maxWeaponCount)
     {
         weaponIconImg.sprite = weaponIcon;
-        maxAmmoCountText.text = maxWeaponCount.ToString();
     }
 
     public void ToggleUI(bool state)
