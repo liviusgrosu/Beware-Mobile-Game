@@ -25,7 +25,7 @@ public class EnemyDropHandler : MonoBehaviour
             Instantiate(obj, transform.position, Quaternion.identity);
         }
             
-        coinPrefab = Resources.Load("Prefabs/Drops/Coin Drop") as GameObject;
+        coinPrefab = Resources.Load("Prefabs/Drops/Misc/Coin Drop") as GameObject;
 
         for (int i = 0; i < coinAmount; i++)
         {

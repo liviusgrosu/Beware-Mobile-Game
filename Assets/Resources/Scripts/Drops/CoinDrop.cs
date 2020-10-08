@@ -15,15 +15,14 @@ public class CoinDrop : MonoBehaviour
 
     private float currExistanceTime = 0f;
 
-    private Renderer rend;
+    public Renderer renderer;
     private Color currMatCol;
 
     private float colourAlpha;
 
     private void Awake()
     {
-        rend = GetComponent<Renderer>();
-        currMatCol = rend.material.color;
+        currMatCol = renderer.material.color;
     }
 
     private void Start()
@@ -44,7 +43,7 @@ public class CoinDrop : MonoBehaviour
             Destroy(this.gameObject);
 
         currExistanceTime += Time.deltaTime;
-        rend.material.color = new Color(currMatCol.r, currMatCol.g, currMatCol.b, colourAlpha);
+        renderer.material.color = new Color(currMatCol.r, currMatCol.g, currMatCol.b, colourAlpha);
     }
 
     private void OnTriggerEnter(Collider col)
