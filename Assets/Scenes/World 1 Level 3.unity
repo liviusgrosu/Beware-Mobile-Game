@@ -123,7 +123,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: f0194670e68e23a4292c348fdbcc120e, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 4ef35b1f3b155bd4c9d8e4879af8d857, type: 2}
 --- !u!1001 &34845
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -287,7 +287,7 @@ PrefabInstance:
     - target: {fileID: 1755477044981619880, guid: 8b3434188ad18134d8ab6727bfe64602,
         type: 3}
       propertyPath: enemyWaves.Array.data[0].enemy.Array.size
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1755477044981619880, guid: 8b3434188ad18134d8ab6727bfe64602,
         type: 3}
@@ -314,6 +314,38 @@ PrefabInstance:
     - target: {fileID: 1755477044981619880, guid: 8b3434188ad18134d8ab6727bfe64602,
         type: 3}
       propertyPath: enemyWaves.Array.data[0].enemy.Array.data[1].miscDrop
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1755477044981619880, guid: 8b3434188ad18134d8ab6727bfe64602,
+        type: 3}
+      propertyPath: enemyWaves.Array.data[0].enemy.Array.data[2].enemyObj
+      value: 
+      objectReference: {fileID: 5058014658141793981, guid: f227028dfeeb06f42804cdecc6e17bd9,
+        type: 3}
+    - target: {fileID: 1755477044981619880, guid: 8b3434188ad18134d8ab6727bfe64602,
+        type: 3}
+      propertyPath: enemyWaves.Array.data[0].enemy.Array.data[2].coinDropAmount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1755477044981619880, guid: 8b3434188ad18134d8ab6727bfe64602,
+        type: 3}
+      propertyPath: enemyWaves.Array.data[0].enemy.Array.data[2].miscDrop
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1755477044981619880, guid: 8b3434188ad18134d8ab6727bfe64602,
+        type: 3}
+      propertyPath: enemyWaves.Array.data[0].enemy.Array.data[3].enemyObj
+      value: 
+      objectReference: {fileID: 5058014658141793981, guid: f227028dfeeb06f42804cdecc6e17bd9,
+        type: 3}
+    - target: {fileID: 1755477044981619880, guid: 8b3434188ad18134d8ab6727bfe64602,
+        type: 3}
+      propertyPath: enemyWaves.Array.data[0].enemy.Array.data[3].coinDropAmount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1755477044981619880, guid: 8b3434188ad18134d8ab6727bfe64602,
+        type: 3}
+      propertyPath: enemyWaves.Array.data[0].enemy.Array.data[3].miscDrop
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1755477044981619881, guid: 8b3434188ad18134d8ab6727bfe64602,
@@ -5545,6 +5577,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8645575393479648035, guid: 989de5fdad78bc34590ffdf5e1ecb2bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8645575393479648035, guid: 989de5fdad78bc34590ffdf5e1ecb2bc,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 989de5fdad78bc34590ffdf5e1ecb2bc, type: 3}
 --- !u!1001 &616404087
@@ -7068,6 +7110,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8645575393479648035, guid: 989de5fdad78bc34590ffdf5e1ecb2bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8645575393479648035, guid: 989de5fdad78bc34590ffdf5e1ecb2bc,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 989de5fdad78bc34590ffdf5e1ecb2bc, type: 3}
@@ -8860,6 +8912,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1799789915}
     m_Modifications:
+    - target: {fileID: 184660518138823035, guid: 989de5fdad78bc34590ffdf5e1ecb2bc,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2492833358827895838, guid: 989de5fdad78bc34590ffdf5e1ecb2bc,
         type: 3}
       propertyPath: m_Name
@@ -8919,6 +8976,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8645575393479648035, guid: 989de5fdad78bc34590ffdf5e1ecb2bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8645575393479648035, guid: 989de5fdad78bc34590ffdf5e1ecb2bc,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 989de5fdad78bc34590ffdf5e1ecb2bc, type: 3}
@@ -16524,6 +16591,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8645575393479648035, guid: 989de5fdad78bc34590ffdf5e1ecb2bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8645575393479648035, guid: 989de5fdad78bc34590ffdf5e1ecb2bc,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 989de5fdad78bc34590ffdf5e1ecb2bc, type: 3}

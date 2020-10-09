@@ -13,7 +13,7 @@ public class WeaponDrop : MonoBehaviour
 
     private float currExistanceTime = 0f;
 
-    private Renderer rend;
+    public Renderer rend;
     private Color currMatCol;
 
     private float colourAlpha;
@@ -23,7 +23,6 @@ public class WeaponDrop : MonoBehaviour
 
     private void Awake()
     {
-        rend = GetComponent<Renderer>();
         currMatCol = rend.material.color;
     }
 
