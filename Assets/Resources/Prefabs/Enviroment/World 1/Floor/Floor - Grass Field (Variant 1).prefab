@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: 8080068128284875529}
   - component: {fileID: 6324985095877881795}
   m_Layer: 0
-  m_Name: Floor - Grass Field (Variant 1) (16)
+  m_Name: Floor - Grass Field (Variant 1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &5156041797137274028
 Transform:

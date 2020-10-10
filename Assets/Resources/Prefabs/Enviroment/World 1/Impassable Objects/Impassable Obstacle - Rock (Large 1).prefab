@@ -133,6 +133,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Impassable Obstacle - Rock (Variant 3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 256eeed68fa62e041a00439a15183478,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 256eeed68fa62e041a00439a15183478,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 256eeed68fa62e041a00439a15183478, type: 3}
 --- !u!4 &2355991689973187080 stripped
@@ -227,6 +237,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Impassable Obstacle - Rock (Variant 1) (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c60269b61ddec7c49bd2b93131ed7738,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c60269b61ddec7c49bd2b93131ed7738,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c60269b61ddec7c49bd2b93131ed7738, type: 3}
