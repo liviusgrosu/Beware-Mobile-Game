@@ -298,7 +298,7 @@ GameObject:
   - component: {fileID: 865813963165005311}
   - component: {fileID: 865813963165005310}
   - component: {fileID: 865813963165005305}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -438,7 +438,7 @@ GameObject:
   - component: {fileID: 2902739891349127553}
   - component: {fileID: 2902739891349127555}
   - component: {fileID: 2902739891349127554}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Hitmarker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
