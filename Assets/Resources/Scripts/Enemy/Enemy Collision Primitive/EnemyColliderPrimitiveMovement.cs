@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.Runtime.Serialization.Json;
 using UnityEngine;
-using UnityEngine.Monetization;
-
 public class EnemyColliderPrimitiveMovement : MonoBehaviour
 {
     private Vector3 _currDirection { get; set; }

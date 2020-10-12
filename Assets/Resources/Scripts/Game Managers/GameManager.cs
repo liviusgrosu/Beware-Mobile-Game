@@ -19,6 +19,8 @@ public class GameManager : MonoBehaviour
     public bool changingScene;
     public bool stopAdvanceToNextLevel;
 
+    private bool toggledWin, toggledLose;
+
     private enum GameState
     { 
         Nil,
@@ -55,15 +57,17 @@ public class GameManager : MonoBehaviour
     {
         //Have a pause feature
 
-        if (playerHP.IsHealthEmpty())
+        if (playerHP.IsHealthEmpty() && !toggledLose)
         {
+            toggledLose = true;
             gameOverUI.ToggleUI(true);
             ToggleInGameUI(false);
         }
 
         // Temp: trigger the game win screen
-        if (exitDoor.playerFinished)
+        if (exitDoor.playerFinished && !toggledWin)
         {
+            toggledWin = true;
             gameWinUI.ToggleUI(true);
             ToggleInGameUI(false);
         }

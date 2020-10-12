@@ -38,4 +38,11 @@ public class EnumDefinitions
         ButtonPress,
         StarCollect
     }
+
+    public enum AdSizes
+    {
+        banner,
+        small,
+        large
+    }
 }

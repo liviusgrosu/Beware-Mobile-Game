@@ -25,6 +25,8 @@ public class GameWinUI : MonoBehaviour, IUIGenericElement
 
     [SerializeField] private ParticleSystem starBurstParticles;
 
+    public Image adBanner;
+
     private void Awake()
     {
         scoreManager = GameObject.Find("Score Manager").GetComponent<ScoreManager>();
@@ -73,6 +75,7 @@ public class GameWinUI : MonoBehaviour, IUIGenericElement
 
         if(isUIActive)
         {
+            LoadAd();
             StartCoroutine(UnlockStarScore());
 
             SaveSystem.SaveLevel(SceneManager.GetActiveScene().name, true, scoreManager.starTotal);
@@ -83,6 +86,12 @@ public class GameWinUI : MonoBehaviour, IUIGenericElement
             }
         }
     }
+
+    private void LoadAd()
+    {
+        adBanner.sprite = AdController.GetAd(EnumDefinitions.AdSizes.banner);
+    }
+
     IEnumerator UnlockStarScore()
     {
         if (!displayStarScore) displayStarScore = true;

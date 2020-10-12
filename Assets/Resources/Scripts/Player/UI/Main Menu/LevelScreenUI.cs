@@ -18,6 +18,8 @@ public class LevelScreenUI : MonoBehaviour, IUIGenericElement
     public Text currentWorldText;
     public Button previousWorldBtn, nextWorldBtn;
 
+    public Image adBanner;
+
     private int lastWorldIdx = 0;
     private int worldNumCap;
 
@@ -99,7 +101,11 @@ public class LevelScreenUI : MonoBehaviour, IUIGenericElement
                 }
             }
         }
-        
+    }
+
+    private void LoadAd()
+    {
+        adBanner.sprite = AdController.GetAd(EnumDefinitions.AdSizes.banner);
     }
 
     public void ToggleUI(bool state)
@@ -114,6 +120,7 @@ public class LevelScreenUI : MonoBehaviour, IUIGenericElement
         {
             ToggleLevelButtons(state);
             UpdateWorldSelectorUI();
+            LoadAd();
         }
     }
 }

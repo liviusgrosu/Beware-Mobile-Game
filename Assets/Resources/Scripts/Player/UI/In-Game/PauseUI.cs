@@ -1,12 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PauseUI : MonoBehaviour, IUIGenericElement
 {
     private bool isUIActive;
     private GameManager gameManager;
     private MenuSoundController soundController;
+    public Image adBanner;
+
+    private void LoadAd()
+    {
+        adBanner.sprite = AdController.GetAd(EnumDefinitions.AdSizes.banner);
+    }
 
     private void Start()
     {
@@ -33,6 +40,7 @@ public class PauseUI : MonoBehaviour, IUIGenericElement
         else Time.timeScale = 1f;
 
         gameManager.ToggleInGameUI(!state);
+        LoadAd();
     }
 
     //Used by the game manager
