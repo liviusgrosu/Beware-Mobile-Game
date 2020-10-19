@@ -120,7 +120,7 @@ public class LevelScreenUI : MonoBehaviour, IUIGenericElement
         {
             ToggleLevelButtons(state);
             UpdateWorldSelectorUI();
-            LoadAd();
+            //LoadAd();
         }
     }
 }
