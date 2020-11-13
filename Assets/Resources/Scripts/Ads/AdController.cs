@@ -1,17 +1,25 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
+using System.Collections;
 using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 using UnityEngine.UI;
+using Firebase.Storage;
 
-public class AdController
+public class AdController : MonoBehaviour
 {
-    private static string tempImagesDir = $"{Application.dataPath}/Ads";
-    private static string adDir = $"{Application.persistentDataPath}/Ads";
-
+    private static string adDir;
+    private const int numOfAdsPerSize = 3;
     private static bool adsAvailable;
 
-    public static void VerifyAdFolder()
+    public Image testIMage;
+
+    private void Awake()
+    {
+        adDir = $"{Application.persistentDataPath}/Ads";
+    }
+
+    public void VerifyAdFolder()
     {
         bool folderExists = Directory.Exists(adDir);
 
@@ -21,50 +29,35 @@ public class AdController
             Directory.CreateDirectory(adDir);
 
             // Create sizes directory
-            Directory.CreateDirectory($"{adDir}/banner");
-            Directory.CreateDirectory($"{adDir}/small");
-            Directory.CreateDirectory($"{adDir}/large");
+            Directory.CreateDirectory($"{adDir}/Banner");
+            Directory.CreateDirectory($"{adDir}/Small");
+            Directory.CreateDirectory($"{adDir}/Large");
         }
     }
 
-    public static void RefreshLatestAds()
+    public void RefreshLatestAds()
     {
-        TransferPublicToLocalAds("banner");
-        TransferPublicToLocalAds("small");
-        TransferPublicToLocalAds("large");
+        StartCoroutine(DownloadAllAds());
     }
 
-    public static void TransferPublicToLocalAds(string subDir)
+    private IEnumerator DownloadAllAds()
     {
-        //TODO: error checking
-        DirectoryInfo di = new DirectoryInfo($"{tempImagesDir}/{subDir}");
-
-        foreach(FileInfo entry in di.GetFiles("*.png"))
+        foreach (string adSize in Enum.GetNames(typeof(EnumDefinitions.AdSizes)))
         {
-            string fp = $"{adDir}/{subDir}/{entry.Name}";
-            if (!File.Exists(fp))
+            for (int i = 1; i <= 3; i++)
             {
-                File.Copy(entry.FullName, fp);
+                Debug.Log(adSize + " " + i);
+                var storage = FirebaseStorage.DefaultInstance;
+
+                var imageReference = storage.GetReference($"/Ads 2020-10-16/{adSize}/{i}.png");
+                var downloadTask = imageReference.GetBytesAsync(long.MaxValue);
+                yield return new WaitUntil(() => downloadTask.IsCompleted);
+
+                Texture2D texture = new Texture2D(2, 2);
+                texture.LoadImage(downloadTask.Result);
+
+                System.IO.File.WriteAllBytes($"{adDir}/{adSize}/{i}.png", texture.EncodeToPNG());
             }
         }
-    }
-
-    public static Sprite GetAd(EnumDefinitions.AdSizes adSize)
-    {
-        // Get a random file from the specified size
-        DirectoryInfo di = new DirectoryInfo($"{adDir}/{adSize.ToString()}");
-        FileInfo [] files = di.GetFiles("*.png");
-        string fileDir = files[Random.Range(0, files.Length)].FullName;
-
-        byte[] fileData = File.ReadAllBytes(fileDir);
-        Texture2D textureData = new Texture2D(512, 512);
-        textureData.LoadImage(fileData);
-
-        Sprite spriteData = Sprite.Create(
-            textureData, 
-            new Rect(0, 0, textureData.width, textureData.height), 
-            new Vector2(0, 0), 
-            1);
-        return spriteData;
     }
 }

@@ -17,6 +17,8 @@ public class MainMenuMaster : MonoBehaviour
 
     private Transform titlePage, optionsPage, levelsPage;
     
+    public AdController adController;
+    
     private void Start()
     {
         titlePage = GameObject.Find("Title Page").transform;
@@ -25,8 +27,9 @@ public class MainMenuMaster : MonoBehaviour
 
         currentPage = MenuPage.Levels;
 
-        AdController.VerifyAdFolder();
-        AdController.RefreshLatestAds();
+        // Make sure the ads have a directory to store into
+        adController.VerifyAdFolder();
+        adController.RefreshLatestAds();
     }
 
     public void ChangeToPage(MenuPage nextPage)

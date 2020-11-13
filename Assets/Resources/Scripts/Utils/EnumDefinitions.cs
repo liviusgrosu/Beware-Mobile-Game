@@ -41,8 +41,8 @@ public class EnumDefinitions
 
     public enum AdSizes
     {
-        banner,
-        small,
-        large
+        Banner,
+        Small,
+        Large
     }
 }
