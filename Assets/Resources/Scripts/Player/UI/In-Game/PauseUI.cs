@@ -12,7 +12,7 @@ public class PauseUI : MonoBehaviour, IUIGenericElement
 
     private void LoadAd()
     {
-        adBanner.sprite = AdController.GetAd(EnumDefinitions.AdSizes.banner);
+        adBanner.sprite = SaveSystem.LoadAd(EnumDefinitions.AdSizes.Banner);
     }
 
     private void Start()

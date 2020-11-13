@@ -105,7 +105,7 @@ public class LevelScreenUI : MonoBehaviour, IUIGenericElement
 
     private void LoadAd()
     {
-        adBanner.sprite = AdController.GetAd(EnumDefinitions.AdSizes.banner);
+        adBanner.sprite = SaveSystem.LoadAd(EnumDefinitions.AdSizes.Banner);
     }
 
     public void ToggleUI(bool state)

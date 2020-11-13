@@ -6,14 +6,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using Firebase.Storage;
 
-public class AdController : MonoBehaviour
+public class AdInit : MonoBehaviour
 {
     private static string adDir;
     private const int numOfAdsPerSize = 3;
     private static bool adsAvailable;
-
-    public Image testIMage;
-
+    
     private void Awake()
     {
         adDir = $"{Application.persistentDataPath}/Ads";
@@ -46,7 +44,6 @@ public class AdController : MonoBehaviour
         {
             for (int i = 1; i <= 3; i++)
             {
-                Debug.Log(adSize + " " + i);
                 var storage = FirebaseStorage.DefaultInstance;
 
                 var imageReference = storage.GetReference($"/Ads 2020-10-16/{adSize}/{i}.png");

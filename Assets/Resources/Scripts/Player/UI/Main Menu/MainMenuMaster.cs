@@ -17,7 +17,7 @@ public class MainMenuMaster : MonoBehaviour
 
     private Transform titlePage, optionsPage, levelsPage;
     
-    public AdController adController;
+    public AdInit AdInit;
     
     private void Start()
     {
@@ -28,8 +28,8 @@ public class MainMenuMaster : MonoBehaviour
         currentPage = MenuPage.Levels;
 
         // Make sure the ads have a directory to store into
-        adController.VerifyAdFolder();
-        adController.RefreshLatestAds();
+        AdInit.VerifyAdFolder();
+        AdInit.RefreshLatestAds();
     }
 
     public void ChangeToPage(MenuPage nextPage)

@@ -89,7 +89,7 @@ public class GameWinUI : MonoBehaviour, IUIGenericElement
 
     private void LoadAd()
     {
-        adBanner.sprite = AdController.GetAd(EnumDefinitions.AdSizes.banner);
+        adBanner.sprite = SaveSystem.LoadAd(EnumDefinitions.AdSizes.Banner);
     }
 
     IEnumerator UnlockStarScore()

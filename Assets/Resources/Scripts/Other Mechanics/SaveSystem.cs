@@ -4,6 +4,8 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 public class SaveSystem
 {
+    private static string adDir = $"{Application.persistentDataPath}/Ads";
+
     public static void SaveLevel(string levelName, bool levelFinished, int levelStarScore)
     {
         BinaryFormatter formatter = new BinaryFormatter();
@@ -64,5 +66,24 @@ public class SaveSystem
         {
             return null;
         }
+    }
+
+    public static Sprite LoadAd(EnumDefinitions.AdSizes adSize)
+    {
+        DirectoryInfo di = new DirectoryInfo($"{adDir}/{adSize.ToString()}");
+        FileInfo [] files = di.GetFiles("*.png");
+        string fileDir = files[Random.Range(0, files.Length)].FullName;
+
+        byte[] fileData = File.ReadAllBytes(fileDir);
+        Texture2D textureData = new Texture2D(512, 512);
+        textureData.LoadImage(fileData);
+
+        Sprite spriteData = Sprite.Create(
+            textureData, 
+            new Rect(0, 0, textureData.width, textureData.height), 
+            new Vector2(0, 0), 
+            1);
+        
+        return spriteData;
     }
 }
