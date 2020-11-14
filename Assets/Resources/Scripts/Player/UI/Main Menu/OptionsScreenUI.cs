@@ -10,9 +10,11 @@ public class OptionsScreenUI : MonoBehaviour, IUIGenericElement
     private bool isUIActive;
 
     private bool settingChanges;
-    private float currMusicVal, currSFXVal;
+    private float currSoundVal;
 
-    public Slider musicSlider, sfxSlider;
+    public Slider soundVolumeSlider;
+
+    public AudioSource mainMenuAudioSrc;
 
     private void Start()
     {
@@ -20,9 +22,11 @@ public class OptionsScreenUI : MonoBehaviour, IUIGenericElement
         menuMaster = GameObject.Find("Main Menu Master").GetComponent<MainMenuMaster>();
     }
 
-    private void SaveSettings()
+    public void SaveSettings()
     {
-        SaveSystem.SaveSettings(sfxSlider.value, musicSlider.value);
+        SaveSystem.SaveSettings(soundVolumeSlider.value);
+        soundController.ChangeAudioSrcVolume(soundVolumeSlider.value);
+        soundController.PlayButtonPress();
     }
 
     public void LoadSettings()
@@ -30,19 +34,16 @@ public class OptionsScreenUI : MonoBehaviour, IUIGenericElement
         SettingData currSettingsData = SaveSystem.LoadSettings();
         if (currSettingsData == null)
         {
-            musicSlider.value = 0.2f;
-            sfxSlider.value = 0.5f;
+            soundVolumeSlider.value = 1f;
         }
         else
         {
-            musicSlider.value = currSettingsData.musicLevel;
-            sfxSlider.value = currSettingsData.sfxLevel;
+            soundVolumeSlider.value = currSettingsData.soundLevel;
         }
     }
 
     public void BackButtonPress()
     {
-        SaveSettings();
         ToggleUI(false);
         soundController.PlayButtonPress();
         menuMaster.ChangeToPage(MainMenuMaster.MenuPage.Title);

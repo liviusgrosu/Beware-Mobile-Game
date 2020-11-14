@@ -12,10 +12,17 @@ public class MenuSoundController : MonoBehaviour
     private void Awake()
     {
         audioSrc = GetComponent<AudioSource>();
+        float volumeLevel = SaveSystem.LoadSettings().soundLevel;
+        ChangeAudioSrcVolume(volumeLevel);
     }
 
     public void PlayButtonPress()
     {
         audioSrc.PlayOneShot(buttonPress);
+    }
+
+    public void ChangeAudioSrcVolume(float volumeLevel)
+    {
+        audioSrc.volume = volumeLevel;
     }
 }

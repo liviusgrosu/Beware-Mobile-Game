@@ -20,12 +20,10 @@ public class LevelData
 [System.Serializable]
 public class SettingData
 {
-    public float sfxLevel;
-    public float musicLevel;
+    public float soundLevel;
 
-    public SettingData(float sfxLevel, float musicLevel)
+    public SettingData(float soundLevel)
     {
-       this.sfxLevel = sfxLevel;
-       this.musicLevel = musicLevel;
+       this.soundLevel = soundLevel;
     }
 }

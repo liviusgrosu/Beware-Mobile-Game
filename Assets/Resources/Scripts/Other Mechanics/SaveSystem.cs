@@ -37,13 +37,13 @@ public class SaveSystem
         }
     }
 
-    public static void SaveSettings(float sfxLevel, float musicLevel)
+    public static void SaveSettings(float soundLevel)
     {
         BinaryFormatter formatter = new BinaryFormatter();
         string path = Application.persistentDataPath + "/settings.sd";
         FileStream stream = new FileStream(path, FileMode.Create);
 
-        SettingData data = new SettingData(sfxLevel, musicLevel);
+        SettingData data = new SettingData(soundLevel);
 
         formatter.Serialize(stream, data);
 

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7455770802344387252}
   - component: {fileID: 7455770802344387258}
+  - component: {fileID: 2502735652088407285}
   - component: {fileID: 7455770802344387253}
   m_Layer: 0
   m_Name: Sound Controller
@@ -60,7 +61,22 @@ MonoBehaviour:
     type: 3}
   slimeMovementSound: {fileID: 8300000, guid: 2dd87b2bfbc497749a6022e13aab59fa, type: 3}
   wingFlapMovementSound: {fileID: 0}
+  starCollectSound: {fileID: 0}
+  buttonPressSound: {fileID: 0}
   doorOpenSound: {fileID: 8300000, guid: 6867c26841f3df542b9af06e2a4103f2, type: 3}
+--- !u!114 &2502735652088407285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7455770802344387255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0174d47b16cc9724fbfbfb15309961fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonPress: {fileID: 8300000, guid: 78ff0aa1e8d586a4581190e22d4ea2cf, type: 3}
 --- !u!82 &7455770802344387253
 AudioSource:
   m_ObjectHideFlags: 0

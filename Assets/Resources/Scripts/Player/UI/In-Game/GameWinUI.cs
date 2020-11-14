@@ -10,7 +10,7 @@ public class GameWinUI : MonoBehaviour, IUIGenericElement
     private bool isUIActive;
 
     private GameManager gameManager;
-    private SoundController soundController;
+    public SoundController soundController;
 
     private ScoreManager scoreManager;
     private List<RectTransform> starUI;
@@ -41,7 +41,6 @@ public class GameWinUI : MonoBehaviour, IUIGenericElement
     private void Start()
     {
         gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
-        soundController = GameObject.Find("Sound Controller").GetComponent<SoundController>();
     }
 
     public void ReplayButtonPress()

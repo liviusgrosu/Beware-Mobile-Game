@@ -7,11 +7,10 @@ public class GameOverUI : MonoBehaviour, IUIGenericElement
     private bool isUIActive;
 
     private GameManager gameManager;
-    private MenuSoundController soundController;
+    public MenuSoundController soundController;
 
     private void Start()
     {
-        soundController = transform.parent.GetComponent<MenuSoundController>();
         gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
     }
 
@@ -34,10 +33,5 @@ public class GameOverUI : MonoBehaviour, IUIGenericElement
         {
             child.gameObject.SetActive(isUIActive);
         }
-    }
-
-    private void PlayUIPress()
-    {
-
     }
 }

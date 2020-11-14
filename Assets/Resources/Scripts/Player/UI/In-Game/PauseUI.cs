@@ -7,24 +7,29 @@ public class PauseUI : MonoBehaviour, IUIGenericElement
 {
     private bool isUIActive;
     private GameManager gameManager;
-    private MenuSoundController soundController;
+    public MenuSoundController menuSoundController;
     public Image adBanner;
+    public Slider soundVolumeSlider;
 
     private void LoadAd()
     {
         adBanner.sprite = SaveSystem.LoadAd(EnumDefinitions.AdSizes.Banner);
     }
 
+    private void Awake()
+    {
+        LoadSettings();
+    }
+
     private void Start()
     {
-        soundController = transform.parent.GetComponent<MenuSoundController>();
         gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
     }
 
     //Used by the pause button
     public void TogglePause(bool state)
     {
-        soundController.PlayButtonPress();
+        menuSoundController.PlayButtonPress();
 
         isUIActive = state;
 
@@ -58,15 +63,35 @@ public class PauseUI : MonoBehaviour, IUIGenericElement
 
     public void MenuButtonPress()
     {
-        soundController.PlayButtonPress();
+        menuSoundController.PlayButtonPress();
         Time.timeScale = 1f;
         gameManager.GoBackToMainMenu();
     }
 
     public void ReplayButtonPress()
     {
-        soundController.PlayButtonPress();
+        menuSoundController.PlayButtonPress();
         Time.timeScale = 1f;
         gameManager.RestartLevel();
+    }
+
+    public void SaveSettings()
+    {
+        SaveSystem.SaveSettings(soundVolumeSlider.value);
+        menuSoundController.ChangeAudioSrcVolume(soundVolumeSlider.value);
+        menuSoundController.PlayButtonPress();
+    }
+
+    public void LoadSettings()
+    {
+        SettingData currSettingsData = SaveSystem.LoadSettings();
+        if (currSettingsData == null)
+        {
+            soundVolumeSlider.value = 1f;
+        }
+        else
+        {
+            soundVolumeSlider.value = currSettingsData.soundLevel;
+        }
     }
 }

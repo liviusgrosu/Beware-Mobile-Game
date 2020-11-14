@@ -13,6 +13,12 @@ public class SplashScreenUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (PlayerPrefs.GetInt("initial_app_open", 1) == 0)
+        {
+            menuMaster.ChangeToPage(MainMenuMaster.MenuPage.Title);
+            return;
+        }
+
         StartCoroutine(FadeInText(presentedByText));
         StartCoroutine(FadeInText(companyNameText));
     }
@@ -41,5 +47,6 @@ public class SplashScreenUI : MonoBehaviour
             yield return null;
         }
         menuMaster.ChangeToPage(MainMenuMaster.MenuPage.Title);
+        PlayerPrefs.SetInt("initial_app_open", 0);
     }
 }
