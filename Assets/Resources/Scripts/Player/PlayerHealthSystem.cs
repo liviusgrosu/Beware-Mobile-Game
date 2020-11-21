@@ -74,18 +74,18 @@ public class PlayerHealthSystem : MonoBehaviour
         if (godMode || isInvincible) return;
 
         if (currHP > 0) currHP += amount;
-
-        if (currHP <= 0)
-        {
-            Die();
-            return;
-        }
-        else if (currHP > maxHP) currHP = maxHP;
+        if (currHP > maxHP) currHP = maxHP;
 
         for (int i = 0; i < maxHP; i++)
         {
             if (i < currHP) healthBar.ElementAt(i).GetComponent<Image>().sprite = fullHPImg;
             else healthBar.ElementAt(i).GetComponent<Image>().sprite = emptyHPImg;
+        }
+
+        if (currHP <= 0)
+        {
+            Die();
+            return;
         }
 
         if (amount < 0)
@@ -101,6 +101,8 @@ public class PlayerHealthSystem : MonoBehaviour
         GetComponent<PlayerMovement>().enabled = false;
         GetComponent<CapsuleCollider>().enabled = false;
         GetComponent<PlayerAttackingBehaviour>().enabled = false;
+        GetComponent<WeaponController>().ToggleWeaponFire(false);
+        GetComponent<WeaponController>().enabled = false;
     }
 
     public bool IsHealthFull()

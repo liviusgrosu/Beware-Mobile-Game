@@ -14,7 +14,6 @@ public class EnemyInstaParams
 {
     public GameObject enemyObj;
 
-    public bool allowVariant;
     public int variantAmount;
     public GameObject variantObject;
 

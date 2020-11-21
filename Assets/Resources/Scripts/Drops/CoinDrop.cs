@@ -46,8 +46,9 @@ public class CoinDrop : MonoBehaviour
         renderer.material.color = new Color(currMatCol.r, currMatCol.g, currMatCol.b, colourAlpha);
     }
 
-    private void OnTriggerEnter(Collider col)
+    private void OnTriggerStay(Collider col)
     {
+
         switch (col.gameObject.tag)
         {
             case "Player":

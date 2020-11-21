@@ -57,7 +57,7 @@ public class EnemyCollisionAdvancedMovement : MonoBehaviour
     {
         if (GetComponent<EnemySpawnTravel>() != null) return;
         agent.destination = player.position;
-        agent.isStopped = (Vector3.Distance(transform.position, player.position) <= 1.5f);
+        agent.isStopped = (Vector3.Distance(transform.position, player.position) <= agent.stoppingDistance);
     }
 
     //Deal with slowing down

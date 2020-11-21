@@ -4794,6 +4794,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Basic Level Objects
       objectReference: {fileID: 0}
+    - target: {fileID: 2449290990405502085, guid: 8b3434188ad18134d8ab6727bfe64602,
+        type: 3}
+      propertyPath: maxHP
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2449290990405502086, guid: 8b3434188ad18134d8ab6727bfe64602,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -4819,11 +4824,6 @@ PrefabInstance:
       propertyPath: menuSoundController
       value: 
       objectReference: {fileID: 1204314046}
-    - target: {fileID: 5260952847782167521, guid: 8b3434188ad18134d8ab6727bfe64602,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6646187906202397753, guid: 8b3434188ad18134d8ab6727bfe64602,
         type: 3}
       propertyPath: soundController

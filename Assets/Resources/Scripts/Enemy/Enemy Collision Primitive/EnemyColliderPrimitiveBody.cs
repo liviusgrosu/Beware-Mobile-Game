@@ -8,34 +8,35 @@ public class EnemyColliderPrimitiveBody : MonoBehaviour
 
     EnemyColliderPrimitiveMovement movement; 
 
+    private bool hasCollided;
+    private List<Collision> collidedObjects;
+
     private void Start()
     {
         movement = GetComponent<EnemyColliderPrimitiveMovement>();
         soundController = GameObject.Find("Sound Controller").GetComponent<SoundController>();
+        collidedObjects = new List<Collision>();
     }
 
     private void OnCollisionEnter(Collision col)
     {
-        switch (col.gameObject.tag)
-        {
-            case "Obstacle":
-                Vector3 inDirection = movement.currDirection;
-                Vector3 inNormal = col.contacts[0].normal;
-                movement.currDirection = Vector3.Reflect(inDirection, inNormal);
-                soundController.PlayEnemyWallBounce();
-                break;
-        }
-    }
+        Vector3 inDirection = movement.currDirection;
+        Vector3 inNormal = col.GetContact(0).normal;
+        Vector3 outDirection = Vector3.Reflect(inDirection, inNormal);
 
-    private void OnCollisionStay(Collision col)
-    {
-        switch (col.gameObject.tag)
+        if (Vector3.Angle(inNormal, outDirection) > 90f)
         {
-            case "Player":
-                //TODO: Change this so that this variable is accessed from a script that would make sense to store it
-                col.gameObject.GetComponent<PlayerHealthSystem>().ChangeHealth(-1);
-                break;
+            return;
         }
+
+        movement.currDirection = outDirection;
+        soundController.PlayEnemyWallBounce();
+
+        if (col.gameObject.tag == "Player")
+        {
+            col.gameObject.GetComponent<PlayerHealthSystem>().ChangeHealth(-1);
+        }
+
     }
 
     private void OnTriggerEnter(Collider col)

@@ -199,6 +199,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4615109}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &25406119 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1838134502}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &38022615
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -268,6 +274,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67b6db24d8fc3b34eae6f5dfafc0d4bf, type: 3}
+--- !u!4 &79726111 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1298439871}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &89306503
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -349,6 +361,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 534002558}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &112604408 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+    type: 3}
+  m_PrefabInstance: {fileID: 827848732}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &190499923
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -423,6 +441,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3867525202678766289, guid: 67b6db24d8fc3b34eae6f5dfafc0d4bf,
     type: 3}
   m_PrefabInstance: {fileID: 190499923}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &206061971 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+    type: 3}
+  m_PrefabInstance: {fileID: 433510434}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &219336202
 PrefabInstance:
@@ -504,6 +528,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3867525202678766289, guid: 67b6db24d8fc3b34eae6f5dfafc0d4bf,
     type: 3}
   m_PrefabInstance: {fileID: 389401366}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &328484792 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+    type: 3}
+  m_PrefabInstance: {fileID: 507072476}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &331286072
 PrefabInstance:
@@ -718,6 +748,81 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67b6db24d8fc3b34eae6f5dfafc0d4bf, type: 3}
+--- !u!4 &393258363 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1705199818}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &433510434
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4387009341704233849}
+    m_Modifications:
+    - target: {fileID: 5926166269712238546, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_Name
+      value: Impassable Obstalce - Farm Fence (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -15.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.5607824
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 14.679768
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.000000014901161
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9f79992dfb92b41429a358c27a0eb34d, type: 3}
 --- !u!1001 &458415823
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -793,6 +898,75 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1817752620}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &507072476
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4387009341704233849}
+    m_Modifications:
+    - target: {fileID: 5926166269712238546, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_Name
+      value: Impassable Obstalce - Farm Fence (37)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -17.92004
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.5607824
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 17.929737
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071058
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071078
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9f79992dfb92b41429a358c27a0eb34d, type: 3}
 --- !u!1001 &534002558
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -854,6 +1028,144 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9f79992dfb92b41429a358c27a0eb34d, type: 3}
+--- !u!1001 &585503618
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4387009341704233849}
+    m_Modifications:
+    - target: {fileID: 5926166269712238546, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_Name
+      value: Impassable Obstalce - Farm Fence (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -15.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.5607824
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 16.679768
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.000000014901161
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 27
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9f79992dfb92b41429a358c27a0eb34d, type: 3}
+--- !u!1001 &612513291
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4387009341704233849}
+    m_Modifications:
+    - target: {fileID: 5926166269712238546, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_Name
+      value: Impassable Obstalce - Farm Fence (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -22.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.5607824
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 12.679768
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.000000014901161
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
         type: 3}
@@ -990,6 +1302,75 @@ Transform:
   m_Father: {fileID: 8718644332827833702}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &638170445
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4387009341704233849}
+    m_Modifications:
+    - target: {fileID: 5926166269712238546, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_Name
+      value: Impassable Obstalce - Farm Fence (34)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -17.920017
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.5607824
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 9.429737
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071058
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071078
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9f79992dfb92b41429a358c27a0eb34d, type: 3}
 --- !u!1001 &648130973
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1140,6 +1521,150 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 458415823}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &742331677
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4387009341704233849}
+    m_Modifications:
+    - target: {fileID: 5926166269712238546, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_Name
+      value: Impassable Obstalce - Farm Fence (38)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -19.92004
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.5607824
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 17.929731
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071058
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071078
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9f79992dfb92b41429a358c27a0eb34d, type: 3}
+--- !u!1001 &765658647
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4387009341704233849}
+    m_Modifications:
+    - target: {fileID: 5926166269712238546, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_Name
+      value: Impassable Obstalce - Farm Fence (39)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -15.92004
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.5607824
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 17.929743
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071058
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071078
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 37
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9f79992dfb92b41429a358c27a0eb34d, type: 3}
+--- !u!4 &768149224 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1777022682}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &770594378
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1284,6 +1809,75 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f79992dfb92b41429a358c27a0eb34d, type: 3}
+--- !u!1001 &827848732
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4387009341704233849}
+    m_Modifications:
+    - target: {fileID: 5926166269712238546, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_Name
+      value: Impassable Obstalce - Farm Fence (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -22.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.5607824
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 16.679768
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.000000014901161
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9f79992dfb92b41429a358c27a0eb34d, type: 3}
 --- !u!1001 &850334930
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1304,7 +1898,7 @@ PrefabInstance:
     - target: {fileID: 1755477044981619880, guid: 8b3434188ad18134d8ab6727bfe64602,
         type: 3}
       propertyPath: enemyWaves.Array.data[0].enemy.Array.size
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1755477044981619880, guid: 8b3434188ad18134d8ab6727bfe64602,
         type: 3}
@@ -1330,7 +1924,7 @@ PrefabInstance:
     - target: {fileID: 1755477044981619880, guid: 8b3434188ad18134d8ab6727bfe64602,
         type: 3}
       propertyPath: enemyWaves.Array.data[0].enemy.Array.data[0].coinDropAmount
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1755477044981619880, guid: 8b3434188ad18134d8ab6727bfe64602,
         type: 3}
@@ -1341,7 +1935,7 @@ PrefabInstance:
     - target: {fileID: 1755477044981619880, guid: 8b3434188ad18134d8ab6727bfe64602,
         type: 3}
       propertyPath: enemyWaves.Array.data[0].enemy.Array.data[1].coinDropAmount
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1755477044981619880, guid: 8b3434188ad18134d8ab6727bfe64602,
         type: 3}
@@ -1494,25 +2088,67 @@ PrefabInstance:
       propertyPath: enemyWaves.Array.data[3].enemy.Array.data[2].coinDropAmount
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1755477044981619880, guid: 8b3434188ad18134d8ab6727bfe64602,
+        type: 3}
+      propertyPath: enemyWaves.Array.data[0].enemy.Array.data[0].variantAmount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1755477044981619880, guid: 8b3434188ad18134d8ab6727bfe64602,
+        type: 3}
+      propertyPath: enemyWaves.Array.data[0].enemy.Array.data[0].variantObject
+      value: 
+      objectReference: {fileID: 3956834363697529881, guid: e3ae48b7643bc41499056d47044eeeb3,
+        type: 3}
+    - target: {fileID: 1755477044981619880, guid: 8b3434188ad18134d8ab6727bfe64602,
+        type: 3}
+      propertyPath: enemyWaves.Array.data[0].enemy.Array.data[0].allowVariant
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1755477044981619880, guid: 8b3434188ad18134d8ab6727bfe64602,
+        type: 3}
+      propertyPath: enemyWaves.Array.data[0].enemy.Array.data[1].variantObject
+      value: 
+      objectReference: {fileID: 3956834363697529881, guid: e3ae48b7643bc41499056d47044eeeb3,
+        type: 3}
     - target: {fileID: 1755477044981619881, guid: 8b3434188ad18134d8ab6727bfe64602,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 6.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 1755477044981619881, guid: 8b3434188ad18134d8ab6727bfe64602,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -17.53
       objectReference: {fileID: 0}
     - target: {fileID: 1943678266464743429, guid: 8b3434188ad18134d8ab6727bfe64602,
         type: 3}
       propertyPath: m_Name
       value: Basic Level Objects
       objectReference: {fileID: 0}
+    - target: {fileID: 2449290989831170293, guid: 8b3434188ad18134d8ab6727bfe64602,
+        type: 3}
+      propertyPath: orthographic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2449290990405502085, guid: 8b3434188ad18134d8ab6727bfe64602,
+        type: 3}
+      propertyPath: godMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2449290990405502085, guid: 8b3434188ad18134d8ab6727bfe64602,
+        type: 3}
+      propertyPath: maxHP
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2449290990405502086, guid: 8b3434188ad18134d8ab6727bfe64602,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.54
+      value: 2.46
       objectReference: {fileID: 0}
     - target: {fileID: 2449290990405502086, guid: 8b3434188ad18134d8ab6727bfe64602,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.21
+      value: -5.21
       objectReference: {fileID: 0}
     - target: {fileID: 5042310106999217312, guid: 8b3434188ad18134d8ab6727bfe64602,
         type: 3}
@@ -1606,6 +2242,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b3434188ad18134d8ab6727bfe64602, type: 3}
+--- !u!4 &854455111 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+    type: 3}
+  m_PrefabInstance: {fileID: 742331677}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &859057874 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3867525202678766289, guid: 67b6db24d8fc3b34eae6f5dfafc0d4bf,
@@ -1618,6 +2260,144 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 648130973}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &937877111
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4387009341704233849}
+    m_Modifications:
+    - target: {fileID: 5926166269712238546, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_Name
+      value: Impassable Obstalce - Farm Fence (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -22.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.5607824
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 14.679768
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.000000014901161
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9f79992dfb92b41429a358c27a0eb34d, type: 3}
+--- !u!1001 &941078551
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4387009341704233849}
+    m_Modifications:
+    - target: {fileID: 5926166269712238546, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_Name
+      value: Impassable Obstalce - Farm Fence (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -21.920017
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.5607824
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 9.429726
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071058
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071078
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9f79992dfb92b41429a358c27a0eb34d, type: 3}
 --- !u!1001 &941200663
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1692,6 +2472,30 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3867525202678766289, guid: 67b6db24d8fc3b34eae6f5dfafc0d4bf,
     type: 3}
   m_PrefabInstance: {fileID: 335303345}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1027440234 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+    type: 3}
+  m_PrefabInstance: {fileID: 585503618}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1043505372 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+    type: 3}
+  m_PrefabInstance: {fileID: 612513291}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1072726217 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+    type: 3}
+  m_PrefabInstance: {fileID: 765658647}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1114387741 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1831848039}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1136645572 stripped
 Transform:
@@ -1924,6 +2728,75 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1363546752}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1298439871
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4387009341704233849}
+    m_Modifications:
+    - target: {fileID: 5926166269712238546, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_Name
+      value: Impassable Obstalce - Farm Fence (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -22.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.5607824
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 10.679768
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.000000014901161
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9f79992dfb92b41429a358c27a0eb34d, type: 3}
 --- !u!4 &1331876590 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3867525202678766289, guid: 67b6db24d8fc3b34eae6f5dfafc0d4bf,
@@ -2074,6 +2947,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1366986565}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1399321534 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1712891521}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1455191596
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2149,6 +3028,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1455191596}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1573493993 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+    type: 3}
+  m_PrefabInstance: {fileID: 638170445}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1620552708
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2223,6 +3108,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3867525202678766289, guid: 67b6db24d8fc3b34eae6f5dfafc0d4bf,
     type: 3}
   m_PrefabInstance: {fileID: 1620552708}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1633165115 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+    type: 3}
+  m_PrefabInstance: {fileID: 937877111}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1647065171
 PrefabInstance:
@@ -2368,6 +3259,75 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 219336202}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1705199818
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4387009341704233849}
+    m_Modifications:
+    - target: {fileID: 5926166269712238546, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_Name
+      value: Impassable Obstalce - Farm Fence (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -15.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.5607824
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 10.679768
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.000000014901161
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 29
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9f79992dfb92b41429a358c27a0eb34d, type: 3}
 --- !u!1001 &1712584434
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2437,6 +3397,144 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67b6db24d8fc3b34eae6f5dfafc0d4bf, type: 3}
+--- !u!1001 &1712891521
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4387009341704233849}
+    m_Modifications:
+    - target: {fileID: 5926166269712238546, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_Name
+      value: Impassable Obstalce - Farm Fence (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -15.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.5607824
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 12.679768
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.000000014901161
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9f79992dfb92b41429a358c27a0eb34d, type: 3}
+--- !u!1001 &1777022682
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4387009341704233849}
+    m_Modifications:
+    - target: {fileID: 5926166269712238546, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_Name
+      value: Impassable Obstalce - Farm Fence (35)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -15.920017
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.5607824
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 9.429743
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071058
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071078
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9f79992dfb92b41429a358c27a0eb34d, type: 3}
 --- !u!4 &1783832729 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
@@ -2500,6 +3598,144 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9f79992dfb92b41429a358c27a0eb34d, type: 3}
+--- !u!1001 &1831848039
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4387009341704233849}
+    m_Modifications:
+    - target: {fileID: 5926166269712238546, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_Name
+      value: Impassable Obstalce - Farm Fence (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -19.920017
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.5607824
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 9.429731
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071058
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071078
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 31
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9f79992dfb92b41429a358c27a0eb34d, type: 3}
+--- !u!1001 &1838134502
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4387009341704233849}
+    m_Modifications:
+    - target: {fileID: 5926166269712238546, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_Name
+      value: Impassable Obstalce - Farm Fence (36)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -21.92004
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.5607824
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 17.929726
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071058
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071078
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 34
       objectReference: {fileID: 0}
     - target: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
         type: 3}
@@ -2806,6 +4042,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f79992dfb92b41429a358c27a0eb34d, type: 3}
+--- !u!4 &2138393338 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6446384439880179048, guid: 9f79992dfb92b41429a358c27a0eb34d,
+    type: 3}
+  m_PrefabInstance: {fileID: 941078551}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &286384325938098671
 Transform:
   m_ObjectHideFlags: 0
@@ -3181,6 +4423,22 @@ Transform:
   - {fileID: 464450265}
   - {fileID: 94966119}
   - {fileID: 1809280280}
+  - {fileID: 1043505372}
+  - {fileID: 1399321534}
+  - {fileID: 1633165115}
+  - {fileID: 206061971}
+  - {fileID: 112604408}
+  - {fileID: 1027440234}
+  - {fileID: 79726111}
+  - {fileID: 393258363}
+  - {fileID: 2138393338}
+  - {fileID: 1114387741}
+  - {fileID: 1573493993}
+  - {fileID: 768149224}
+  - {fileID: 25406119}
+  - {fileID: 328484792}
+  - {fileID: 854455111}
+  - {fileID: 1072726217}
   m_Father: {fileID: 8718644332827833702}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

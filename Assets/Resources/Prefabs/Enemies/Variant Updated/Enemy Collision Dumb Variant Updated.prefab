@@ -35,8 +35,8 @@ Transform:
   m_LocalPosition: {x: 1.4524012, y: 4.707757, z: -6.5428486}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 6204108337435380721}
   - {fileID: 3956834364243924705}
+  - {fileID: 6204108337435380721}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -109,7 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc6a7b413e5e2e54fb4522c858e0275c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  godMode: 0
+  godMode: 1
   maxHP: 1
   healthCellUI: {fileID: 1023857267034312492, guid: 2434dd89ddb0a104b90138e220615b31,
     type: 3}
@@ -190,7 +190,7 @@ RectTransform:
   m_Children:
   - {fileID: 7402022793676686805}
   m_Father: {fileID: 3956834363697529886}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 60, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -302,7 +302,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 881c1f468f44f0e4ab4c916d005b8512,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 881c1f468f44f0e4ab4c916d005b8512,
         type: 3}

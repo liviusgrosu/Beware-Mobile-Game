@@ -49,6 +49,12 @@ public class DropExplosion : MonoBehaviour
             Vector3 inNormal = col.contacts[0].normal;
             rb.AddForce(Vector3.Reflect(inDirection, inNormal) * 2f, ForceMode.Impulse);
         }
+        else if (col.gameObject.tag == "Player")
+        {
+            rb.isKinematic = true;
+            rb.useGravity = false;
+            sphereCollider.isTrigger = true;
+        }
     }
 
     private void OnTriggerEnter(Collider other)

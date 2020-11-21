@@ -21,6 +21,8 @@ public class GameManager : MonoBehaviour
 
     private bool toggledWin, toggledLose;
 
+    public float timeBeforeGameOverUI = 1f;
+
     private enum GameState
     { 
         Nil,
@@ -55,16 +57,11 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        //Have a pause feature
-
         if (playerHP.IsHealthEmpty() && !toggledLose)
         {
-            toggledLose = true;
-            gameOverUI.ToggleUI(true);
-            ToggleInGameUI(false);
+            StartCoroutine(WaitUntilDeathAnimationFinish());
         }
 
-        // Temp: trigger the game win screen
         if (exitDoor.playerFinished && !toggledWin)
         {
             toggledWin = true;
@@ -114,5 +111,13 @@ public class GameManager : MonoBehaviour
         int levelId = int.Parse(leveParams.ElementAt(3));
 
         return new int[] { worldId, levelId };
+    }
+
+    IEnumerator WaitUntilDeathAnimationFinish()
+    {
+        yield return new WaitForSeconds(timeBeforeGameOverUI);
+        toggledLose = true;
+        gameOverUI.ToggleUI(true);
+        ToggleInGameUI(false);
     }
 }

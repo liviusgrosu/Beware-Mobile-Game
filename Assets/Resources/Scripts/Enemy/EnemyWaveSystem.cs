@@ -51,7 +51,7 @@ public class EnemyWaveSystem : MonoBehaviour
 
         int extraEntities = 0;
         foreach(EnemyInstaParams entity in enemyWaves[waveCounter - 1].enemy)
-            if (entity.allowVariant) extraEntities += entity.variantAmount;
+            if (entity.variantAmount > 0) extraEntities += entity.variantAmount;
 
         StartCoroutine(SpawnWave(enemyWaves[waveCounter - 1]));
         return enemyWaves[waveCounter - 1].enemy.Length + extraEntities;
@@ -64,7 +64,7 @@ public class EnemyWaveSystem : MonoBehaviour
             EnemyInstaParams entity = enemyWaves[waveCounter - 1].enemy[i];
 
             GameObject enemy = Instantiate(entity.enemyObj, this.transform.position, Quaternion.identity);
-            enemy.GetComponent<EnemyVariantHandler>().containsVariant = entity.allowVariant;
+            enemy.GetComponent<EnemyVariantHandler>().containsVariant = entity.variantAmount > 0;
             enemy.GetComponent<EnemyVariantHandler>().variantAmount = entity.variantAmount;
             enemy.GetComponent<EnemyVariantHandler>().varientPrefab = entity.variantObject;
 
