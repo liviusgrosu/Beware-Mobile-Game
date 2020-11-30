@@ -160,7 +160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slowMovementSpeed: 0.03
-  regMovementSpeed: 0.15
+  regMovementSpeed: 0.06
   fastMovementSpeed: 0.15
 --- !u!114 &2085857744443058959
 MonoBehaviour:
@@ -529,6 +529,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Model
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 881c1f468f44f0e4ab4c916d005b8512,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 881c1f468f44f0e4ab4c916d005b8512, type: 3}

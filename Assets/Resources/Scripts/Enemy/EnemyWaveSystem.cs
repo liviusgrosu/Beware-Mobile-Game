@@ -18,6 +18,7 @@ public class EnemyWaveSystem : MonoBehaviour
     private ExitDoorController exitDoorController;
     private EnemyWavesUI waveUI;
 
+
     private void Awake()
     {
         spawnPoints = new List<Transform>();

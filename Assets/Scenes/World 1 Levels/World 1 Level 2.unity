@@ -22161,6 +22161,11 @@ PrefabInstance:
       propertyPath: orthographic
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2449290990405502085, guid: 8b3434188ad18134d8ab6727bfe64602,
+        type: 3}
+      propertyPath: maxHP
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2449290990405502086, guid: 8b3434188ad18134d8ab6727bfe64602,
         type: 3}
       propertyPath: m_LocalPosition.z

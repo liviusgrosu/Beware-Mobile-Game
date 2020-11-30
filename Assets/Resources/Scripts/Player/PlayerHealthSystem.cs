@@ -33,6 +33,9 @@ public class PlayerHealthSystem : MonoBehaviour
     [SerializeField] private float invincibleTime;
     private bool isInvincible;
 
+    [SerializeField]
+    private Animator modelAnimator; 
+
     private void Start()
     {
         soundController = GameObject.Find("Sound Controller").GetComponent<SoundController>();
@@ -103,6 +106,8 @@ public class PlayerHealthSystem : MonoBehaviour
         GetComponent<PlayerAttackingBehaviour>().enabled = false;
         GetComponent<WeaponController>().ToggleWeaponFire(false);
         GetComponent<WeaponController>().enabled = false;
+
+        modelAnimator.SetTrigger("Die");
     }
 
     public bool IsHealthFull()

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 483242657281304449}
   - component: {fileID: 483242657281304451}
   - component: {fileID: 483242657281304450}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: Hitmarker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86,7 +86,7 @@ GameObject:
   - component: {fileID: 7793915588740180671}
   - component: {fileID: 6225921195562933409}
   - component: {fileID: 7886980634384947482}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Shirt Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -167,7 +167,7 @@ GameObject:
   - component: {fileID: 557958929510683052}
   - component: {fileID: 4525222365040666868}
   - component: {fileID: 1767850029607168048}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Cube.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -250,7 +250,7 @@ GameObject:
   - component: {fileID: 5058014657888118918}
   - component: {fileID: 5058014657888118919}
   - component: {fileID: 5058014657888118912}
-  m_Layer: 12
+  m_Layer: 11
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -368,7 +368,7 @@ GameObject:
   - component: {fileID: 743703358817995400}
   - component: {fileID: 8848994644359311319}
   - component: {fileID: 5625828094205444131}
-  m_Layer: 12
+  m_Layer: 11
   m_Name: Enemy Collision Smart Basic Updated
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -460,7 +460,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc6a7b413e5e2e54fb4522c858e0275c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  godMode: 0
+  godMode: 1
   maxHP: 1
   healthCellUI: {fileID: 1023857267034312492, guid: 2434dd89ddb0a104b90138e220615b31,
     type: 3}
@@ -475,7 +475,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 5058014658141793981}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.14
+  m_Radius: 0.3
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -553,7 +553,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7890584390513479232}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}

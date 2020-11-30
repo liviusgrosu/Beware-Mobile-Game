@@ -27,6 +27,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private float fastMovementSpeed = 0.15f;
 
+    [SerializeField]
+    private Animator modelAnimator; 
+
     public float currMovementSpeed {
         get { return _currMovementSpeed; }
         set { _currMovementSpeed = value; }
@@ -67,9 +70,21 @@ public class PlayerMovement : MonoBehaviour
         inputDirection *= currMovementSpeed;
 
         if (inputDirection.magnitude != 0)
+        {
             rb.MovePosition(transform.position + inputDirection);
+            if (!modelAnimator.GetCurrentAnimatorStateInfo(0).IsName("Running Cycle"))
+            {
+                modelAnimator.SetTrigger("Start Running");
+            }
+        }
         else
+        {
             rb.velocity = Vector3.zero;
+            if (!modelAnimator.GetCurrentAnimatorStateInfo(0).IsName("Idle Cycle"))
+            {
+                modelAnimator.SetTrigger("Start Idling");
+            }
+        }
     }
 
     //Deal with slowing down

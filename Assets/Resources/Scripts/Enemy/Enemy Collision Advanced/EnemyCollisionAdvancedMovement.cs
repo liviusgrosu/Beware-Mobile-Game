@@ -56,6 +56,10 @@ public class EnemyCollisionAdvancedMovement : MonoBehaviour
     private void Update()
     {
         if (GetComponent<EnemySpawnTravel>() != null) return;
+        if (agent == null) 
+        {
+            Debug.Log("agent doesnt exist");
+        }
         agent.destination = player.position;
         agent.isStopped = (Vector3.Distance(transform.position, player.position) <= agent.stoppingDistance);
     }
