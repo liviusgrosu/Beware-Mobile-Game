@@ -80,7 +80,8 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             rb.velocity = Vector3.zero;
-            if (!modelAnimator.GetCurrentAnimatorStateInfo(0).IsName("Idle Cycle"))
+            if (!modelAnimator.GetCurrentAnimatorStateInfo(0).IsName("Idle Cycle") &&
+                !modelAnimator.GetCurrentAnimatorStateInfo(0).IsName("Shooting Cycle"))
             {
                 modelAnimator.SetTrigger("Start Idling");
             }

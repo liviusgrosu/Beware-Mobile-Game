@@ -70,6 +70,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6274339263624944584}
   - component: {fileID: 3710257003022139937}
+  - component: {fileID: 4281064492332326685}
   m_Layer: 0
   m_Name: Chaingun Weapon
   m_TagString: Untagged
@@ -91,6 +92,7 @@ Transform:
   - {fileID: 879840902562739804}
   - {fileID: 1104367548051375960}
   - {fileID: 8743172211673643999}
+  - {fileID: 6722506746634865394}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -120,6 +122,21 @@ MonoBehaviour:
   isFiring: 0
   weaponIcon: {fileID: 21300000, guid: 7f782a2892b649440a9f4fb7202bd32f, type: 3}
   fireType: 1
+--- !u!114 &4281064492332326685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5000509310322805231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27335db5c8d8f8245b68496cd216e9b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  copyX: 0
+  copyY: 0
+  copyZ: 0
 --- !u!1 &6079542299068552380
 GameObject:
   m_ObjectHideFlags: 0
@@ -150,3 +167,93 @@ Transform:
   m_Father: {fileID: 6274339263624944584}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -10, z: 0}
+--- !u!1001 &6539681005143059737
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6274339263624944584}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: ddb6ac34975364f4883672304b1cb8a5,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.073
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ddb6ac34975364f4883672304b1cb8a5,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.242
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ddb6ac34975364f4883672304b1cb8a5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.809
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ddb6ac34975364f4883672304b1cb8a5,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ddb6ac34975364f4883672304b1cb8a5,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.70710677
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ddb6ac34975364f4883672304b1cb8a5,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.00000017881393
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ddb6ac34975364f4883672304b1cb8a5,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.0000002682209
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ddb6ac34975364f4883672304b1cb8a5,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ddb6ac34975364f4883672304b1cb8a5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ddb6ac34975364f4883672304b1cb8a5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -180
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ddb6ac34975364f4883672304b1cb8a5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ddb6ac34975364f4883672304b1cb8a5,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.013950867
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ddb6ac34975364f4883672304b1cb8a5,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.013950867
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ddb6ac34975364f4883672304b1cb8a5,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.013950867
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ddb6ac34975364f4883672304b1cb8a5,
+        type: 3}
+      propertyPath: m_Name
+      value: Nail Gun
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ddb6ac34975364f4883672304b1cb8a5, type: 3}
+--- !u!4 &6722506746634865394 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ddb6ac34975364f4883672304b1cb8a5,
+    type: 3}
+  m_PrefabInstance: {fileID: 6539681005143059737}
+  m_PrefabAsset: {fileID: 0}

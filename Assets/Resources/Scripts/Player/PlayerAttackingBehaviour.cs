@@ -7,6 +7,7 @@ public class PlayerAttackingBehaviour : MonoBehaviour
 {
     private PlayerMovement movement;
     private Transform playerBody;
+    private Animator modelAnimator;
 
     private WeaponController weaponController;
     [SerializeField]
@@ -31,7 +32,10 @@ public class PlayerAttackingBehaviour : MonoBehaviour
     void Start()
     {
         enemyManager = GameObject.Find("Enemy Manager").GetComponent<EnemyManager>();
+        
         playerBody = transform.Find("Player Body");
+        modelAnimator = playerBody.GetComponent<Animator>();
+
         movement = GetComponent<PlayerMovement>();
         weaponController = GetComponent<WeaponController>();
     }
@@ -56,14 +60,30 @@ public class PlayerAttackingBehaviour : MonoBehaviour
             { 
                 //If an enemy dies then change to the nearest alive one
                 if (nearestTarget == null)
+                {
                     nearestTarget = enemyManager.GetClosestEnemy(transform.position);
+                }
                 
                 RotateTowardsTarget(LOOK_ENEMY);
-                if (!weaponController.IsFiringWeapon() && isGenerallyLookingAtEnemy) weaponController.ToggleWeaponFire(true);
+                if (!weaponController.IsFiringWeapon() && isGenerallyLookingAtEnemy) 
+                {
+                    weaponController.ToggleWeaponFire(true);
+                    if (!modelAnimator.GetCurrentAnimatorStateInfo(0).IsName("Shooting Cycle"))
+                    {
+                        modelAnimator.SetTrigger("Start Shooting");
+                    }
+                }
             }
             else
             {
-                if (weaponController.IsFiringWeapon()) weaponController.ToggleWeaponFire(false);
+                if (weaponController.IsFiringWeapon()) 
+                {
+                    weaponController.ToggleWeaponFire(false);
+                    if (!modelAnimator.GetCurrentAnimatorStateInfo(0).IsName("Idle Cycle"))
+                    {
+                        modelAnimator.SetTrigger("Start Idling");
+                    }
+                }
                 RotateTowardsTarget(LOOK_MOVEMENT);
             }
         }

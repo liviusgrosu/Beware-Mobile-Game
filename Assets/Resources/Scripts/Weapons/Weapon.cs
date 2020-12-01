@@ -41,6 +41,8 @@ public class Weapon : MonoBehaviour
     [Header("Misc")]
     public Sprite weaponIcon;
 
+    private Animator entityAnimator;
+
     private enum FireType
     {
         Sequential,
@@ -60,16 +62,22 @@ public class Weapon : MonoBehaviour
     private void Update()
     {
         if(audioController == null)
+        {
             audioController = GameObject.Find("Sound Controller").GetComponent<SoundController>();
+        }
     }
 
     public void ToggleFiring(bool state)
     {
         isFiring = state;
         if (isFiring)
+        {
             StartCoroutine(BeginFiring());
+        }
         else
+        {
             StopAllCoroutines();
+        }
     }
 
     IEnumerator BeginFiring()
@@ -83,7 +91,14 @@ public class Weapon : MonoBehaviour
 
     private void FireProjectile()
     {
-        if (audioController != null) audioController.PlayWeaponFireSound(weaponType);
+        if (entityAnimator != null)
+        {
+            entityAnimator.SetTrigger("Fire");
+        }
+        if (audioController != null) 
+        {
+            audioController.PlayWeaponFireSound(weaponType);
+        }
         if (!isAmmoInfinite) curProjectileCount--;
         switch (fireType)
         {
@@ -97,7 +112,9 @@ public class Weapon : MonoBehaviour
                 break;
             case FireType.All:
                 for (bulletSpawnIndex = 0; bulletSpawnIndex < bulletSpawns.Length; bulletSpawnIndex++)
+                {
                     InstantiateBullet();
+                }
                 break;
         }
     }
@@ -107,5 +124,10 @@ public class Weapon : MonoBehaviour
         GameObject bulletInstant = Instantiate(projectilePrefab, bulletSpawns[bulletSpawnIndex].position, Quaternion.identity);
         bulletInstant.GetComponent<Rigidbody>().AddForce(bulletSpawns[bulletSpawnIndex].forward * projectileSpeed);
         Destroy(bulletInstant, BULLET_LIFE);
+    }
+
+    public void PassEntityAnimator(Animator entityAnimator)
+    {
+        this.entityAnimator = entityAnimator;
     }
 }

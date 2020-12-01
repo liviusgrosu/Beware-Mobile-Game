@@ -28,16 +28,17 @@ public class PlayerHealthSystem : MonoBehaviour
     [Header("Invincible Frames")]
     [SerializeField] private Material regularMat;
     [SerializeField] private Material invincibleMat;
-    [SerializeField] private MeshRenderer rend;
+    [SerializeField] private Renderer rend;
 
     [SerializeField] private float invincibleTime;
     private bool isInvincible;
 
-    [SerializeField]
     private Animator modelAnimator; 
 
     private void Start()
     {
+        modelAnimator = GameObject.Find("Player Body").GetComponent<Animator>();
+
         soundController = GameObject.Find("Sound Controller").GetComponent<SoundController>();
 
         canvas = transform.GetChild(0);

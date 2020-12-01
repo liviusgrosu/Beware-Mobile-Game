@@ -16,11 +16,15 @@ public class WeaponController : MonoBehaviour
 
     private bool isPlayer;
 
+    private Animator entityAnimator;
+
+    public Transform playerHands;
+
     private void Start()
     {
-        isPlayer = this.gameObject.tag == "Player" ? true : false;
+        entityAnimator = transform.Find("Player Body").GetComponent<Animator>();
 
-        //if (!isPlayer) Debug.Break();
+        isPlayer = this.gameObject.tag == "Player" ? true : false;
 
         uiController = GameObject.Find("Weapon Player UI").GetComponent<WeaponUIController>();
         SwitchWeapons(startingWeapon);
@@ -48,6 +52,11 @@ public class WeaponController : MonoBehaviour
             GameObject weaponPrefab = Resources.Load(string.Format("Prefabs/Weapons/{0} Weapon", nextWeapon.ToString())) as GameObject;
             currentWeapon = Instantiate(weaponPrefab, weaponSpawn.position, weaponSpawn.rotation);
             currentWeapon.transform.parent = weaponSpawn;
+            currentWeapon.GetComponent<Weapon>().PassEntityAnimator(entityAnimator);
+
+            currentWeapon.GetComponent<CopyLocation>().CopyLocationOf(playerHands);
+            currentWeapon.GetComponent<CopyLocation>().ToggleAxis(2);
+
             uiController.ChangeWeaponInfo(currentWeapon.GetComponent<Weapon>().weaponIcon, currentWeapon.GetComponent<Weapon>().maxProjectileCount);
         }
     }
