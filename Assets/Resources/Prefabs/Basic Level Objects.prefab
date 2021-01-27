@@ -201,6 +201,46 @@ PrefabInstance:
       propertyPath: orthographic size
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 1118917572633384497, guid: 587099c01b5bba2499f15e917746dfb9,
+        type: 3}
+      propertyPath: orthographic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1118917572633384497, guid: 587099c01b5bba2499f15e917746dfb9,
+        type: 3}
+      propertyPath: far clip plane
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 1118917572633384497, guid: 587099c01b5bba2499f15e917746dfb9,
+        type: 3}
+      propertyPath: field of view
+      value: 61.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1118917572633384502, guid: 587099c01b5bba2499f15e917746dfb9,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 11.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 1118917572633384502, guid: 587099c01b5bba2499f15e917746dfb9,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.4705754
+      objectReference: {fileID: 0}
+    - target: {fileID: 1118917572633384502, guid: 587099c01b5bba2499f15e917746dfb9,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.8823598
+      objectReference: {fileID: 0}
+    - target: {fileID: 1118917572633384502, guid: 587099c01b5bba2499f15e917746dfb9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 56.143
+      objectReference: {fileID: 0}
+    - target: {fileID: 1118917572633384502, guid: 587099c01b5bba2499f15e917746dfb9,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.19
+      objectReference: {fileID: 0}
     - target: {fileID: 1118917573193087553, guid: 587099c01b5bba2499f15e917746dfb9,
         type: 3}
       propertyPath: maxHP
@@ -271,6 +311,21 @@ PrefabInstance:
       propertyPath: modelAnimator
       value: 
       objectReference: {fileID: 4895725781293125516}
+    - target: {fileID: 1118917573193087558, guid: 587099c01b5bba2499f15e917746dfb9,
+        type: 3}
+      propertyPath: slowMovementSpeed
+      value: 0.075
+      objectReference: {fileID: 0}
+    - target: {fileID: 1118917573193087558, guid: 587099c01b5bba2499f15e917746dfb9,
+        type: 3}
+      propertyPath: regMovementSpeed
+      value: 0.125
+      objectReference: {fileID: 0}
+    - target: {fileID: 1118917573193087558, guid: 587099c01b5bba2499f15e917746dfb9,
+        type: 3}
+      propertyPath: fastMovementSpeed
+      value: 0.175
+      objectReference: {fileID: 0}
     - target: {fileID: 1118917573193087933, guid: 587099c01b5bba2499f15e917746dfb9,
         type: 3}
       propertyPath: m_Name

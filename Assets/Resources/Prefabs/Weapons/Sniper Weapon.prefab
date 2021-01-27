@@ -30,6 +30,36 @@ Transform:
   m_Father: {fileID: 6274339263624944584}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4011925422750763022
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4365896300233095369}
+  m_Layer: 0
+  m_Name: Right Hand IK Target
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4365896300233095369
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4011925422750763022}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.314, y: 0.39099997, z: -0.618}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6274339263624944584}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5000509310322805231
 GameObject:
   m_ObjectHideFlags: 0
@@ -40,7 +70,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6274339263624944584}
   - component: {fileID: 3710257003022139937}
-  - component: {fileID: 7875571673970797916}
   m_Layer: 0
   m_Name: Sniper Weapon
   m_TagString: Untagged
@@ -61,6 +90,8 @@ Transform:
   m_Children:
   - {fileID: 3493707533993632149}
   - {fileID: 5435007505610912843}
+  - {fileID: 8161866763536235593}
+  - {fileID: 4365896300233095369}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -88,21 +119,38 @@ MonoBehaviour:
   isFiring: 0
   weaponIcon: {fileID: 21300000, guid: 12cffb17063ead145a9570984cd95687, type: 3}
   fireType: 0
---- !u!114 &7875571673970797916
-MonoBehaviour:
+  leftIKTarget: {fileID: 8161866763536235593}
+  rightIKTarget: {fileID: 4365896300233095369}
+--- !u!1 &7918033779239717386
+GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5000509310322805231}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27335db5c8d8f8245b68496cd216e9b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  copyX: 0
-  copyY: 0
-  copyZ: 0
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8161866763536235593}
+  m_Layer: 0
+  m_Name: Left Hand IK Target
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8161866763536235593
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7918033779239717386}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.24000001, y: 0.46399996, z: -0.4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6274339263624944584}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &4032583142340986494
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -113,12 +161,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 3670713a8a2ef2646aadf0f01eb81a75,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.12
+      value: 0.282
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3670713a8a2ef2646aadf0f01eb81a75,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.397
+      value: 0.571
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3670713a8a2ef2646aadf0f01eb81a75,
         type: 3}

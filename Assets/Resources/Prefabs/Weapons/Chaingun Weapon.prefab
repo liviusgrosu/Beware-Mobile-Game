@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 487769705812220145}
   m_LocalRotation: {x: 0, y: 0.08715578, z: 0, w: 0.9961947}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.273, y: 0.25100002, z: -1.0270001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6274339263624944584}
@@ -54,7 +54,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2389100010684747543}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.273, y: 0.25100002, z: -1.0270001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6274339263624944584}
@@ -93,6 +93,8 @@ Transform:
   - {fileID: 1104367548051375960}
   - {fileID: 8743172211673643999}
   - {fileID: 6722506746634865394}
+  - {fileID: 2893369054323394541}
+  - {fileID: 8302162246282808275}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -122,6 +124,8 @@ MonoBehaviour:
   isFiring: 0
   weaponIcon: {fileID: 21300000, guid: 7f782a2892b649440a9f4fb7202bd32f, type: 3}
   fireType: 1
+  leftIKTarget: {fileID: 2893369054323394541}
+  rightIKTarget: {fileID: 8302162246282808275}
 --- !u!114 &4281064492332326685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,12 +165,72 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6079542299068552380}
   m_LocalRotation: {x: 0, y: -0.08715578, z: 0, w: 0.9961947}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.273, y: 0.25100002, z: -1.0270001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6274339263624944584}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -10, z: 0}
+--- !u!1 &7465591886096670194
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8302162246282808275}
+  m_Layer: 0
+  m_Name: Right Hand IK Target
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8302162246282808275
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7465591886096670194}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.307, y: 0.136, z: -1.07}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6274339263624944584}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8707615282335184879
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2893369054323394541}
+  m_Layer: 0
+  m_Name: Left Hand IK Target
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2893369054323394541
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8707615282335184879}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.246, y: 0.13900001, z: -0.5730001}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6274339263624944584}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &6539681005143059737
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -177,17 +241,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: ddb6ac34975364f4883672304b1cb8a5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.073
+      value: 0.28100002
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ddb6ac34975364f4883672304b1cb8a5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.242
+      value: 0.28
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ddb6ac34975364f4883672304b1cb8a5,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.809
+      value: -1.213
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ddb6ac34975364f4883672304b1cb8a5,
         type: 3}

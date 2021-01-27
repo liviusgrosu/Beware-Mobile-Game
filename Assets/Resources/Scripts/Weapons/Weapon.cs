@@ -53,6 +53,9 @@ public class Weapon : MonoBehaviour
     [SerializeField]
     private FireType fireType;
 
+    [Space(5)]
+    public Transform leftIKTarget, rightIKTarget; 
+
     private void Awake()
     {
         curProjectileCount = maxProjectileCount;

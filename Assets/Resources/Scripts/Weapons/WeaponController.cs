@@ -18,7 +18,7 @@ public class WeaponController : MonoBehaviour
 
     private Animator entityAnimator;
 
-    public Transform playerHands;
+    public IKArm LeftHand, RightHand;
 
     private void Start()
     {
@@ -54,8 +54,14 @@ public class WeaponController : MonoBehaviour
             currentWeapon.transform.parent = weaponSpawn;
             currentWeapon.GetComponent<Weapon>().PassEntityAnimator(entityAnimator);
 
-            currentWeapon.GetComponent<CopyLocation>().CopyLocationOf(playerHands);
-            currentWeapon.GetComponent<CopyLocation>().ToggleAxis(2);
+            // currentWeapon.GetComponent<CopyLocation>().CopyLocationOf(playerHands);
+            // currentWeapon.GetComponent<CopyLocation>().ToggleAxis(2);
+
+            // Pull the targets from the weapon here
+            // provide the ik hands the target here
+
+            LeftHand.ProvideNewTarget(currentWeapon.GetComponent<Weapon>().leftIKTarget);
+            RightHand.ProvideNewTarget(currentWeapon.GetComponent<Weapon>().rightIKTarget);
 
             uiController.ChangeWeaponInfo(currentWeapon.GetComponent<Weapon>().weaponIcon, currentWeapon.GetComponent<Weapon>().maxProjectileCount);
         }

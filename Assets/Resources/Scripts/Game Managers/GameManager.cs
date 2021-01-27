@@ -53,6 +53,8 @@ public class GameManager : MonoBehaviour
         playerJoystickUI = GameObject.Find("Virtual Joystick Handler").GetComponent<IUIGenericElement>();
 
         currentSceneName = SceneManager.GetActiveScene().name;
+
+        Application.targetFrameRate = 60;
     }
 
     private void Update()

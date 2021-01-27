@@ -24,7 +24,6 @@ public class CopyLocation : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(referenceObj != null);
         if (referenceObj != null)
         {
             float newY = copyY ? transform.position.x: referenceObj.position.x;
